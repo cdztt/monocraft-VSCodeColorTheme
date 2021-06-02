@@ -11,4 +11,4 @@ You can author your README using Visual Studio Code.  Here are some useful edito
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**-->
-## This is a Monokai theme with lower contrast and none font style.
+## This is a customized color theme based on Monokai for VSCode.
