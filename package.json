@@ -1,0 +1,21 @@
+{
+    "name": "monocraft",
+    "displayName": "MonoCraft",
+    "description": "a Monokai theme with lower contrast and none font style",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "MonoCraft",
+                "uiTheme": "vs-dark",
+                "path": "./themes/MonoCraft-color-theme.json"
+            }
+        ]
+    }
+}
