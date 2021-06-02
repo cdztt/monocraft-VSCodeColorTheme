@@ -123,7 +123,7 @@
 			"name": "String",
 			"scope": "string",
 			"settings": {
-				"foreground": "#CE9178"
+				"foreground": "#c39786"
 			}
 		},
 		{
@@ -133,7 +133,7 @@
 				"punctuation.section.embedded"
 			],
 			"settings": {
-				"foreground": "#C586C0"
+				"foreground": "#dd83d5"
 			}
 		},
 		{
@@ -178,7 +178,7 @@
 			"name": "Keyword",
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#C586C0"
+				"foreground": "#dd83d5"
 			}
 		},
 		{
@@ -186,7 +186,7 @@
 			"scope": "storage",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#C586C0"
+				"foreground": "#dd83d5"
 			}
 		},
 		{
@@ -226,7 +226,7 @@
 			"scope": "variable.parameter",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#e68b23"
+				"foreground": "#d6862b"
 			}
 		},
 		{
@@ -234,7 +234,7 @@
 			"scope": "entity.name.tag",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#C586C0"
+				"foreground": "#dd83d5"
 			}
 		},
 		{
@@ -266,7 +266,7 @@
 			"scope": "support.type, support.class",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#66cde2"
+				"foreground": "#0cac8c"
 			}
 		},
 		{
@@ -309,7 +309,7 @@
 			"name": "diff.deleted",
 			"scope": "markup.deleted",
 			"settings": {
-				"foreground": "#C586C0"
+				"foreground": "#dd83d5"
 			}
 		},
 		{
@@ -342,7 +342,7 @@
 			"name": "Markup Quote",
 			"scope": "markup.quote",
 			"settings": {
-				"foreground": "#C586C0"
+				"foreground": "#dd83d5"
 			}
 		},
 		{
@@ -469,7 +469,7 @@
 			"name": "this.self",
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#FD971F"
+				"foreground": "#d6862b"
 			}
 		}
 	],
