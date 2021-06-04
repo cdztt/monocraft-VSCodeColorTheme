@@ -97,16 +97,18 @@
 		"terminal.ansiBrightWhite": "#f8f8f2"
 	},
 	/*
-	priest: 	#e7e7e7
-	mage: 		#b8f0ff
-	rogue:		#f1eb8c
-	warrior:	#c0966a
-	shaman:		#65a2df
-	hunter:		#86a85a
-	monk:		#4dce98
-	druid:		#ffa353
-	warlock:	#9494f1
-	paladin:	#f69ec6
+	priest: 	#e7e7e7		12		variant
+	mage: 		#b8f0ff		12		function
+	rogue:		#f1eb8c		12		flow control and operator
+	warrior:	#c0966a		5.5		type declaration
+	shaman:		#65a2df		5.5		class and JSX tag
+	hunter:		#86a85a		5.5		this
+	monk:		#4dce98		7.5		string literal
+	druid:		#ffa353		7.5		number literal
+	warlock:	#9494f1		5.5		framework function
+	paladin:	#f69ec6		7.5		tag attribution
+	deathknight:#FF6D85		5.5		interpolation
+	demonhunter:#e69dff		7.5		boolean
 	*/
 	"tokenColors": [
 		{
@@ -126,7 +128,12 @@
 		},
 		{
 			"name": "Comment",
-			"scope": "comment",
+			"scope": [
+				"comment",
+				"storage.type.class.jsdoc",
+				"entity.name.type.instance.jsdoc",
+				"variable.other.jsdoc"
+			],
 			"settings": {
 				"foreground": "#88846f"
 			}
@@ -145,7 +152,7 @@
 				"punctuation.section.embedded"
 			],
 			"settings": {
-				"foreground": "#f69ec6"
+				"foreground": "#FF6D85"
 			}
 		},
 		{
@@ -159,7 +166,7 @@
 			"name": "Built-in constant",
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#ffa353"
+				"foreground": "#e69dff"
 			}
 		},
 		{
@@ -233,14 +240,14 @@
 			"name": "Tag name",
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#dd83d5"
+				"foreground": "#65A2DF"
 			}
 		},
 		{
 			"name": "Tag attribute",
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#F69EC6"
 			}
 		},
 		{
@@ -455,6 +462,20 @@
 			"scope": "token.debug-token",
 			"settings": {
 				"foreground": "#b267e6"
+			}
+		},
+		{
+			"name": "css",
+			"scope": [
+				"punctuation.section.property-list",
+				"punctuation.separator.key-value.css",
+				"punctuation.terminator.rule.css",
+				"meta.property-value.css",
+				"punctuation.definition.tag",
+				"punctuation.definition.generic"
+			],
+			"settings": {
+				"foreground": "#e7e7e7"
 			}
 		},
 	],
