@@ -97,18 +97,18 @@
 		"terminal.ansiBrightWhite": "#f8f8f2"
 	},
 	/*
-	priest: 	#e7e7e7		12		variant
-	mage: 		#b8f0ff		12		function
-	rogue:		#f1eb8c		12		flow control and operator
-	warrior:	#c0966a		5.5		type declaration
-	shaman:		#65a2df		5.5		class and JSX tag
-	hunter:		#86a85a		5.5		this
-	monk:		#4dce98		7.5		string literal
-	druid:		#ffa353		7.5		number literal
-	warlock:	#9494f1		5.5		framework function
-	paladin:	#f69ec6		7.5		tag attribution
-	deathknight:#FF6D85		5.5		interpolation
-	demonhunter:#e69dff		7.5		boolean
+	priest: 		#e7e7e7		12.0		variant
+	mage: 			#b8f0ff		12.0		function
+	rogue:			#f1eb8c		12.0		flow control and operator
+	warrior:		#c0966a		5.5			type declaration
+	shaman:			#65a2df		5.5			class and JSX tag
+	hunter:			#86a85a		5.5			this
+	monk:			#4dce98		7.5			string literal
+	druid:			#ffa353		7.5			number literal
+	warlock:		#9494f1		5.5			framework function
+	paladin:		#f69ec6		7.5			tag attribution
+	deathknight:	#FF6D85		5.5			interpolation
+	demonhunter:	#DB70FF		5.5			boolean
 	*/
 	"tokenColors": [
 		{
@@ -166,7 +166,7 @@
 			"name": "Built-in constant",
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#e69dff"
+				"foreground": "#db70ff"
 			}
 		},
 		{
@@ -247,7 +247,7 @@
 			"name": "Tag attribute",
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#F69EC6"
+				"foreground": "#f69ec6"
 			}
 		},
 		{
