@@ -97,9 +97,9 @@
 		"terminal.ansiBrightWhite": "#f8f8f2"
 	},
 	/*
-	priest: 		#e7e7e7		12.0		variant
-	mage: 			#b8f0ff		12.0		function
-	rogue:			#f1eb8c		12.0		flow control and operator
+	priest: 		#f0eaea		12.5		variant
+	mage: 			#8be6ff		10.5		function
+	rogue:			#e4db8e		10.5		flow control and operator
 	warrior:		#c0966a		5.5			type declaration
 	shaman:			#65a2df		5.5			class and JSX tag
 	hunter:			#86a85a		5.5			this
@@ -114,7 +114,7 @@
 		{
 			"scope": "",
 			"settings": {
-				"foreground": "#e7e7e7"
+				"foreground": "#f0eaea"
 			}
 		},
 		{
@@ -123,7 +123,7 @@
 				"source.groovy.embedded"
 			],
 			"settings": {
-				"foreground": "#e7e7e7"
+				"foreground": "#f0eaea"
 			}
 		},
 		{
@@ -184,7 +184,7 @@
 				"meta.method.declaration.js"
 			],
 			"settings": {
-				"foreground": "#e7e7e7"
+				"foreground": "#f0eaea"
 			}
 		},
 		{
@@ -194,7 +194,7 @@
 				"storage.modifier"
 			],
 			"settings": {
-				"foreground": "#f1eb8c"
+				"foreground": "#e4db8e"
 			}
 		},
 		{
@@ -226,7 +226,7 @@
 			"name": "Function name",
 			"scope": "entity.name.function",
 			"settings": {
-				"foreground": "#b8f0ff"
+				"foreground": "#8be6ff"
 			}
 		},
 		{
@@ -295,7 +295,7 @@
 				"string.quoted.double.json"
 			],
 			"settings": {
-				"foreground": "#e7e7e7"
+				"foreground": "#f0eaea"
 			}
 		},
 		{
@@ -475,7 +475,7 @@
 				"punctuation.definition.generic"
 			],
 			"settings": {
-				"foreground": "#e7e7e7"
+				"foreground": "#f0eaea"
 			}
 		},
 	],
