@@ -97,16 +97,16 @@
 		"terminal.ansiBrightWhite": "#f8f8f2"
 	},
 	/*
-	priest: 		#f0eaea		12.5		variant
+	priest: 		#e4e2e2		11.5		variant
 	mage: 			#8be6ff		10.5		function
 	rogue:			#e4db8e		10.5		flow control and operator
 	warrior:		#c0966a		5.5			type declaration
 	shaman:			#65a2df		5.5			class and JSX tag
-	hunter:			#86a85a		5.5			this
-	monk:			#4dce98		7.5			string literal
-	druid:			#ffa353		7.5			number literal
-	warlock:		#9494f1		5.5			framework function
-	paladin:		#f69ec6		7.5			tag attribution
+	hunter:			#8eb95a		6.5			string literal
+	monk:			#4dce98		7.5			this
+	druid:			#ff8f2c		6.5			number literal
+	warlock:		#a3a3ff		6.5			framework function
+	paladin:		#ffacd0		8.5			tag attribution
 	deathknight:	#FF6D85		5.5			interpolation
 	demonhunter:	#DB70FF		5.5			boolean
 	*/
@@ -114,7 +114,7 @@
 		{
 			"scope": "",
 			"settings": {
-				"foreground": "#f0eaea"
+				"foreground": "#e4e2e2"
 			}
 		},
 		{
@@ -123,7 +123,7 @@
 				"source.groovy.embedded"
 			],
 			"settings": {
-				"foreground": "#f0eaea"
+				"foreground": "#e4e2e2"
 			}
 		},
 		{
@@ -142,7 +142,7 @@
 			"name": "String",
 			"scope": "string",
 			"settings": {
-				"foreground": "#4dce98"
+				"foreground": "#8eb95a"
 			}
 		},
 		{
@@ -159,7 +159,7 @@
 			"name": "Number",
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#ffa353"
+				"foreground": "#ff8f2c"
 			}
 		},
 		{
@@ -173,7 +173,7 @@
 			"name": "User-defined constant",
 			"scope": "constant.character, constant.other",
 			"settings": {
-				"foreground": "#9494f1"
+				"foreground": "#a3a3ff"
 			}
 		},
 		{
@@ -184,7 +184,7 @@
 				"meta.method.declaration.js"
 			],
 			"settings": {
-				"foreground": "#f0eaea"
+				"foreground": "#e4e2e2"
 			}
 		},
 		{
@@ -233,7 +233,7 @@
 			"name": "this super",
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#86a85a"
+				"foreground": "#4dce98"
 			}
 		},
 		{
@@ -247,21 +247,21 @@
 			"name": "Tag attribute",
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#f69ec6"
+				"foreground": "#ffacd0"
 			}
 		},
 		{
 			"name": "Library function",
 			"scope": "support.function",
 			"settings": {
-				"foreground": "#9494f1"
+				"foreground": "#a3a3ff"
 			}
 		},
 		{
 			"name": "Library constant",
 			"scope": "support.constant",
 			"settings": {
-				"foreground": "#9494f1"
+				"foreground": "#a3a3ff"
 			}
 		},
 		{
@@ -295,7 +295,7 @@
 				"string.quoted.double.json"
 			],
 			"settings": {
-				"foreground": "#f0eaea"
+				"foreground": "#e4e2e2"
 			}
 		},
 		{
@@ -323,19 +323,19 @@
 			"name": "diff.changed",
 			"scope": "markup.changed",
 			"settings": {
-				"foreground": "#ffa353"
+				"foreground": "#ff8f2c"
 			}
 		},
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
-				"foreground": "#9494f1A0"
+				"foreground": "#a3a3ffA0"
 			}
 		},
 		{
 			"scope": "entity.name.filename.find-in-files",
 			"settings": {
-				"foreground": "#ffa353"
+				"foreground": "#ff8f2c"
 			}
 		},
 		{
@@ -349,7 +349,7 @@
 			"name": "Markup Lists",
 			"scope": "markup.list",
 			"settings": {
-				"foreground": "#ffa353"
+				"foreground": "#ff8f2c"
 			}
 		},
 		{
@@ -414,7 +414,7 @@
 			"name": "Markdown Underline Link/Image",
 			"scope": "markup.underline.link.markdown,markup.underline.link.image.markdown",
 			"settings": {
-				"foreground": "#ffa353"
+				"foreground": "#ff8f2c"
 			}
 		},
 		{
@@ -475,7 +475,7 @@
 				"punctuation.definition.generic"
 			],
 			"settings": {
-				"foreground": "#f0eaea"
+				"foreground": "#e4e2e2"
 			}
 		},
 	],
