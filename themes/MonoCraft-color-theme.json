@@ -363,11 +363,11 @@
 			"name": "Markup Inline",
 			"scope": "markup.inline.raw",
 			"settings": {
-				"foreground": "#FD971F"
+				"foreground": "#FF8F2C"
 			}
 		},
 		{
-			"name": "Markup Headings",
+			"name": "Markup Headings, markdown Header",
 			"scope": "markup.heading",
 			"settings": {
 				"foreground": "#A6E22E"
@@ -392,8 +392,7 @@
 			"name": "Markdown Quote",
 			"scope": "markup.quote.markdown",
 			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#75715E"
+				"foreground": "#e2e22e"
 			}
 		},
 		{
@@ -405,7 +404,10 @@
 		},
 		{
 			"name": "Markdown Link Title/Description",
-			"scope": "string.other.link.title.markdown,string.other.link.description.markdown",
+			"scope": [
+				"string.other.link.title.markdown",
+				"string.other.link.description.markdown"
+			],
 			"settings": {
 				"foreground": "#AE81FF"
 			}
@@ -476,6 +478,15 @@
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
+			}
+		},
+		{
+			"name": "markdown code",
+			"scope": [
+				"markup.fenced_code.block.markdown"
+			],
+			"settings": {
+				"foreground": "#8eb95a"
 			}
 		},
 	],
