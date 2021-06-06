@@ -101,9 +101,9 @@
 	mage: 			#8be6ff		10.5		function
 	rogue:			#e4db8e		10.5		flow control and operator
 	warrior:		#c0966a		5.5			type declaration
-	shaman:			#65a2df		5.5			class and JSX tag
-	hunter:			#8eb95a		6.5			string literal
-	monk:			#4dce98		7.5			this
+	shaman:			#73b0ee		6.5			class and JSX tag
+	hunter:			#9CC56B		7.5			string literal
+	monk:			#23C380		6.5			this
 	druid:			#ff8f2c		6.5			number literal
 	warlock:		#a3a3ff		6.5			framework function
 	paladin:		#ffacd0		8.5			tag attribution
@@ -111,12 +111,6 @@
 	demonhunter:	#DB70FF		5.5			boolean
 	*/
 	"tokenColors": [
-		{
-			"scope": "",
-			"settings": {
-				"foreground": "#e4e2e2"
-			}
-		},
 		{
 			"scope": [
 				"meta.embedded",
@@ -142,7 +136,7 @@
 			"name": "String",
 			"scope": "string",
 			"settings": {
-				"foreground": "#8eb95a"
+				"foreground": "#9cc56b"
 			}
 		},
 		{
@@ -206,20 +200,21 @@
 		},
 		{
 			"name": "Class name",
-			"scope": ["entity.name.type",
+			"scope": [
+				"entity.name.type",
 				"entity.name.class",
 				"entity.name.namespace",
 				"entity.name.scope-resolution"
 			],
 			"settings": {
-				"foreground": "#65a2df"
+				"foreground": "#73b0ee"
 			}
 		},
 		{
 			"name": "Inherited class",
 			"scope": "entity.other.inherited-class",
 			"settings": {
-				"foreground": "#65a2df"
+				"foreground": "#73b0ee"
 			}
 		},
 		{
@@ -233,14 +228,14 @@
 			"name": "this super",
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#4dce98"
+				"foreground": "#23c380"
 			}
 		},
 		{
 			"name": "Tag name",
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#65A2DF"
+				"foreground": "#73b0ee"
 			}
 		},
 		{
@@ -267,11 +262,11 @@
 		{
 			"name": "Library class/type",
 			"scope": [
-				"support.class",
-				"support.type"
+				"support.type",
+				"support.class"
 			],
 			"settings": {
-				"foreground": "#65a2df"
+				"foreground": "#73b0ee"
 			}
 		},
 		{
@@ -430,7 +425,7 @@
 			"name": "Markdown Punctuation Definition Link",
 			"scope": "markup.list.unnumbered.markdown, markup.list.numbered.markdown",
 			"settings": {
-				"foreground": "#f8f8f2"
+				"foreground": "#e4e2e2"
 			}
 		},
 		{
@@ -467,14 +462,15 @@
 			}
 		},
 		{
-			"name": "css",
+			"name": "punctuation",
 			"scope": [
 				"punctuation.section.property-list",
 				"punctuation.separator.key-value.css",
 				"punctuation.terminator.rule.css",
 				"meta.property-value.css",
-				"punctuation.definition.tag",
-				"punctuation.definition.generic"
+				"punctuation.definition",
+				"punctuation.accessor",
+				"keyword.operator.type.annotation.ts"
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
@@ -486,7 +482,7 @@
 				"markup.fenced_code.block.markdown"
 			],
 			"settings": {
-				"foreground": "#8eb95a"
+				"foreground": "#9CC56B"
 			}
 		},
 	],
