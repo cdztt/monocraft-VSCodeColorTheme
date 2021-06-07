@@ -124,6 +124,7 @@
 			"name": "Comment",
 			"scope": [
 				"comment",
+				"punctuation.definition.comment",
 				"storage.type.class.jsdoc",
 				"entity.name.type.instance.jsdoc",
 				"variable.other.jsdoc"
@@ -226,7 +227,9 @@
 		},
 		{
 			"name": "this super",
-			"scope": "variable.language",
+			"scope": [
+				"variable.language",
+			],
 			"settings": {
 				"foreground": "#23c380"
 			}
@@ -464,13 +467,14 @@
 		{
 			"name": "punctuation",
 			"scope": [
-				"punctuation.section.property-list",
-				"punctuation.separator.key-value.css",
-				"punctuation.terminator.rule.css",
 				"meta.property-value.css",
+				"punctuation.section.property-list",
+				"punctuation.separator",
+				"punctuation.terminator",
 				"punctuation.definition",
 				"punctuation.accessor",
-				"keyword.operator.type.annotation.ts"
+				"keyword.operator.type.annotation.ts",
+				"meta.brace"
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
