@@ -137,7 +137,7 @@
 			"name": "String",
 			"scope": "string",
 			"settings": {
-				"foreground": "#a8d177"
+				"foreground": "#e4db8e"
 			}
 		},
 		{
@@ -147,21 +147,21 @@
 				"punctuation.section.embedded"
 			],
 			"settings": {
-				"foreground": "#FF6D85"
+				"foreground": "#ff8f2c"
 			}
 		},
 		{
 			"name": "Number",
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#ff8f2c"
+				"foreground": "#DB70FF"
 			}
 		},
 		{
 			"name": "Built-in constant",
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#db70ff"
+				"foreground": "#DB70FF"
 			}
 		},
 		{
@@ -189,7 +189,7 @@
 				"storage.modifier"
 			],
 			"settings": {
-				"foreground": "#e4db8e"
+				"foreground": "#FF8F2C"
 			}
 		},
 		{
@@ -208,14 +208,7 @@
 				"entity.name.scope-resolution"
 			],
 			"settings": {
-				"foreground": "#73b0ee"
-			}
-		},
-		{
-			"name": "Inherited class",
-			"scope": "entity.other.inherited-class",
-			"settings": {
-				"foreground": "#73b0ee"
+				"foreground": "#a8d177"
 			}
 		},
 		{
@@ -231,7 +224,7 @@
 				"variable.language",
 			],
 			"settings": {
-				"foreground": "#23c380"
+				"foreground": "#C0966A"
 			}
 		},
 		{
@@ -252,7 +245,7 @@
 			"name": "Library function",
 			"scope": "support.function",
 			"settings": {
-				"foreground": "#9292ff"
+				"foreground": "#73b0ee"
 			}
 		},
 		{
@@ -269,7 +262,7 @@
 				"support.class"
 			],
 			"settings": {
-				"foreground": "#73b0ee"
+				"foreground": "#23C380"
 			}
 		},
 		{
@@ -486,7 +479,7 @@
 				"markup.fenced_code.block.markdown"
 			],
 			"settings": {
-				"foreground": "#a8d177"
+				"foreground": "#23C380"
 			}
 		},
 	],
