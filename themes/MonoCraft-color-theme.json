@@ -102,10 +102,10 @@
 	rogue:			#e4db8e		10.5		flow control and operator
 	warrior:		#c0966a		5.5			type declaration
 	shaman:			#73b0ee		6.5			class and JSX tag
-	hunter:			#9CC56B		7.5			string literal
+	hunter:			#a8d177		8.5			string literal
 	monk:			#23C380		6.5			this
 	druid:			#ff8f2c		6.5			number literal
-	warlock:		#a3a3ff		6.5			framework function
+	warlock:		#9292ff		5.5			framework function
 	paladin:		#ffacd0		8.5			tag attribution
 	deathknight:	#FF6D85		5.5			interpolation
 	demonhunter:	#DB70FF		5.5			boolean
@@ -137,7 +137,7 @@
 			"name": "String",
 			"scope": "string",
 			"settings": {
-				"foreground": "#9cc56b"
+				"foreground": "#a8d177"
 			}
 		},
 		{
@@ -168,7 +168,7 @@
 			"name": "User-defined constant",
 			"scope": "constant.character, constant.other",
 			"settings": {
-				"foreground": "#a3a3ff"
+				"foreground": "#9292ff"
 			}
 		},
 		{
@@ -252,14 +252,14 @@
 			"name": "Library function",
 			"scope": "support.function",
 			"settings": {
-				"foreground": "#a3a3ff"
+				"foreground": "#9292ff"
 			}
 		},
 		{
 			"name": "Library constant",
 			"scope": "support.constant",
 			"settings": {
-				"foreground": "#a3a3ff"
+				"foreground": "#9292ff"
 			}
 		},
 		{
@@ -327,7 +327,7 @@
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
-				"foreground": "#a3a3ffA0"
+				"foreground": "#9292ffA0"
 			}
 		},
 		{
@@ -486,7 +486,7 @@
 				"markup.fenced_code.block.markdown"
 			],
 			"settings": {
-				"foreground": "#9CC56B"
+				"foreground": "#a8d177"
 			}
 		},
 	],
