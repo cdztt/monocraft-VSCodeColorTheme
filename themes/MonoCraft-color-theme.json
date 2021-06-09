@@ -99,7 +99,7 @@
 	/*
 	priest: 		#e4e2e2		11.5		variant
 	mage: 			#8be6ff		10.5		function
-	rogue:			#dfd15b		9.5			flow control and operator
+	rogue:			#d1c75d		8.5			flow control and operator
 	warrior:		#ceb499		7.5			type declaration
 	shaman:			#53a9ff		6.0			class and JSX tag
 	hunter:			#7fc524		7.0			string literal
@@ -189,21 +189,21 @@
 			"name": "Keyword",
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#dfd15b"
+				"foreground": "#d1c75d"
 			}
 		},
 		{
 			"name": "modifier",
 			"scope": "storage.modifier",
 			"settings": {
-				"foreground": "#dfd15b"
+				"foreground": "#d1c75d"
 			}
 		},
 		{
 			"name": "Storage type",
 			"scope": "storage.type",
 			"settings": {
-				"foreground": "#dfd15b"
+				"foreground": "#d1c75d"
 			}
 		},
 		{
