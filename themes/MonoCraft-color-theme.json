@@ -475,7 +475,8 @@
 				"punctuation.definition",
 				"punctuation.accessor",
 				"keyword.operator.type.annotation.ts",
-				"meta.brace"
+				"meta.brace",
+				"text.html.markdown"
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
