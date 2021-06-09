@@ -99,13 +99,13 @@
 	/*
 	priest: 		#e4e2e2		11.5		variant
 	mage: 			#8be6ff		10.5		function
-	rogue:			#e4db8e		10.5		flow control and operator
-	warrior:		#c0966a		5.5			type declaration
-	shaman:			#73b0ee		6.5			class and JSX tag
-	hunter:			#a8d177		8.5			string literal
+	rogue:			#dfd15b		9.5			flow control and operator
+	warrior:		#ceb499		7.5			type declaration
+	shaman:			#53a9ff		6.0			class and JSX tag
+	hunter:			#7fc524		7.0			string literal
 	monk:			#23C380		6.5			this
-	druid:			#ff8f2c		6.5			number literal
-	warlock:		#9292ff		5.5			framework function
+	druid:			#ffac64		8.0			number literal
+	warlock:		#b8b8ff		8.0			framework function
 	paladin:		#ffacd0		8.5			tag attribution
 	deathknight:	#FF6D85		5.5			interpolation
 	demonhunter:	#DB70FF		5.5			boolean
@@ -135,9 +135,12 @@
 		},
 		{
 			"name": "String",
-			"scope": "string",
+			"scope": [
+				"string",
+				"punctuation.definition.string"
+			],
 			"settings": {
-				"foreground": "#e4db8e"
+				"foreground": "#ceb499"
 			}
 		},
 		{
@@ -147,14 +150,14 @@
 				"punctuation.section.embedded"
 			],
 			"settings": {
-				"foreground": "#FF6D85"
+				"foreground": "#e4e2e2"
 			}
 		},
 		{
 			"name": "Number",
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#DB70FF"
+				"foreground": "#FF6D85"
 			}
 		},
 		{
@@ -168,7 +171,7 @@
 			"name": "User-defined constant",
 			"scope": "constant.character, constant.other",
 			"settings": {
-				"foreground": "#9292ff"
+				"foreground": "#b8b8ff"
 			}
 		},
 		{
@@ -186,21 +189,21 @@
 			"name": "Keyword",
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#FF8F2C"
+				"foreground": "#dfd15b"
 			}
 		},
 		{
 			"name": "modifier",
 			"scope": "storage.modifier",
 			"settings": {
-				"foreground": "#c0966a"
+				"foreground": "#dfd15b"
 			}
 		},
 		{
 			"name": "Storage type",
 			"scope": "storage.type",
 			"settings": {
-				"foreground": "#c0966a"
+				"foreground": "#dfd15b"
 			}
 		},
 		{
@@ -212,7 +215,7 @@
 				"entity.name.scope-resolution"
 			],
 			"settings": {
-				"foreground": "#a8d177"
+				"foreground": "#7fc524"
 			}
 		},
 		{
@@ -226,14 +229,14 @@
 			"name": "this super",
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#C0966A"
+				"foreground": "#ffac64"
 			}
 		},
 		{
 			"name": "Tag name",
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#73b0ee"
+				"foreground": "#53a9ff"
 			}
 		},
 		{
@@ -247,14 +250,17 @@
 			"name": "Library function",
 			"scope": "support.function",
 			"settings": {
-				"foreground": "#73b0ee"
+				"foreground": "#53a9ff"
 			}
 		},
 		{
 			"name": "Library constant",
-			"scope": "support.constant",
+			"scope": [
+				"support.constant",
+				"variable.other.readwrite"
+			],
 			"settings": {
-				"foreground": "#9292ff"
+				"foreground": "#b8b8ff"
 			}
 		},
 		{
@@ -316,19 +322,19 @@
 			"name": "diff.changed",
 			"scope": "markup.changed",
 			"settings": {
-				"foreground": "#ff8f2c"
+				"foreground": "#ffac64"
 			}
 		},
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
-				"foreground": "#9292ffA0"
+				"foreground": "#b8b8ffA0"
 			}
 		},
 		{
 			"scope": "entity.name.filename.find-in-files",
 			"settings": {
-				"foreground": "#ff8f2c"
+				"foreground": "#ffac64"
 			}
 		},
 		{
@@ -342,7 +348,7 @@
 			"name": "Markup Lists",
 			"scope": "markup.list",
 			"settings": {
-				"foreground": "#ff8f2c"
+				"foreground": "#ffac64"
 			}
 		},
 		{
@@ -356,7 +362,7 @@
 			"name": "Markup Inline",
 			"scope": "markup.inline.raw",
 			"settings": {
-				"foreground": "#FF8F2C"
+				"foreground": "#ffac64"
 			}
 		},
 		{
@@ -409,7 +415,7 @@
 			"name": "Markdown Underline Link/Image",
 			"scope": "markup.underline.link.markdown,markup.underline.link.image.markdown",
 			"settings": {
-				"foreground": "#ff8f2c"
+				"foreground": "#ffac64"
 			}
 		},
 		{
