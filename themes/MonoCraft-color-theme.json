@@ -147,7 +147,7 @@
 				"punctuation.section.embedded"
 			],
 			"settings": {
-				"foreground": "#ff8f2c"
+				"foreground": "#FF6D85"
 			}
 		},
 		{
@@ -184,12 +184,16 @@
 		},
 		{
 			"name": "Keyword",
-			"scope": [
-				"keyword",
-				"storage.modifier"
-			],
+			"scope": "keyword",
 			"settings": {
 				"foreground": "#FF8F2C"
+			}
+		},
+		{
+			"name": "modifier",
+			"scope": "storage.modifier",
+			"settings": {
+				"foreground": "#c0966a"
 			}
 		},
 		{
@@ -220,9 +224,7 @@
 		},
 		{
 			"name": "this super",
-			"scope": [
-				"variable.language",
-			],
+			"scope": "variable.language",
 			"settings": {
 				"foreground": "#C0966A"
 			}
