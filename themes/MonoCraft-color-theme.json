@@ -108,7 +108,7 @@
 	warlock:		#b8b8ff		8.0			framework function
 	paladin:		#ffacd0		8.5			tag attribution
 	deathknight:	#FF6D85		5.5			interpolation
-	demonhunter:	#DB70FF		5.5			boolean
+	demonhunter:	#d990f1		6.5			boolean
 	*/
 	"tokenColors": [
 		{
@@ -164,7 +164,7 @@
 			"name": "Built-in constant",
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#DB70FF"
+				"foreground": "#d990f1"
 			}
 		},
 		{
