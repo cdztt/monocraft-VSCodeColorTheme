@@ -124,6 +124,9 @@
 			"name": "Comment",
 			"scope": [
 				"comment",
+				"punctuation.definition.block.tag",
+				"punctuation.definition.bracket.curly",
+				"punctuation.definition.bracket",
 				"punctuation.definition.comment",
 				"storage.type.class.jsdoc",
 				"entity.name.type.instance.jsdoc",
@@ -150,7 +153,7 @@
 				"punctuation.section.embedded"
 			],
 			"settings": {
-				"foreground": "#e4e2e2"
+				"foreground": "#FFACD0"
 			}
 		},
 		{
