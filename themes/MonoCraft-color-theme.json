@@ -479,7 +479,8 @@
 				"punctuation.accessor",
 				"keyword.operator.type.annotation.ts",
 				"meta.brace",
-				"text.html.markdown"
+				"text.html.markdown",
+				"text.html.derivative"
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
