@@ -472,6 +472,7 @@
 			"name": "punctuation",
 			"scope": [
 				"meta.property-value.css",
+				"source.css",
 				"punctuation.section.property-list",
 				"punctuation.separator",
 				"punctuation.terminator",
