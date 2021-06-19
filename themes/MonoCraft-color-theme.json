@@ -103,7 +103,7 @@
 	warrior:		#ceb499		7.5			type declaration
 	shaman:			#53a9ff		6.0			class and JSX tag
 	hunter:			#7fc524		7.0			string literal
-	monk:			#23C380		6.5			this
+	monk:			#28ca87		7.0			this
 	druid:			#ffac64		8.0			number literal
 	warlock:		#b8b8ff		8.0			framework function
 	paladin:		#ffacd0		8.5			tag attribution
@@ -273,7 +273,7 @@
 				"support.class"
 			],
 			"settings": {
-				"foreground": "#23C380"
+				"foreground": "#28ca87"
 			}
 		},
 		{
@@ -494,7 +494,7 @@
 				"markup.fenced_code.block.markdown"
 			],
 			"settings": {
-				"foreground": "#23C380"
+				"foreground": "#28ca87"
 			}
 		},
 	],
