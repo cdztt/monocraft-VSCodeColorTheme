@@ -483,7 +483,8 @@
 				"text.html.markdown",
 				"text.html.derivative",
 				"JSXNested",
-                "text.html.vue-html"
+                "text.html.vue-html",
+                "meta.delimiter.comma.js"
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
