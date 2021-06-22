@@ -482,7 +482,8 @@
 				"meta.brace",
 				"text.html.markdown",
 				"text.html.derivative",
-				"JSXNested"
+				"JSXNested",
+                "text.html.vue-html"
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
