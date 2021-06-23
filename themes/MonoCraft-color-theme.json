@@ -105,7 +105,7 @@
 	hunter:			#7fc524		7.0			string literal
 	monk:			#28ca87		7.0			this
 	druid:			#ffac64		8.0			number literal
-	warlock:		#b8b8ff		8.0			framework function
+	warlock:		#b1b1ff		7.5			framework function
 	paladin:		#ffacd0		8.5			tag attribution
 	deathknight:	#FF6D85		5.5			interpolation
 	demonhunter:	#df7dff		6.0			boolean
@@ -174,7 +174,7 @@
 			"name": "User-defined constant",
 			"scope": "constant.character, constant.other",
 			"settings": {
-				"foreground": "#b8b8ff"
+				"foreground": "#b1b1ff"
 			}
 		},
 		{
@@ -263,7 +263,7 @@
 				"variable.other.readwrite"
 			],
 			"settings": {
-				"foreground": "#b8b8ff"
+				"foreground": "#b1b1ff"
 			}
 		},
 		{
@@ -331,7 +331,7 @@
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
-				"foreground": "#b8b8ffA0"
+				"foreground": "#b1b1ffA0"
 			}
 		},
 		{
