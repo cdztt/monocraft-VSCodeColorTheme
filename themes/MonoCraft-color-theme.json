@@ -150,7 +150,8 @@
 			"name": "Template Definition",
 			"scope": [
 				"punctuation.definition.template-expression",
-				"punctuation.section.embedded"
+				"punctuation.section.embedded",
+                "punctuation.quasi.element"
 			],
 			"settings": {
 				"foreground": "#FFACD0"
