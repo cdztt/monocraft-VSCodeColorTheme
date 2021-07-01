@@ -99,7 +99,7 @@
 	/*
 	priest: 		#e4e2e2		11.5		variant
 	mage: 			#8be6ff		10.5		function
-	rogue:			#d6cd65		9.0			keyword and operator
+	rogue:			#ccc148		8.0			keyword and operator
 	warrior:		#c29e79		6.0			string literal
 	shaman:			#53a9ff		6.0			html tag
 	hunter:			#7fc524		7.0			type declaration
@@ -193,21 +193,21 @@
 			"name": "Keyword",
 			"scope": "keyword",
 			"settings": {
-				"foreground": "#d6cd65"
+				"foreground": "#ccc148"
 			}
 		},
 		{
 			"name": "modifier",
 			"scope": "storage.modifier",
 			"settings": {
-				"foreground": "#d6cd65"
+				"foreground": "#ccc148"
 			}
 		},
 		{
 			"name": "Storage type",
 			"scope": "storage.type",
 			"settings": {
-				"foreground": "#d6cd65"
+				"foreground": "#ccc148"
 			}
 		},
 		{
