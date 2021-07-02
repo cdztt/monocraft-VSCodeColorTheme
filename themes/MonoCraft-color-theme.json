@@ -99,15 +99,15 @@
 	/*
 	priest: 		#e4e2e2		11.5		variant and tag attribution
 	mage: 			#8be6ff		10.5		function
-	rogue:			#d6cd65		9.0			keyword and operator and interpolation
-    rogue-stealth:  #99903a     4.5         type
-	paladin:		#ffa3cb		8.0         operator
+	rogue:			#e4d12e		9.5			keyword
+    rogue-stealth:  #a3982f     5.0         type
+	paladin:		#ffa3cb		8.0         operator and interpolation
 	warrior:		#C0966A		5.5			string literal
-	shaman:			#53a9ff		6.0			variable.other.readwrite
-	hunter:			#72c00d		6.5			type declaration and html tag
-	monk:			#00bd6e		6.0			class and type
+	shaman:			#53a9ff		6.0			class
+	hunter:			#7FC524		7.0			html tag
+	monk:			#00bd6e		6.0			support.class
 	druid:			#ff8317		6.0         number literal
-	warlock:		#9b9bbb		5.5         constant.other
+	warlock:		#9393bb		5.0         constant.other
     /*deprecated
 	deathknight:	#FF6D85		5.5
 	demonhunter:	#c27ada		5.0
@@ -149,14 +149,15 @@
 			}
 		},
 		{
-			"name": "Template Definition",
+			"name": "Template Definition and interpolation",
 			"scope": [
 				"punctuation.definition.template-expression",
 				"punctuation.section.embedded",
-                "punctuation.quasi.element"
+                "punctuation.quasi.element",
+                "punctuation.definition.quasi"
 			],
 			"settings": {
-				"foreground": "#d6cd65"
+				"foreground": "#ffa3cb"
 			}
 		},
 		{
@@ -177,7 +178,7 @@
 			"name": "User-defined constant",
 			"scope": "constant.character, constant.other",
 			"settings": {
-				"foreground": "#9b9bbb"
+				"foreground": "#9393bb"
 			}
 		},
 		{
@@ -195,25 +196,24 @@
 			"name": "Keyword",
 			"scope": [
                 "keyword",
-                "punctuation.definition.quasi",
                 "storage.type.function.arrow"
             ],
 			"settings": {
-				"foreground": "#d6cd65"
+				"foreground": "#e4d12e"
 			}
 		},
 		{
 			"name": "modifier",
 			"scope": "storage.modifier",
 			"settings": {
-				"foreground": "#d6cd65"
+				"foreground": "#e4d12e"
 			}
 		},
 		{
 			"name": "Storage type",
 			"scope": "storage.type",
 			"settings": {
-				"foreground": "#99903a"
+				"foreground": "#a3982f"
 			}
 		},
         {
@@ -221,6 +221,18 @@
 			"scope": "keyword.operator",
 			"settings": {
 				"foreground": "#ffa3cb",
+			}
+		},
+        {
+			"name": "assignment",
+			"scope": [
+                "keyword.operator.assignment",
+                "keyword.operator.comparison",
+                "keyword.operator.relational",
+            ],
+			"settings": {
+				"foreground": "#ffa3cb",
+                "fontStyle": "bold"
 			}
 		},
 		{
@@ -232,7 +244,7 @@
 				"entity.name.scope-resolution"
 			],
 			"settings": {
-				"foreground": "#72c00d"
+				"foreground": "#53a9ff"
 			}
 		},
 		{
@@ -253,7 +265,7 @@
 			"name": "Tag name",
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#72c00d"
+				"foreground": "#7FC524"
 			}
 		},
 		{
@@ -273,8 +285,7 @@
 		{
 			"name": "Library constant",
 			"scope": [
-				"support.constant",
-				"variable.other.readwrite"
+				"support.constant"
 			],
 			"settings": {
 				"foreground": "#53A9FF"
@@ -345,7 +356,7 @@
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
-				"foreground": "#9b9bbbA0"
+				"foreground": "#9393bbA0"
 			}
 		},
 		{
@@ -493,6 +504,7 @@
 				"punctuation.definition",
 				"punctuation.accessor",
 				"keyword.operator.type.annotation.ts",
+                "keyword.operator.accessor",
 				"meta.brace",
 				"text.html.markdown",
 				"text.html.derivative",
