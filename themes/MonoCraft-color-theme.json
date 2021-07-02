@@ -100,16 +100,16 @@
 	priest: 		#e4e2e2		11.5		variant and tag attribution
 	mage: 			#8be6ff		10.5		function
 	rogue:			#d6cd65		9.0			keyword and operator and interpolation
-    rogue:          #99903a     4.5         type
+    rogue-stealth:  #99903a     4.5         type
+	paladin:		#ffa3cb		8.0         operator
 	warrior:		#C0966A		5.5			string literal
-	shaman:			#53a9ff		6.0			constant
+	shaman:			#53a9ff		6.0			variable.other.readwrite
 	hunter:			#72c00d		6.5			type declaration and html tag
 	monk:			#00bd6e		6.0			class and type
-	deathknight:	#FF6D85		5.5			number literal
-
-	druid:			#f1a96a		7.5
-	warlock:		#aaaaff		7.0
-	paladin:		#ffacd0		8.5
+	druid:			#ff8317		6.0         number literal
+	warlock:		#9b9bbb		5.5         constant.other
+    /*deprecated
+	deathknight:	#FF6D85		5.5
 	demonhunter:	#c27ada		5.0
 	*/
 	"tokenColors": [
@@ -163,21 +163,21 @@
 			"name": "Number",
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#FF6D85"
+				"foreground": "#ff8317"
 			}
 		},
 		{
 			"name": "Built-in constant",
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#FF6D85"
+				"foreground": "#ff8317"
 			}
 		},
 		{
 			"name": "User-defined constant",
 			"scope": "constant.character, constant.other",
 			"settings": {
-				"foreground": "#aaaaff"
+				"foreground": "#9b9bbb"
 			}
 		},
 		{
@@ -216,13 +216,13 @@
 				"foreground": "#99903a"
 			}
 		},
-        //{
-		//	"name": "operator",
-		//	"scope": "keyword.operator",
-		//	"settings": {
-		//		"foreground": "#ffacd0"
-		//	}
-		//},
+        {
+			"name": "operator",
+			"scope": "keyword.operator",
+			"settings": {
+				"foreground": "#ffa3cb",
+			}
+		},
 		{
 			"name": "Class name",
 			"scope": [
@@ -339,19 +339,19 @@
 			"name": "diff.changed",
 			"scope": "markup.changed",
 			"settings": {
-				"foreground": "#f1a96a"
+				"foreground": "#ff8317"
 			}
 		},
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
-				"foreground": "#aaaaffA0"
+				"foreground": "#9b9bbbA0"
 			}
 		},
 		{
 			"scope": "entity.name.filename.find-in-files",
 			"settings": {
-				"foreground": "#f1a96a"
+				"foreground": "#ff8317"
 			}
 		},
 		{
@@ -365,7 +365,7 @@
 			"name": "Markup Lists",
 			"scope": "markup.list",
 			"settings": {
-				"foreground": "#f1a96a"
+				"foreground": "#ff8317"
 			}
 		},
 		{
@@ -379,7 +379,7 @@
 			"name": "Markup Inline",
 			"scope": "markup.inline.raw",
 			"settings": {
-				"foreground": "#f1a96a"
+				"foreground": "#ff8317"
 			}
 		},
 		{
@@ -432,7 +432,7 @@
 			"name": "Markdown Underline Link/Image",
 			"scope": "markup.underline.link.markdown,markup.underline.link.image.markdown",
 			"settings": {
-				"foreground": "#f1a96a"
+				"foreground": "#ff8317"
 			}
 		},
 		{
