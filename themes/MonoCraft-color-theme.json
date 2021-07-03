@@ -104,12 +104,12 @@
 	paladin:		#eb9abe		7.0         operator and interpolation
 	warrior:		#C0966A		5.5			string literal
 	shaman:			#53a9ff		6.0			support function
-	hunter:			#7FC524		7.0			html tag
+	hunter:			#7fbd34		6.5			html tag
 	monk:			#00bd6e		6.0			class
+	warlock:		#9191ca		5.0         language variable and this
 	druid:			#ff8317		6.0         number literal
-	warlock:		#9191ca		5.0         language variable
-	deathknight:	#FF6D85		5.5         constant
-	demonhunter:	#b983c0		5.0         this
+	demonhunter:	#b983c0		5.0         language constant
+	deathknight:	#FF6D85		5.5         other constant
 	*/
 	"tokenColors": [
 		{
@@ -171,7 +171,7 @@
 			"name": "Built-in constant",
 			"scope": "constant.language",
 			"settings": {
-				"foreground": "#ff8317"
+				"foreground": "#b983c0"
 			}
 		},
 		{
@@ -256,13 +256,6 @@
 			}
 		},
 		{
-			"name": "this",
-			"scope": "variable.language.this",
-			"settings": {
-				"foreground": "#b983c0",
-			}
-		},
-		{
 			"name": "language variable",
 			"scope": "variable.language",
 			"settings": {
@@ -273,7 +266,7 @@
 			"name": "Tag name",
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#7FC524"
+				"foreground": "#7fbd34"
 			}
 		},
 		{
