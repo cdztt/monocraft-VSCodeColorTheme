@@ -184,9 +184,8 @@
 		{
 			"name": "Variable",
 			"scope": [
-				"variable",
-				"meta.object-literal.key.js",
-				"meta.method.declaration.js"
+                "variable.other",
+                "string.unquoted"
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
@@ -241,7 +240,8 @@
 				"entity.name.type",
 				"entity.name.class",
 				"entity.name.namespace",
-				"entity.name.scope-resolution"
+				"entity.name.scope-resolution",
+				"support.type",
 			],
 			"settings": {
 				"foreground": "#53a9ff"
@@ -279,23 +279,22 @@
 			"name": "Library function",
 			"scope": "support.function",
 			"settings": {
-				"foreground": "#53A9FF"
+				"foreground": "#8be6ff"
 			}
 		},
 		{
 			"name": "Library constant",
 			"scope": [
-				"support.constant"
+				"support.constant",
 			],
 			"settings": {
 				"foreground": "#53A9FF"
 			}
 		},
 		{
-			"name": "Library class/type",
+			"name": "Library class",
 			"scope": [
-				"support.type",
-				"support.class"
+				"support.class",
 			],
 			"settings": {
 				"foreground": "#00bd6e"
@@ -503,14 +502,12 @@
 				"punctuation.terminator",
 				"punctuation.definition",
 				"punctuation.accessor",
-				"keyword.operator.type.annotation.ts",
-                "keyword.operator.accessor",
 				"meta.brace",
 				"text.html.markdown",
 				"text.html.derivative",
 				"JSXNested",
                 "text.html.vue-html",
-                "meta.delimiter.comma.js"
+                "meta.delimiter.comma.js",
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
@@ -526,5 +523,5 @@
 			}
 		},
 	],
-	"semanticHighlighting": true
+	//"semanticHighlighting": true
 }
