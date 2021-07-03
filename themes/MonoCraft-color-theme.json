@@ -103,9 +103,9 @@
     rogue-stealth:  #a3982f     5.0         type
 	paladin:		#ffa3cb		8.0         operator and interpolation
 	warrior:		#C0966A		5.5			string literal
-	shaman:			#53a9ff		6.0			class
+	shaman:			#53a9ff		6.0			support function
 	hunter:			#7FC524		7.0			html tag
-	monk:			#00bd6e		6.0			support.class
+	monk:			#00bd6e		6.0			class
 	druid:			#ff8317		6.0         number literal
 	warlock:		#9393bb		5.0         this
 	deathknight:	#FF6D85		5.5         constant
@@ -228,6 +228,7 @@
                 "keyword.operator.assignment",
                 "keyword.operator.comparison",
                 "keyword.operator.relational",
+                "keyword.operator.arithmetic"
             ],
 			"settings": {
 				"foreground": "#ffa3cb",
@@ -508,7 +509,7 @@
 				"text.html.derivative",
 				"JSXNested",
                 "text.html.vue-html",
-                "meta.delimiter.comma.js",
+                "meta.delimiter",
 			],
 			"settings": {
 				"foreground": "#e4e2e2"
