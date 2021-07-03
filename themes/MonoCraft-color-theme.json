@@ -107,9 +107,9 @@
 	hunter:			#7FC524		7.0			html tag
 	monk:			#00bd6e		6.0			support.class
 	druid:			#ff8317		6.0         number literal
-	warlock:		#9393bb		5.0         constant.other
+	warlock:		#9393bb		5.0         this
+	deathknight:	#FF6D85		5.5         constant
     /*deprecated
-	deathknight:	#FF6D85		5.5
 	demonhunter:	#c27ada		5.0
 	*/
 	"tokenColors": [
@@ -178,7 +178,7 @@
 			"name": "User-defined constant",
 			"scope": "constant.character, constant.other",
 			"settings": {
-				"foreground": "#9393bb"
+				"foreground": "#FF6D85"
 			}
 		},
 		{
@@ -258,7 +258,8 @@
 			"name": "this",
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#E4E2E2"
+				"foreground": "#9393bb",
+                "fontStyle": "italic"
 			}
 		},
 		{
