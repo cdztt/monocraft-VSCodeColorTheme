@@ -101,20 +101,20 @@
 	mage: 			#8be6ff		10.5		function
 	rogue:			#e4d12e		9.5			keyword
     rogue-stealth:  #a3982f     5.0         type
-	paladin:		#ffa3cb		8.0         operator and interpolation
+	paladin:		#eb9abe		7.0         operator and interpolation
 	warrior:		#C0966A		5.5			string literal
 	shaman:			#53a9ff		6.0			support function
 	hunter:			#7FC524		7.0			html tag
 	monk:			#00bd6e		6.0			class
 	druid:			#ff8317		6.0         number literal
-	warlock:		#9393bb		5.0         this
+	warlock:		#9191ca		5.0         language variable
 	deathknight:	#FF6D85		5.5         constant
-    /*deprecated
-	demonhunter:	#c27ada		5.0
+	demonhunter:	#b983c0		5.0         this
 	*/
 	"tokenColors": [
 		{
 			"scope": [
+                "source",
 				"meta.embedded",
 				"source.groovy.embedded"
 			],
@@ -142,7 +142,8 @@
 			"name": "String",
 			"scope": [
 				"string",
-				"punctuation.definition.string"
+				"punctuation.definition.string",
+                "punctuation.definition.quasi"
 			],
 			"settings": {
 				"foreground": "#C0966A"
@@ -154,10 +155,9 @@
 				"punctuation.definition.template-expression",
 				"punctuation.section.embedded",
                 "punctuation.quasi.element",
-                "punctuation.definition.quasi"
 			],
 			"settings": {
-				"foreground": "#ffa3cb"
+				"foreground": "#eb9abe"
 			}
 		},
 		{
@@ -219,7 +219,7 @@
 			"name": "operator",
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#ffa3cb",
+				"foreground": "#eb9abe",
 			}
 		},
         {
@@ -231,7 +231,7 @@
                 "keyword.operator.arithmetic"
             ],
 			"settings": {
-				"foreground": "#ffa3cb",
+				"foreground": "#eb9abe",
                 "fontStyle": "bold"
 			}
 		},
@@ -257,10 +257,16 @@
 		},
 		{
 			"name": "this",
+			"scope": "variable.language.this",
+			"settings": {
+				"foreground": "#b983c0",
+			}
+		},
+		{
+			"name": "language variable",
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#9393bb",
-                "fontStyle": "italic"
+				"foreground": "#9191ca",
 			}
 		},
 		{
@@ -357,7 +363,7 @@
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
-				"foreground": "#9393bbA0"
+				"foreground": "#9191caA0"
 			}
 		},
 		{
@@ -500,6 +506,7 @@
 				"meta.property-value.css",
 				"source.css",
 				"punctuation.section.property-list",
+                "punctuation.section.class",
 				"punctuation.separator",
 				"punctuation.terminator",
 				"punctuation.definition",
