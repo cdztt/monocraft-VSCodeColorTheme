@@ -228,7 +228,8 @@
                 "keyword.operator.assignment",
                 "keyword.operator.comparison",
                 "keyword.operator.relational",
-                "keyword.operator.arithmetic"
+                "keyword.operator.arithmetic",
+                "keyword.operator.ternary"
             ],
 			"settings": {
 				"foreground": "#eb9abe",
