@@ -19,7 +19,8 @@
 		"minimap.selectionHighlight": "#878b9180",
 		"editor.wordHighlightBackground": "#4a4a7680",
 		"editor.wordHighlightStrongBackground": "#6a6a9680",
-		"editor.lineHighlightBackground": "#3e3d32",
+		"editor.lineHighlightBackground": "#1715027a",/* new color */
+		//"editor.lineHighlightBackground": "#3e3d32",/* original color*/
 		"editorLineNumber.activeForeground": "#c2c2bf",
 		"editorCursor.foreground": "#f8f8f0",
 		"editorWhitespace.foreground": "#464741",
@@ -195,7 +196,9 @@
 			"name": "Keyword",
 			"scope": [
                 "keyword",
-                "storage.type.function.arrow"
+                "storage.type.function.arrow",
+                "storage.type.function",
+                "storage.type.class"
             ],
 			"settings": {
 				"foreground": "#e4d12e"
@@ -210,7 +213,9 @@
 		},
 		{
 			"name": "Storage type",
-			"scope": "storage.type",
+			"scope": [
+                "storage.type",
+            ],
 			"settings": {
 				"foreground": "#a3982f"
 			}
@@ -251,7 +256,10 @@
 		},
 		{
 			"name": "Function name",
-			"scope": "entity.name.function",
+			"scope": [
+                "entity.name.function",
+                "meta.function-call.generic"
+            ],
 			"settings": {
 				"foreground": "#8be6ff"
 			}
@@ -442,7 +450,7 @@
 		},
 		{
 			"name": "Markdown Underline Link/Image",
-			"scope": "markup.underline.link.markdown,markup.underline.link.image.markdown",
+			"scope": "markup.underline.link.markdown, markup.underline.link.image.markdown",
 			"settings": {
 				"foreground": "#ff8317"
 			}
@@ -500,6 +508,7 @@
 				"meta.property-value.css",
 				"source.css",
 				"punctuation.section.property-list",
+                "punctuation.section.function",
                 "punctuation.section.class",
 				"punctuation.separator",
 				"punctuation.terminator",
