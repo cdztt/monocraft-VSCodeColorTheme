@@ -19,9 +19,7 @@
 		"minimap.selectionHighlight": "#878b9180",
 		"editor.wordHighlightBackground": "#4a4a7680",
 		"editor.wordHighlightStrongBackground": "#6a6a9680",
-		"editor.lineHighlightBackground": "#1e1f1c",/* as same as some original color e.g. sidebar */
-		//"editor.lineHighlightBackground": "#1715027a",/* custom color */
-		//"editor.lineHighlightBackground": "#3e3d32",/* original color*/
+		"editor.lineHighlightBackground": "#1e1f1c",/*changed to the color as same as others e.g. sidebar, it's original color is #3e3d32*/
 		"editorLineNumber.activeForeground": "#c2c2bf",
 		"editorCursor.foreground": "#f8f8f0",
 		"editorWhitespace.foreground": "#464741",
