@@ -105,7 +105,7 @@
 	warrior:		#C0966A		5.5			string literal
 	shaman:			#53a9ff		6.0			support function
 	hunter:			#7fbd34		6.5			html tag
-	monk:			#00bd6e		6.0			class
+	monk:			#00cb77		7.0			class
 	warlock:		#9191ca		5.0         language variable and this
 	druid:			#ff8317		6.0         number literal
 	demonhunter:	#b983c0		5.0         language constant
@@ -306,7 +306,7 @@
 				"support.class",
 			],
 			"settings": {
-				"foreground": "#00bd6e"
+				"foreground": "#00cb77"
 			}
 		},
 		{
@@ -530,7 +530,7 @@
 				"markup.fenced_code.block.markdown"
 			],
 			"settings": {
-				"foreground": "#00bd6e"
+				"foreground": "#00cb77"
 			}
 		},
 	],
