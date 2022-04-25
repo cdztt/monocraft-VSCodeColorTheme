@@ -195,12 +195,21 @@
 			"name": "Keyword",
 			"scope": [
                 "keyword",
-                "storage.type.function.arrow",
                 "storage.type.function",
                 "storage.type.class"
             ],
 			"settings": {
 				"foreground": "#e4d12e"
+			}
+		},
+        {
+			"name": "arrow function",
+			"scope": [
+                "storage.type.function.arrow",
+            ],
+			"settings": {
+				"foreground": "#e4d12e",
+                "fontStyle": "bold"
 			}
 		},
 		{
