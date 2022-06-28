@@ -14,11 +14,13 @@
 		"editor.background": "#272822",
 		"editor.foreground": "#f8f8f2",
 		"selection.background": "#878b9180",
+		"minimap.selectionHighlight": "#878b9180",
 		"editor.selectionHighlightBackground": "#575b6180",
 		"editor.selectionBackground": "#878b9180",
-		"minimap.selectionHighlight": "#878b9180",
+        "editor.findMatchHighlightBackground": "#575b6180",//新加，统一find和selection
+        "editor.findMatchBackground": "#878b9180",//新加，统一find和selection
 		"editor.wordHighlightBackground": "#4a4a7680",
-		"editor.wordHighlightStrongBackground": "#6a6a9680",
+		//"editor.wordHighlightStrongBackground": "#6a6a9680",//作用域里第一个定义的变量
 		"editor.lineHighlightBackground": "#1e1f1c",/*changed to the color as same as others e.g. sidebar, it's original color is #3e3d32*/
 		"editorLineNumber.activeForeground": "#c2c2bf",
 		"editorCursor.foreground": "#f8f8f0",
