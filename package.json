@@ -3,6 +3,11 @@
     "displayName": "MonoCraft",
     "description": "a Monokai theme with lower contrast and none font style",
     "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/enoughtallisymcrift/monocraft-VSCodeColorTheme.git"
+    },
+    "license": "MIT",
     "engines": {
         "vscode": "^1.56.0"
     },
