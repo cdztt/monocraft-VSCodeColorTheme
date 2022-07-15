@@ -1,5 +1,4 @@
 node_modules
-*.vsix
 .vscode/**
 .vscode-test/**
 vsc-extension-quickstart.md
