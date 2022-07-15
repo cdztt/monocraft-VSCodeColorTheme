@@ -251,25 +251,25 @@
 			"scope": "keyword.operator",
 			"settings": {
 				//"foreground": "#eb9abe",
+				"foreground": "#d490ae"
+			}
+		},
+        {
+			"name": "assignment",
+			"scope": [
+                "keyword.operator.assignment",
+                "keyword.operator.comparison",
+                "keyword.operator.relational",
+                "keyword.operator.arithmetic",
+                "keyword.operator.ternary",
+                "keyword.operator.logical"
+            ],
+			"settings": {
+				//"foreground": "#eb9abe",
 				"foreground": "#d490ae",
                 "fontStyle": "bold"
 			}
 		},
-        //{
-		//	"name": "assignment",
-		//	"scope": [
-        //        "keyword.operator.assignment",
-        //        "keyword.operator.comparison",
-        //        "keyword.operator.relational",
-        //        "keyword.operator.arithmetic",
-        //        "keyword.operator.ternary"
-        //    ],
-		//	"settings": {
-		//		//"foreground": "#eb9abe",
-		//		"foreground": "#d490ae",
-        //        "fontStyle": "bold"
-		//	}
-		//},
 		{
 			"name": "Class name",
 			"scope": [
