@@ -12,18 +12,20 @@
 		"list.highlightForeground": "#f8f8f2",
 		"button.background": "#75715E",
 		"editor.background": "#272822",
+		//"editor.background": "#2B00FF",
 		"editor.foreground": "#f8f8f2",
 		"selection.background": "#878b9180",
 		"minimap.selectionHighlight": "#878b9180",
 		"editor.selectionHighlightBackground": "#575b6180",
 		"editor.selectionBackground": "#878b9180",
+		//"editor.selectionBackground": "#95753b80",
         "editor.findMatchHighlightBackground": "#575b6180",//统一find和selection
         "editor.findMatchBackground": "#878b9180",//统一find和selection
         "editor.findMatchBorder": "#878b91",//给find选中加边框
 		"editor.wordHighlightBackground": "#4a4a7680",
         //wordHighlightStrongBackground是作用域里第一个定义的变量，原始值#6a6a9680
 		"editor.wordHighlightStrongBackground": "#4a4a7680",//改成和wordHighlightBackground一样
-		"editor.lineHighlightBackground": "#1e1f1c",/*changed to the color as same as others e.g. sidebar, it's original color is #3e3d32*/
+		"editor.lineHighlightBackground": "#171719",/*it's original color is #3e3d32*/
 		"editorLineNumber.activeForeground": "#c2c2bf",
 		"editorCursor.foreground": "#ff5c77",//原始值#f8f8f0
 		"editorWhitespace.foreground": "#464741",
