@@ -3,7 +3,7 @@
 1. Open the VSCode and open the extensions view (Ctrl+Shift+X)
 1. Use the 'Install from VSIX' command in the extensions view (under the ...) to install your extension
 
-#### keyboard shortcut
 Besides a color theme, there is a keyboard shortcut.
 * Ctrl + ,
+
 Append a comma( , ) at the end of the current line.
