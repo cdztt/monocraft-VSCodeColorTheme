@@ -1,8 +1,8 @@
 {
     "name": "monocraft",
     "displayName": "MonoCraft",
-    "description": "a Monokai theme with lower contrast and none font style",
-    "version": "0.1.0",
+    "description": "a dark color theme and some useful keybindings",
+    "version": "1.1.0",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/enoughtallisymcrift/monocraft-VSCodeColorTheme.git"
@@ -12,8 +12,13 @@
         "vscode": "^1.56.0"
     },
     "categories": [
-        "Themes"
+        "Themes",
+        "Other"
     ],
+    "activationEvents": [
+        "onCommand:editor.action.appendComma"
+    ],
+    "main": "./keybindings/index.js",
     "contributes": {
         "themes": [
             {
@@ -21,6 +26,16 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/MonoCraft-color-theme.json"
             }
+        ],
+        "keybindings": [
+            {
+                "command": "editor.action.appendComma",
+                "key": "Ctrl+,",
+                "when": "editorTextFocus"
+            }
         ]
+    },
+    "dependencies": {
+        "@types/vscode": "^1.69.0"
     }
 }

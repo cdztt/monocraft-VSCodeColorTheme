@@ -12,13 +12,11 @@
 		"list.highlightForeground": "#f8f8f2",
 		"button.background": "#75715E",
 		"editor.background": "#272822",
-		//"editor.background": "#2B00FF",
 		"editor.foreground": "#f8f8f2",
 		"selection.background": "#878b9180",
 		"minimap.selectionHighlight": "#878b9180",
 		"editor.selectionHighlightBackground": "#575b6180",
 		"editor.selectionBackground": "#878b9180",
-		//"editor.selectionBackground": "#95753b80",
         "editor.findMatchHighlightBackground": "#575b6180",//统一find和selection
         "editor.findMatchBackground": "#878b9180",//统一find和selection
         "editor.findMatchBorder": "#878b91",//给find选中加边框
@@ -132,7 +130,6 @@
 				"source.groovy.embedded"
 			],
 			"settings": {
-				//"foreground": "#e4e2e2"
 				"foreground": "#cfcfcf"
 			}
 		},
@@ -171,7 +168,6 @@
                 "punctuation.quasi.element",
 			],
 			"settings": {
-				//"foreground": "#eb9abe"
 				"foreground": "#d490ae"
 			}
 		},
@@ -179,7 +175,6 @@
 			"name": "Number",
 			"scope": "constant.numeric",
 			"settings": {
-				//"foreground": "#ff8317"
 				"foreground": "#e9842b"
 			}
 		},
@@ -204,7 +199,6 @@
                 "string.unquoted"
 			],
 			"settings": {
-				//"foreground": "#e4e2e2"
 				"foreground": "#cfcfcf"
 			}
 		},
@@ -216,7 +210,6 @@
                 "storage.type.class"
             ],
 			"settings": {
-				//"foreground": "#e4d12e"
 				"foreground": "#b5a72c"
 			}
 		},
@@ -226,7 +219,6 @@
                 "storage.type.function.arrow",
             ],
 			"settings": {
-				//"foreground": "#e4d12e",
 				"foreground": "#b5a72c",
                 "fontStyle": "bold"
 			}
@@ -235,7 +227,6 @@
 			"name": "modifier",
 			"scope": "storage.modifier",
 			"settings": {
-				//"foreground": "#e4d12e"
 				"foreground": "#b5a72c"
 			}
 		},
@@ -252,7 +243,6 @@
 			"name": "operator",
 			"scope": "keyword.operator",
 			"settings": {
-				//"foreground": "#eb9abe",
 				"foreground": "#d490ae"
 			}
 		},
@@ -267,7 +257,6 @@
                 "keyword.operator.logical"
             ],
 			"settings": {
-				//"foreground": "#eb9abe",
 				"foreground": "#d490ae",
                 "fontStyle": "bold"
 			}
@@ -282,7 +271,6 @@
 				"support.type",
 			],
 			"settings": {
-				//"foreground": "#53a9ff"
 				"foreground": "#5ca1e6"
 			}
 		},
@@ -293,7 +281,6 @@
                 "meta.function-call.generic"
             ],
 			"settings": {
-				//"foreground": "#8be6ff"
 				"foreground": "#82d5ec"
 			}
 		},
@@ -315,7 +302,6 @@
 			"name": "Tag attribute",
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				//"foreground": "#e4e2e2"
 				"foreground": "#cfcfcf"
 			}
 		},
@@ -323,7 +309,6 @@
 			"name": "Library function",
 			"scope": "support.function",
 			"settings": {
-				//"foreground": "#8be6ff"
 				"foreground": "#82d5ec"
 			}
 		},
@@ -333,7 +318,6 @@
 				"support.constant",
 			],
 			"settings": {
-				//"foreground": "#53A9FF"
 				"foreground": "#5ca1e6"
 			}
 		},
@@ -343,7 +327,6 @@
 				"support.class",
 			],
 			"settings": {
-				//"foreground": "#00cb77"
 				"foreground": "#20bc7b"
 			}
 		},
@@ -368,7 +351,6 @@
 				"string.quoted.double.json"
 			],
 			"settings": {
-				//"foreground": "#e4e2e2"
 				"foreground": "#cfcfcf"
 			}
 		},
@@ -397,7 +379,6 @@
 			"name": "diff.changed",
 			"scope": "markup.changed",
 			"settings": {
-				//"foreground": "#ff8317"
 				"foreground": "#e9842b"
 			}
 		},
@@ -410,7 +391,6 @@
 		{
 			"scope": "entity.name.filename.find-in-files",
 			"settings": {
-				//"foreground": "#ff8317"
 				"foreground": "#e9842b"
 			}
 		},
@@ -425,7 +405,6 @@
 			"name": "Markup Lists",
 			"scope": "markup.list",
 			"settings": {
-				//"foreground": "#ff8317"
 				"foreground": "#e9842b"
 			}
 		},
@@ -440,7 +419,6 @@
 			"name": "Markup Inline",
 			"scope": "markup.inline.raw",
 			"settings": {
-				//"foreground": "#ff8317"
 				"foreground": "#e9842b"
 			}
 		},
@@ -494,7 +472,6 @@
 			"name": "Markdown Underline Link/Image",
 			"scope": "markup.underline.link.markdown, markup.underline.link.image.markdown",
 			"settings": {
-				//"foreground": "#ff8317"
 				"foreground": "#e9842b"
 			}
 		},
@@ -509,7 +486,6 @@
 			"name": "Markdown Punctuation Definition Link",
 			"scope": "markup.list.unnumbered.markdown, markup.list.numbered.markdown",
 			"settings": {
-				//"foreground": "#e4e2e2"
 				"foreground": "#cfcfcf"
 			}
 		},
@@ -566,7 +542,6 @@
                 "meta.delimiter",
 			],
 			"settings": {
-				//"foreground": "#e4e2e2"
 				"foreground": "#cfcfcf"
 			}
 		},
@@ -576,7 +551,6 @@
 				"markup.fenced_code.block.markdown"
 			],
 			"settings": {
-				//"foreground": "#00cb77"
 				"foreground": "#20bc7b"
 			}
 		},
