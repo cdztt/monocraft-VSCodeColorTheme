@@ -6,4 +6,4 @@
 #### keyboard shortcut
 Besides a color theme, there is a keyboard shortcut.
 * Ctrl + ,
-> Append a comma( , ) at the end of the current line.
+Append a comma( , ) at the end of the current line.
