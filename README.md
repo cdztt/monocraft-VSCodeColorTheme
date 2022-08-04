@@ -4,8 +4,6 @@
 1. Use the 'Install from VSIX' command in the extensions view (under the ...) to install your extension
 
 ### Besides a color theme, the extension includes some keyboard shortcuts.
-* Ctrl + ,
+* ctrl + ,
 
 Append a comma( , ) to the end of the current line.
-
-* Ctrl + space

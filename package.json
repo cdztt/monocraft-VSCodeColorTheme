@@ -29,7 +29,7 @@
         ],
         "keybindings": [
             {
-                "key": "Ctrl+,",
+                "key": "ctrl+,",
                 "command": "editor.action.appendComma",
                 "when": "editorTextFocus && !editorReadonly"
             }
