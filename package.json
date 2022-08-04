@@ -29,9 +29,9 @@
         ],
         "keybindings": [
             {
-                "command": "editor.action.appendComma",
                 "key": "Ctrl+,",
-                "when": "editorTextFocus"
+                "command": "editor.action.appendComma",
+                "when": "editorTextFocus && !editorReadonly"
             }
         ]
     },
