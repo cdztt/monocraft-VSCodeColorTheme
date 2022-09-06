@@ -16,7 +16,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:editor.action.appendComma"
+        "onCommand:editor.action.appendComma",
+        "onCommand:editor.action.appendSemicolon"
     ],
     "main": "./keybindings/index.js",
     "contributes": {
@@ -31,6 +32,11 @@
             {
                 "key": "ctrl+,",
                 "command": "editor.action.appendComma",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
+                "key": "ctrl+;",
+                "command": "editor.action.appendSemicolon",
                 "when": "editorTextFocus && !editorReadonly"
             }
         ]
