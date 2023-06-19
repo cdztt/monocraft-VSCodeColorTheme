@@ -154,7 +154,8 @@
 			"scope": [
 				"string",
 				"punctuation.definition.string",
-                "punctuation.definition.quasi"
+                "punctuation.definition.quasi",
+                "string.regexp.js punctuation.definition.string"
 			],
 			"settings": {
 				"foreground": "#C0966A"
@@ -165,7 +166,7 @@
 			"scope": [
 				"punctuation.definition.template-expression",
 				"punctuation.section.embedded",
-                "punctuation.quasi.element",
+                "punctuation.quasi.element"
 			],
 			"settings": {
 				"foreground": "#d490ae"
