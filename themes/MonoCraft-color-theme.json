@@ -111,8 +111,8 @@
 	paladin:		#eb9abe		7.0         operator and interpolation
 	paladin(dim):   #d490ae		6.0         operator and interpolation
 	warrior:		#C0966A		5.5			string literal
-	shaman:			#53a9ff		6.0			square
-	shaman(dim):	#5ca1e6		5.5			square
+	shaman:			#53a9ff		6.0			support type
+	shaman(dim):	#5ca1e6		5.5			support type
 	hunter:			#7fbd34		6.5			html tag
 	monk:			#00cb77		7.0			type and class
 	monk(dim):		#20bc7b		6.0			type and class
@@ -181,7 +181,10 @@
 		},
 		{
 			"name": "Built-in constant",
-			"scope": "constant.language",
+			"scope": [
+                "constant.language",
+                "support.constant",
+            ],
 			"settings": {
 				"foreground": "#b983c0"
 			}
@@ -244,7 +247,8 @@
 			"name": "operator",
 			"scope": [
                 "keyword.operator",
-                "punctuation.accessor"
+                "punctuation.accessor",
+                "meta.brace.square"
             ],
 			"settings": {
 				"foreground": "#d490ae"
@@ -292,8 +296,6 @@
 			"name": "language variable",
 			"scope":[
                 "variable.language",
-                "support.constant",
-                "support.type",
             ],
 			"settings": {
 				"foreground": "#9191ca",
@@ -321,9 +323,9 @@
 			}
 		},
 		{
-			"name": "Library constant",
+			"name": "support.type",
 			"scope": [
-                "meta.brace.square"
+                "support.type",
 			],
 			"settings": {
 				"foreground": "#5ca1e6"
