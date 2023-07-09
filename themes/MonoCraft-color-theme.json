@@ -111,12 +111,12 @@
 	paladin:		#eb9abe		7.0         operator and interpolation
 	paladin(dim):   #d490ae		6.0         operator and interpolation
 	warrior:		#C0966A		5.5			string literal
-	shaman:			#53a9ff		6.0			support function
-	shaman(dim):	#5ca1e6		5.5			support function
+	shaman:			#53a9ff		6.0			square
+	shaman(dim):	#5ca1e6		5.5			square
 	hunter:			#7fbd34		6.5			html tag
-	monk:			#00cb77		7.0			class
-	monk(dim):		#20bc7b		6.0			class
-	warlock:		#9191ca		5.0         language variable and this
+	monk:			#00cb77		7.0			type and class
+	monk(dim):		#20bc7b		6.0			type and class
+	warlock:		#9191ca		5.0         language variable
 	druid:			#ff8317		6.0         number literal
 	druid-stealth:	#e9842b		5.5         number literal
 	demonhunter:	#b983c0		5.0         constant
@@ -242,7 +242,10 @@
 		},
         {
 			"name": "operator",
-			"scope": "keyword.operator",
+			"scope": [
+                "keyword.operator",
+                "punctuation.accessor"
+            ],
 			"settings": {
 				"foreground": "#d490ae"
 			}
@@ -269,10 +272,10 @@
 				"entity.name.class",
 				"entity.name.namespace",
 				"entity.name.scope-resolution",
-				"support.type",
+                "support.type.primitive"
 			],
 			"settings": {
-				"foreground": "#5ca1e6"
+				"foreground": "#20bc7b"
 			}
 		},
 		{
@@ -287,7 +290,11 @@
 		},
 		{
 			"name": "language variable",
-			"scope": "variable.language",
+			"scope":[
+                "variable.language",
+                "support.constant",
+                "support.type",
+            ],
 			"settings": {
 				"foreground": "#9191ca",
 			}
@@ -316,19 +323,10 @@
 		{
 			"name": "Library constant",
 			"scope": [
-				"support.constant",
+                "meta.brace.square"
 			],
 			"settings": {
 				"foreground": "#5ca1e6"
-			}
-		},
-		{
-			"name": "Library class",
-			"scope": [
-				"support.class",
-			],
-			"settings": {
-				"foreground": "#20bc7b"
 			}
 		},
 		{
@@ -534,7 +532,7 @@
 				"punctuation.separator",
 				"punctuation.terminator",
 				"punctuation.definition",
-				"punctuation.accessor",
+				//"punctuation.accessor",
 				"meta.brace",
 				"text.html.markdown",
 				"text.html.derivative",
