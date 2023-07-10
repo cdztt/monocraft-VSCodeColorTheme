@@ -279,7 +279,7 @@
                 "support.type.primitive"
 			],
 			"settings": {
-				"foreground": "#20bc7b"
+				"foreground": "#7fbd34"
 			}
 		},
 		{
@@ -305,7 +305,7 @@
 			"name": "Tag name",
 			"scope": "entity.name.tag",
 			"settings": {
-				"foreground": "#7fbd34"
+				"foreground": "#20bc7b"
 			}
 		},
 		{
@@ -552,7 +552,7 @@
 				"markup.fenced_code.block.markdown"
 			],
 			"settings": {
-				"foreground": "#20bc7b"
+				"foreground": "#7fbd34"
 			}
 		},
 	],

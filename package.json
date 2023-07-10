@@ -2,7 +2,7 @@
     "name": "monocraft",
     "displayName": "MonoCraft",
     "description": "a dark color theme and some useful keybindings",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/enoughtallisymcrift/monocraft-VSCodeColorTheme.git"
