@@ -101,15 +101,15 @@
 		"terminal.ansiBrightWhite": "#f8f8f2"
 	},
 	/*
-	priest: 		#e4e2e2		11.5		variant and tag attribution
-	priest(dim):	#cfcfcf		9.5	    	variant and tag attribution
+	priest: 		#e4e2e2		11.5		variable
+	priest(dim):	#cfcfcf		9.5	    	variable
 	mage: 			#8be6ff		10.5		function
 	mage(dim):		#82d5ec		9.0	 	    function
-	rogue:			#e4d12e		9.5			keyword
-    rogue-stealth:  #a3982f     5.0         type
-    rogue_stealth:  #b5a72c     6.0         type
-	paladin:		#eb9abe		7.0         operator and interpolation
-	paladin(dim):   #d490ae		6.0         operator and interpolation
+	rogue:			#e4d12e		9.5			control keyword
+    rogue-stealth:  #a3982f     5.0         control keyword
+    rogue_stealth:  #b5a72c     6.0         control keyword
+	paladin:		#eb9abe		7.0         number literal
+	paladin(dim):   #d490ae		6.0         number literal
 	warrior:		#C0966A		5.5			string literal
 	shaman:			#53a9ff		6.0			support type
 	shaman(dim):	#5ca1e6		5.5			support type
@@ -117,8 +117,9 @@
 	monk:			#00cb77		7.0			type and class
 	monk(dim):		#20bc7b		6.0			type and class
 	warlock:		#9191ca		5.0         language variable
-	druid:			#ff8317		6.0         number literal
-	druid-stealth:	#e9842b		5.5         number literal
+	druid:			#ff8317		6.0         operator and interpolation
+	druid-stealth:	#e9842b		5.5         operator and interpolation
+	druid-stealth:	#e27a20		5.0         operator and interpolation
 	demonhunter:	#b983c0		5.0         constant
 	deathknight:	#ff5c77		5.0         cursor
 	*/
@@ -169,14 +170,16 @@
                 "punctuation.quasi.element"
 			],
 			"settings": {
-				"foreground": "#d490ae"
+				"foreground": "#e27a20"
 			}
 		},
 		{
 			"name": "Number",
-			"scope": "constant.numeric",
+			"scope": [
+                "constant.numeric",
+            ],
 			"settings": {
-				"foreground": "#e9842b"
+				"foreground": "#eb9abe"
 			}
 		},
 		{
@@ -223,8 +226,7 @@
                 "storage.type.function.arrow",
             ],
 			"settings": {
-				"foreground": "#b5a72c",
-                "fontStyle": "bold"
+				"foreground": "#e4d12e",
 			}
 		},
 		{
@@ -251,7 +253,7 @@
                 "meta.brace.square"
             ],
 			"settings": {
-				"foreground": "#d490ae"
+				"foreground": "#e27a20"
 			}
 		},
         {
@@ -265,8 +267,7 @@
                 "keyword.operator.logical"
             ],
 			"settings": {
-				"foreground": "#d490ae",
-                "fontStyle": "bold"
+				"foreground": "#e27a20",
 			}
 		},
 		{
@@ -380,7 +381,7 @@
 			"name": "diff.changed",
 			"scope": "markup.changed",
 			"settings": {
-				"foreground": "#e9842b"
+				"foreground": "#e27a20"
 			}
 		},
 		{
@@ -392,7 +393,7 @@
 		{
 			"scope": "entity.name.filename.find-in-files",
 			"settings": {
-				"foreground": "#e9842b"
+				"foreground": "#e27a20"
 			}
 		},
 		{
@@ -406,7 +407,7 @@
 			"name": "Markup Lists",
 			"scope": "markup.list",
 			"settings": {
-				"foreground": "#e9842b"
+				"foreground": "#e27a20"
 			}
 		},
 		{
@@ -420,7 +421,7 @@
 			"name": "Markup Inline",
 			"scope": "markup.inline.raw",
 			"settings": {
-				"foreground": "#e9842b"
+				"foreground": "#e27a20"
 			}
 		},
 		{
@@ -473,7 +474,7 @@
 			"name": "Markdown Underline Link/Image",
 			"scope": "markup.underline.link.markdown, markup.underline.link.image.markdown",
 			"settings": {
-				"foreground": "#e9842b"
+				"foreground": "#e27a20"
 			}
 		},
 		{
