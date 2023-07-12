@@ -106,17 +106,17 @@
 	mage: 			   #8be6ff		10.5		function
 	mage(dim):		   #82d5ec		9.0	 	    function
 	rogue:			   #e4d12e		9.5			control keyword
-    rogue-stealth:     #a3982f     5.0         control keyword
-    rogue_stealth:     #b5a72c     6.0         control keyword
+    rogue-stealth:     #a3982f      5.0         control keyword
+    rogue_stealth:     #b5a72c      6.0         control keyword
 	paladin:		   #eb9abe		7.0         number literal
 	paladin(dim):      #d490ae		6.0         number literal
 	warrior:		   #C0966A		5.5			string literal
 	shaman:			   #53a9ff		6.0			support type
-	shaman(dim):	   #5ca1e6		5.5			support type
+	shaman(dim):	   #519ae3		5.0			support type
 	hunter:			   #7fbd34		6.5			html tag
-	monk:			   #00cb77		7.0			type and class
-	monk(dim):		   #20bc7b		6.0			type and class
-	warlock:		   #9191ca		5.0         language variable
+	monk:			   #00cb77		7.0			component
+	monk(dim):		   #20bc7b		6.0			component
+	warlock:		   #9292ff		5.5         type and class
 	druid:			   #ff8317		6.0         operator and interpolation
 	druid-stealth:	   #e9842b		5.5         operator and interpolation
 	druid-stealth:	   #e27a20		5.0         operator and interpolation
@@ -278,10 +278,9 @@
 				"entity.name.class",
 				"entity.name.namespace",
 				"entity.name.scope-resolution",
-                "support.type.primitive"
 			],
 			"settings": {
-				"foreground": "#7fbd34"
+				"foreground": "#9292ff"
 			}
 		},
 		{
@@ -300,12 +299,19 @@
                 "variable.language",
             ],
 			"settings": {
-				"foreground": "#9191ca",
+				"foreground": "#cfcfcf",
 			}
 		},
 		{
 			"name": "Tag name",
 			"scope": "entity.name.tag",
+			"settings": {
+				"foreground": "#7fbd34"
+			}
+		},
+		{
+			"name": "component",
+			"scope": "support.class.component",
 			"settings": {
 				"foreground": "#20bc7b"
 			}
@@ -330,7 +336,7 @@
                 "support.type",
 			],
 			"settings": {
-				"foreground": "#5ca1e6"
+				"foreground": "#519ae3"
 			}
 		},
 		{
@@ -388,7 +394,7 @@
 		{
 			"scope": "constant.numeric.line-number.find-in-files - match",
 			"settings": {
-				"foreground": "#9191caA0"
+				"foreground": "#9292ffA0"
 			}
 		},
 		{
