@@ -101,29 +101,44 @@
 		"terminal.ansiBrightWhite": "#f8f8f2"
 	},
 	/*
-	priest: 		   #e4e2e2		11.5		variable
-	priest(dim):	   #cfcfcf		9.5	    	variable
-	mage: 			   #8be6ff		10.5		function
-	mage(dim):		   #82d5ec		9.0	 	    function
-	rogue:			   #e4d12e		9.5			control keyword
-    rogue-stealth:     #a3982f      5.0         control keyword
-    rogue_stealth:     #b5a72c      6.0         control keyword
-	paladin:		   #eb9abe		7.0         number literal
-	paladin(dim):      #d490ae		6.0         number literal
-	warrior:		   #C0966A		5.5			string literal
-	shaman:			   #53a9ff		6.0			support type
-	shaman(dim):	   #519ae3		5.0			support type
-	hunter:			   #7fbd34		6.5			html tag
-	monk:			   #00cb77		7.0			component
-	monk(dim):		   #20bc7b		6.0			component
-	warlock:		   #9292ff		5.5         type and class
-	druid:			   #ff8317		6.0         operator and interpolation
-	druid-stealth:	   #e9842b		5.5         operator and interpolation
-	druid-stealth:	   #e27a20		5.0         operator and interpolation
-	demonhunter:	   #b983c0		5.0         constant
-	deathknight:	   #ff5c77		5.0         cursor
-	deathknight(dim):  #ff4967		4.5         cursor
+	priest: 		#e4e2e2		11.5		variable
+	priest:	        #cfcfcf		9.5
+
+	mage: 			#8be6ff		10.5		function
+	mage:		    #82d5ec		9.0
+
+	rogue:			#e4d12e		9.5			control keyword
+    rogue:          #a3982f     5.0
+    rogue:          #b5a72c     6.0
+    rogue:          #847d41     3.5
+
+	paladin:		#eb9abe		7.0         number literal
+	paladin:        #d490ae		6.0
+
+	warrior:		#d8aa78		7.0			string literal
+	warrior:        #C0966A		5.5
+
+	shaman:			#53a9ff		6.0			support type
+	shaman:	        #519ae3		5.0
+
+	hunter:			#7fbd34		6.5			html tag
+
+	monk:			#00cb77		7.0			component
+	monk:		    #20bc7b		6.0
+
+	warlock:		#9292ff		5.5         type and class
+
+	druid:			#ff8317		6.0         operator and interpolation
+	druid:	        #e9842b		5.5
+	druid:	        #e27a20		5.0
+	druid:	        #a26025		3.0
+
+	demonhunter:	#b983c0		5.0         constant
+
+	deathknight:	#ff5c77		5.0         cursor
+	deathknight:    #ff4967		4.5
 	*/
+
 	"tokenColors": [
 		{
 			"scope": [
@@ -160,7 +175,7 @@
                 "string.regexp.js punctuation.definition.string"
 			],
 			"settings": {
-				"foreground": "#C0966A"
+				"foreground": "#d8aa78"
 			}
 		},
 		{
@@ -171,7 +186,7 @@
                 "punctuation.quasi.element"
 			],
 			"settings": {
-				"foreground": "#e27a20"
+				"foreground": "#a26025",
 			}
 		},
 		{
@@ -215,35 +230,18 @@
 			"scope": [
                 "keyword",
                 "storage.type.function",
-                "storage.type.class"
+                "storage.type.class",
+                "storage.type",
             ],
 			"settings": {
-				"foreground": "#b5a72c"
-			}
-		},
-        {
-			"name": "arrow function",
-			"scope": [
-                "storage.type.function.arrow",
-            ],
-			"settings": {
-				"foreground": "#e4d12e",
+				"foreground": "#847d41"
 			}
 		},
 		{
 			"name": "modifier",
 			"scope": "storage.modifier",
 			"settings": {
-				"foreground": "#b5a72c"
-			}
-		},
-		{
-			"name": "Storage type",
-			"scope": [
-                "storage.type",
-            ],
-			"settings": {
-				"foreground": "#b5a72c"
+				"foreground": "#847d41",
 			}
 		},
         {
@@ -254,7 +252,7 @@
                 "meta.brace.square"
             ],
 			"settings": {
-				"foreground": "#e27a20"
+				"foreground": "#a26025",
 			}
 		},
         {
@@ -268,7 +266,7 @@
                 "keyword.operator.logical"
             ],
 			"settings": {
-				"foreground": "#e27a20",
+				"foreground": "#a26025",
 			}
 		},
 		{
@@ -542,7 +540,6 @@
 				"punctuation.separator",
 				"punctuation.terminator",
 				"punctuation.definition",
-				//"punctuation.accessor",
 				"meta.brace",
 				"text.html.markdown",
 				"text.html.derivative",
@@ -564,5 +561,5 @@
 			}
 		},
 	],
-	//"semanticHighlighting": true
+	"semanticHighlighting": true
 }
