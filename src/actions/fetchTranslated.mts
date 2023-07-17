@@ -1,6 +1,6 @@
-const axios = require('axios');
+import axios from 'axios';
 
-async function fetchTranslated(text) {
+async function fetchTranslated(text: string) {
   const options = {
     method: 'POST',
     url: 'https://microsoft-translator-text.p.rapidapi.com/translate',
@@ -24,11 +24,11 @@ async function fetchTranslated(text) {
 
   try {
     const resp = await axios.request(options);
-    return resp.data[0].translations[0].text;
+    return resp.data[0].translations[0].text as string;
   } catch (err) {
-    console.error(err);
+    return '网络错误';
   }
 }
 // test:
 // fetchTranslated('hello, how are you!').then(console.log);
-module.exports = fetchTranslated;
+export default fetchTranslated;

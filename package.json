@@ -1,15 +1,22 @@
 {
   "name": "monocraft",
+  "publisher": "cdztt",
   "displayName": "MonoCraft",
-  "description": "a dark color theme and some useful keybindings",
+  "description": "Dark color theme and Chinese to English translator",
   "version": "1.3.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdztt/monocraft-VSCodeColorTheme.git"
   },
   "license": "MIT",
+  "main": "./dist/index.js",
+  "scripts": {
+    "tscw": "tsc --watch",
+    "tsc": "tsc",
+    "build": "vsce package"
+  },
   "engines": {
-    "vscode": "^1.56.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
     "Themes",
@@ -19,13 +26,12 @@
     "onCommand:editor.action.appendComma",
     "onCommand:editor.action.appendSemicolon"
   ],
-  "main": "./keybindings/index.js",
   "contributes": {
     "themes": [
       {
         "label": "MonoCraft",
         "uiTheme": "vs-dark",
-        "path": "./themes/MonoCraft-color-theme.json"
+        "path": "./src/themes/MonoCraft-color-theme.json"
       }
     ],
     "keybindings": [
@@ -58,5 +64,13 @@
   },
   "dependencies": {
     "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "typescript": "^5.1.6"
   }
 }
