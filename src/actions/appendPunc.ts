@@ -1,4 +1,5 @@
 import vscode from 'vscode';
+import getCurrentLine from '../helpers/getCurrentLine';
 
 function appendPunc(punctuation: string) {
   vscode.commands
@@ -8,7 +9,7 @@ function appendPunc(punctuation: string) {
       if (editor !== undefined) {
         const { line: lineIndex, character: characterIndex } =
           editor.selection.active;
-        const textLine = editor.document.lineAt(lineIndex);
+        const textLine = getCurrentLine(editor);
         const lastCharacterIndex = textLine.range.end.character;
 
         if (textLine.text.charAt(lastCharacterIndex - 1) !== punctuation) {
@@ -34,4 +35,4 @@ function appendPunc(punctuation: string) {
     });
 }
 
-module.exports = appendPunc;
+export default appendPunc;

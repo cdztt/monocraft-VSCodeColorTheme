@@ -59,6 +59,26 @@
       {
         "command": "tran.all",
         "title": "tranAll"
+      },
+      {
+        "command": "color.red",
+        "title": "colorRed"
+      },
+      {
+        "command": "color.green",
+        "title": "colorGreen"
+      },
+      {
+        "command": "color.blue",
+        "title": "colorBlue"
+      },
+      {
+        "command": "color.slate",
+        "title": "colorSlate"
+      },
+      {
+        "command": "color.auto.slate",
+        "title": "colorAutoSlate"
       }
     ]
   },

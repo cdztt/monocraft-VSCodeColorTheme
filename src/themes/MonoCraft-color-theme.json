@@ -234,10 +234,10 @@
       }
     },
     {
-      "name": "operator",
+      "name": "accessor",
       "scope": [
-        "keyword.operator",
         "punctuation.accessor",
+        "punctuation.destructuring",
         "meta.brace.square"
       ],
       "settings": {
@@ -245,8 +245,9 @@
       }
     },
     {
-      "name": "assignment",
+      "name": "operator",
       "scope": [
+        "keyword.operator",
         "keyword.operator.assignment",
         "keyword.operator.comparison",
         "keyword.operator.relational",

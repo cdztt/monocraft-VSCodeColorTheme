@@ -1,7 +1,9 @@
 import vscode from 'vscode';
+import addColor, { Color } from './actions/addColor.js';
+import appendPunc from './actions/appendPunc.js';
+import getCursorRange from './helpers/getCursorRange.js';
 const fetchTranslated = import('./actions/fetchTranslated.mjs');
 const translateAll = import('./actions/translateAll.mjs');
-const appendPunc = require('./actions/appendPunc.js');
 
 function activate(context: vscode.ExtensionContext) {
   const appendComma = vscode.commands.registerCommand(
@@ -21,17 +23,7 @@ function activate(context: vscode.ExtensionContext) {
   const tranSele = vscode.commands.registerCommand('tran.sele', async () => {
     const editor = vscode.window.activeTextEditor;
     if (editor !== undefined) {
-      const {
-        start: { line: startLine, character: startCharacter },
-        end: { line: endLine, character: endCharacter },
-      } = editor.selection;
-      const range = new vscode.Range(
-        startLine,
-        startCharacter,
-        endLine,
-        endCharacter
-      );
-
+      const range = getCursorRange(editor);
       let text = editor.document.getText(range);
       const regExpHanOrPunc = /[\p{Script=Han}+\p{P}+]/gu;
       const regExpEOLs = /(\r?\n)+/g;
@@ -58,9 +50,43 @@ function activate(context: vscode.ExtensionContext) {
     }
   });
 
+  const colorRed = vscode.commands.registerCommand('color.red', () => {
+    addColor(Color.red);
+  });
+
+  const colorGreen = vscode.commands.registerCommand('color.green', () => {
+    addColor(Color.green);
+  });
+
+  const colorBlue = vscode.commands.registerCommand('color.blue', () => {
+    addColor(Color.blue);
+  });
+
+  const colorSlate = vscode.commands.registerCommand('color.slate', () => {
+    addColor(Color.slate);
+  });
+
+  const colorAutoSlate = vscode.commands.registerCommand(
+    'color.auto.slate',
+    () => {
+      vscode.workspace.onDidChangeTextDocument(() => {
+        vscode.commands.executeCommand('color.slate');
+      });
+    }
+  );
+
+  function setAutoColor(color: keyof typeof Color) {
+    return vscode.commands.registerCommand(`color.auto.${color}`, () => {
+      vscode.workspace.onDidChangeTextDocument(() => {
+        vscode.commands.executeCommand(`color.${color}`);
+      });
+    });
+  }
+
   context.subscriptions.push(appendComma, appendSemicolon);
-  context.subscriptions.push(tranSele);
-  context.subscriptions.push(tranAll);
+  context.subscriptions.push(tranSele, tranAll);
+  context.subscriptions.push(colorRed, colorGreen, colorBlue, colorSlate);
+  context.subscriptions.push(colorAutoSlate);
 }
 
 module.exports = {

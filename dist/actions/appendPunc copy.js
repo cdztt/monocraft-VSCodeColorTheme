@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const vscode_1 = __importDefault(require("vscode"));
-const getCurrentLine_1 = __importDefault(require("../helpers/getCurrentLine"));
 function appendPunc(punctuation) {
     vscode_1.default.commands
         .executeCommand('editor.action.trimTrailingWhitespace')
@@ -12,7 +11,7 @@ function appendPunc(punctuation) {
         const editor = vscode_1.default.window.activeTextEditor;
         if (editor !== undefined) {
             const { line: lineIndex, character: characterIndex } = editor.selection.active;
-            const textLine = (0, getCurrentLine_1.default)(editor);
+            const textLine = editor.document.lineAt(lineIndex);
             const lastCharacterIndex = textLine.range.end.character;
             if (textLine.text.charAt(lastCharacterIndex - 1) !== punctuation) {
                 editor
@@ -30,4 +29,4 @@ function appendPunc(punctuation) {
         }
     });
 }
-exports.default = appendPunc;
+module.exports = appendPunc;

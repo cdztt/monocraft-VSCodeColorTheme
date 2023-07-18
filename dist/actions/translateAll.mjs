@@ -27,6 +27,7 @@ var __asyncGenerator = (this && this.__asyncGenerator) || function (thisArg, _ar
     function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
 };
 import { createReadStream, createWriteStream } from 'node:fs';
+import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pipeline } from 'node:stream/promises';
 import fetchTranslated from './fetchTranslated.mjs';
@@ -92,13 +93,8 @@ function transform(source) {
                 _d = false;
                 const text = _c;
                 const translated = yield __await(fetchTranslated(text));
-                const translatedArr = translated.split(EOL);
-                const textArr = text.split(EOL);
-                const merged = textArr.map((val, key) => {
-                    return val + EOL + translatedArr[key] + EOL;
-                });
-                const result = merged.slice(0, -1).join('');
-                yield yield __await(result);
+                const translatedArr = translated.split(EOL).slice(0, -1);
+                yield yield __await(translatedArr);
             }
         }
         catch (e_2_1) { e_2 = { error: e_2_1 }; }
@@ -107,6 +103,62 @@ function transform(source) {
                 if (!_d && !_a && (_b = source_1.return)) yield __await(_b.call(source_1));
             }
             finally { if (e_2) throw e_2.error; }
+        }
+    });
+}
+function transform2(filePath, source) {
+    return __asyncGenerator(this, arguments, function* transform2_1() {
+        var _a, e_3, _b, _c;
+        const original = yield __await(readFile(filePath, {
+            encoding: 'utf8',
+        }));
+        const regExpLeadingEOLs = new RegExp(`^(${EOL})+`);
+        const regExpTrailingEOLs = new RegExp(`(${EOL})*$`);
+        const originalArr = original
+            .replace(regExpLeadingEOLs, '')
+            .replace(regExpTrailingEOLs, EOL)
+            .split(EOL);
+        let flag = 0;
+        let translatedLine = '';
+        try {
+            for (var _d = true, source_2 = __asyncValues(source), source_2_1; source_2_1 = yield __await(source_2.next()), _a = source_2_1.done, !_a; _d = true) {
+                _c = source_2_1.value;
+                _d = false;
+                const translatedArr = _c;
+                const result = [];
+                while (true) {
+                    while (flag > 0 && translatedArr.length > 0) {
+                        translatedLine += (translatedLine && ' ') + translatedArr.shift();
+                        flag--;
+                    }
+                    if (flag === 0 && translatedLine !== '') {
+                        result.push(translatedLine);
+                        translatedLine = '';
+                    }
+                    if (flag > 0)
+                        result.push('');
+                    if (translatedArr.length === 0)
+                        break;
+                    while (originalArr.length > 0) {
+                        const originalLine = originalArr.shift();
+                        if (originalLine === '') {
+                            if (flag > 0)
+                                break;
+                            continue;
+                        }
+                        result.push(originalLine);
+                        flag++;
+                    }
+                }
+                yield yield __await(result.join(EOL) + (flag === 0 ? EOL : ''));
+            }
+        }
+        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+        finally {
+            try {
+                if (!_d && !_a && (_b = source_2.return)) yield __await(_b.call(source_2));
+            }
+            finally { if (e_3) throw e_3.error; }
         }
     });
 }
@@ -120,7 +172,7 @@ function translateAll(filePath) {
             });
             const translatedPath = path.resolve(filePath, '../translated_' + path.basename(filePath));
             const writable = createWriteStream(translatedPath);
-            yield pipeline(getMultiLines(readable, 10), transform, writable);
+            yield pipeline(getMultiLines(readable, 10), transform, transform2.bind(null, filePath), writable);
         }
         catch (err) {
             return JSON.stringify(err);
