@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -26,11 +27,15 @@ var __asyncGenerator = (this && this.__asyncGenerator) || function (thisArg, _ar
     function reject(value) { resume("throw", value); }
     function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
 };
-import { createReadStream, createWriteStream } from 'node:fs';
-import { readFile } from 'node:fs/promises';
-import path from 'node:path';
-import { pipeline } from 'node:stream/promises';
-import fetchTranslated from './fetchTranslated.mjs';
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const node_fs_1 = require("node:fs");
+const promises_1 = require("node:fs/promises");
+const node_path_1 = __importDefault(require("node:path"));
+const promises_2 = require("node:stream/promises");
+const fetchTranslated_js_1 = __importDefault(require("./fetchTranslated.js"));
 let EOL = '\n';
 function getMultiLines(readable, num) {
     return __asyncGenerator(this, arguments, function* getMultiLines_1() {
@@ -92,7 +97,7 @@ function transform(source) {
                 _c = source_1_1.value;
                 _d = false;
                 const text = _c;
-                const translated = yield __await(fetchTranslated(text));
+                const translated = yield __await((0, fetchTranslated_js_1.default)(text));
                 const translatedArr = translated.split(EOL).slice(0, -1);
                 yield yield __await(translatedArr);
             }
@@ -109,7 +114,7 @@ function transform(source) {
 function transform2(filePath, source) {
     return __asyncGenerator(this, arguments, function* transform2_1() {
         var _a, e_3, _b, _c;
-        const original = yield __await(readFile(filePath, {
+        const original = yield __await((0, promises_1.readFile)(filePath, {
             encoding: 'utf8',
         }));
         const regExpLeadingEOLs = new RegExp(`^(${EOL})+`);
@@ -165,18 +170,19 @@ function transform2(filePath, source) {
 function translateAll(filePath) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            if (path.extname(filePath) !== '.txt')
+            if (node_path_1.default.extname(filePath) !== '.txt')
                 throw '不是txt文件';
-            const readable = createReadStream(filePath, {
+            const fileHandle = yield (0, promises_1.open)(filePath);
+            const readable = fileHandle.createReadStream({
                 encoding: 'utf8',
             });
-            const translatedPath = path.resolve(filePath, '../translated_' + path.basename(filePath));
-            const writable = createWriteStream(translatedPath);
-            yield pipeline(getMultiLines(readable, 10), transform, transform2.bind(null, filePath), writable);
+            const translatedPath = node_path_1.default.resolve(filePath, '../translated_' + node_path_1.default.basename(filePath));
+            const writable = (0, node_fs_1.createWriteStream)(translatedPath);
+            yield (0, promises_2.pipeline)(getMultiLines(readable, 10), transform, transform2.bind(null, filePath), writable);
         }
         catch (err) {
             return JSON.stringify(err);
         }
     });
 }
-export default translateAll;
+exports.default = translateAll;

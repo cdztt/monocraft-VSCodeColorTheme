@@ -31,8 +31,9 @@
     "editorIndentGuide.activeBackground": "#767771",
     "editorGroupHeader.tabsBackground": "#1e1f1c",
     "editorGroup.dropBackground": "#41433980",
-    "tab.inactiveBackground": "#34352f",
     "tab.border": "#1e1f1c",
+    "tab.activeBorder": "#b5a72c",
+    "tab.inactiveBackground": "#272822",
     "tab.inactiveForeground": "#ccccc7",
     "tab.lastPinnedBorder": "#414339",
     "widget.shadow": "#00000098",
@@ -109,8 +110,8 @@
 	mage:		      #82d5ec		9.0
 
 	rogue:			  #e4d12e		9.5			control keyword
-  rogue:        #a3982f   5.0
   rogue:        #b5a72c   6.0
+  rogue:        #a3982f   5.0
   rogue:        #847d41   3.5
 
 	paladin:		  #eb9abe		7.0     number literal

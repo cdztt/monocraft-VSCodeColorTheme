@@ -1,8 +1,8 @@
-import { ReadStream, createReadStream, createWriteStream } from 'node:fs';
-import { readFile } from 'node:fs/promises';
+import { ReadStream, createWriteStream } from 'node:fs';
+import { open, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pipeline } from 'node:stream/promises';
-import fetchTranslated from './fetchTranslated.mjs';
+import fetchTranslated from './fetchTranslated.js';
 
 let EOL = '\n';
 
@@ -105,14 +105,17 @@ async function translateAll(filePath: string) {
   try {
     if (path.extname(filePath) !== '.txt') throw '不是txt文件';
 
-    const readable = createReadStream(filePath, {
+    const fileHandle = await open(filePath);
+    const readable = fileHandle.createReadStream({
       encoding: 'utf8',
     });
+
     const translatedPath = path.resolve(
       filePath,
       '../translated_' + path.basename(filePath)
     );
     const writable = createWriteStream(translatedPath);
+
     await pipeline(
       getMultiLines(readable, 10),
       transform,

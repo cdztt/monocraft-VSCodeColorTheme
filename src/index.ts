@@ -1,9 +1,8 @@
 import vscode from 'vscode';
 import addColor, { Color } from './actions/addColor.js';
 import appendPunc from './actions/appendPunc.js';
-import getCursorRange from './helpers/getCursorRange.js';
-const fetchTranslated = import('./actions/fetchTranslated.mjs');
-const translateAll = import('./actions/translateAll.mjs');
+import tranAllHandler from './handlers/tranAllHandler.js';
+import tranSeleHandler from './handlers/tranSeleHandler.js';
 
 function activate(context: vscode.ExtensionContext) {
   const appendComma = vscode.commands.registerCommand(
@@ -20,35 +19,12 @@ function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  const tranSele = vscode.commands.registerCommand('tran.sele', async () => {
-    const editor = vscode.window.activeTextEditor;
-    if (editor !== undefined) {
-      const range = getCursorRange(editor);
-      let text = editor.document.getText(range);
-      const regExpHanOrPunc = /[\p{Script=Han}+\p{P}+]/gu;
-      const regExpEOLs = /(\r?\n)+/g;
-      text = text.replace(regExpHanOrPunc, '').replace(regExpEOLs, ' ');
+  const tranSele = vscode.commands.registerCommand(
+    'tran.sele',
+    tranSeleHandler
+  );
 
-      const translated = await fetchTranslated.then((m) => m.default(text));
-      vscode.window.showInformationMessage(translated);
-    }
-  });
-
-  const tranAll = vscode.commands.registerCommand('tran.all', () => {
-    const editor = vscode.window.activeTextEditor;
-    if (editor !== undefined) {
-      const filePath = editor.document.fileName;
-      translateAll
-        .then((m) => m.default(filePath))
-        .then((err) => {
-          if (err === undefined) {
-            vscode.window.showInformationMessage('翻译完成！');
-          } else {
-            vscode.window.showErrorMessage('失败！！ ' + err);
-          }
-        });
-    }
-  });
+  const tranAll = vscode.commands.registerCommand('tran.all', tranAllHandler);
 
   function setColor(color: keyof typeof Color) {
     return vscode.commands.registerCommand(`color.${color}`, () => {

@@ -29,6 +29,5 @@ async function fetchTranslated(text: string) {
     return '网络错误';
   }
 }
-// test:
-// fetchTranslated('hello, how are you!').then(console.log);
+
 export default fetchTranslated;
