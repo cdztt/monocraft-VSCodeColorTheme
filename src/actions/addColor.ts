@@ -7,6 +7,7 @@ export enum Color {
   green = '#2e8b57',
   blue = '#4169e1',
   slate = '#2f4f4f',
+  coral = '#ff7f50',
 }
 function addColor(color: Color) {
   const decoration = vscode.window.createTextEditorDecorationType({

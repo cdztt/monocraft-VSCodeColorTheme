@@ -3,3 +3,6 @@
 .gitignore
 vsc-extension-quickstart.md
 *.txt
+CHANGELOG.md
+test
+src

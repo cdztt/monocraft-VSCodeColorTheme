@@ -76,23 +76,16 @@ function activate(context) {
             });
         }
     });
-    const colorRed = vscode_1.default.commands.registerCommand('color.red', () => {
-        (0, addColor_js_1.default)(addColor_js_1.Color.red);
-    });
-    const colorGreen = vscode_1.default.commands.registerCommand('color.green', () => {
-        (0, addColor_js_1.default)(addColor_js_1.Color.green);
-    });
-    const colorBlue = vscode_1.default.commands.registerCommand('color.blue', () => {
-        (0, addColor_js_1.default)(addColor_js_1.Color.blue);
-    });
-    const colorSlate = vscode_1.default.commands.registerCommand('color.slate', () => {
-        (0, addColor_js_1.default)(addColor_js_1.Color.slate);
-    });
-    const colorAutoSlate = vscode_1.default.commands.registerCommand('color.auto.slate', () => {
-        vscode_1.default.workspace.onDidChangeTextDocument(() => {
-            vscode_1.default.commands.executeCommand('color.slate');
+    function setColor(color) {
+        return vscode_1.default.commands.registerCommand(`color.${color}`, () => {
+            (0, addColor_js_1.default)(addColor_js_1.Color[color]);
         });
-    });
+    }
+    const colorRed = setColor('red');
+    const colorGreen = setColor('green');
+    const colorBlue = setColor('blue');
+    const colorSlate = setColor('slate');
+    const colorCoral = setColor('coral');
     function setAutoColor(color) {
         return vscode_1.default.commands.registerCommand(`color.auto.${color}`, () => {
             vscode_1.default.workspace.onDidChangeTextDocument(() => {
@@ -100,10 +93,15 @@ function activate(context) {
             });
         });
     }
+    const colorAutoRed = setAutoColor('red');
+    const colorAutoGreen = setAutoColor('green');
+    const colorAutoBlue = setAutoColor('blue');
+    const colorAutoSlate = setAutoColor('slate');
+    const colorAutoCoral = setAutoColor('coral');
     context.subscriptions.push(appendComma, appendSemicolon);
     context.subscriptions.push(tranSele, tranAll);
-    context.subscriptions.push(colorRed, colorGreen, colorBlue, colorSlate);
-    context.subscriptions.push(colorAutoSlate);
+    context.subscriptions.push(colorRed, colorGreen, colorBlue, colorSlate, colorCoral);
+    context.subscriptions.push(colorAutoRed, colorAutoGreen, colorAutoBlue, colorAutoSlate, colorAutoCoral);
 }
 module.exports = {
     activate,

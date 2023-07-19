@@ -50,30 +50,16 @@ function activate(context: vscode.ExtensionContext) {
     }
   });
 
-  const colorRed = vscode.commands.registerCommand('color.red', () => {
-    addColor(Color.red);
-  });
-
-  const colorGreen = vscode.commands.registerCommand('color.green', () => {
-    addColor(Color.green);
-  });
-
-  const colorBlue = vscode.commands.registerCommand('color.blue', () => {
-    addColor(Color.blue);
-  });
-
-  const colorSlate = vscode.commands.registerCommand('color.slate', () => {
-    addColor(Color.slate);
-  });
-
-  const colorAutoSlate = vscode.commands.registerCommand(
-    'color.auto.slate',
-    () => {
-      vscode.workspace.onDidChangeTextDocument(() => {
-        vscode.commands.executeCommand('color.slate');
-      });
-    }
-  );
+  function setColor(color: keyof typeof Color) {
+    return vscode.commands.registerCommand(`color.${color}`, () => {
+      addColor(Color[color]);
+    });
+  }
+  const colorRed = setColor('red');
+  const colorGreen = setColor('green');
+  const colorBlue = setColor('blue');
+  const colorSlate = setColor('slate');
+  const colorCoral = setColor('coral');
 
   function setAutoColor(color: keyof typeof Color) {
     return vscode.commands.registerCommand(`color.auto.${color}`, () => {
@@ -82,11 +68,28 @@ function activate(context: vscode.ExtensionContext) {
       });
     });
   }
+  const colorAutoRed = setAutoColor('red');
+  const colorAutoGreen = setAutoColor('green');
+  const colorAutoBlue = setAutoColor('blue');
+  const colorAutoSlate = setAutoColor('slate');
+  const colorAutoCoral = setAutoColor('coral');
 
   context.subscriptions.push(appendComma, appendSemicolon);
   context.subscriptions.push(tranSele, tranAll);
-  context.subscriptions.push(colorRed, colorGreen, colorBlue, colorSlate);
-  context.subscriptions.push(colorAutoSlate);
+  context.subscriptions.push(
+    colorRed,
+    colorGreen,
+    colorBlue,
+    colorSlate,
+    colorCoral
+  );
+  context.subscriptions.push(
+    colorAutoRed,
+    colorAutoGreen,
+    colorAutoBlue,
+    colorAutoSlate,
+    colorAutoCoral
+  );
 }
 
 module.exports = {

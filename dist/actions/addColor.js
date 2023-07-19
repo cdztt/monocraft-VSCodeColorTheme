@@ -13,6 +13,7 @@ var Color;
     Color["green"] = "#2e8b57";
     Color["blue"] = "#4169e1";
     Color["slate"] = "#2f4f4f";
+    Color["coral"] = "#ff7f50";
 })(Color || (exports.Color = Color = {}));
 function addColor(color) {
     const decoration = vscode_1.default.window.createTextEditorDecorationType({
