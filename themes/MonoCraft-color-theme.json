@@ -3,7 +3,7 @@
   "type": "dark",
   "colors": {
     "dropdown.background": "#414339",
-    "list.activeSelectionBackground": "#75715E",
+    "list.activeSelectionBackground": "#3e3d32",
     "quickInputList.focusBackground": "#414339",
     "dropdown.listBackground": "#1e1f1c",
     "list.inactiveSelectionBackground": "#414339",

@@ -5,6 +5,7 @@ import { pipeline } from 'node:stream/promises';
 import fetchTranslated from './fetchTranslated.js';
 
 let EOL = '\n';
+const segmentsNumber = 15;
 
 async function* getMultiLines(readable: ReadStream, num: number) {
   let text = '';
@@ -117,7 +118,7 @@ async function translateAll(filePath: string) {
     const writable = createWriteStream(translatedPath);
 
     await pipeline(
-      getMultiLines(readable, 10),
+      getMultiLines(readable, segmentsNumber),
       transform,
       transform2.bind(null, filePath),
       writable

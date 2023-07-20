@@ -3,7 +3,7 @@
   "publisher": "cdztt",
   "displayName": "MonoCraft",
   "description": "Dark color theme and Chinese to English translator",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdztt/monocraft-VSCodeColorTheme.git"
@@ -32,7 +32,7 @@
       {
         "label": "MonoCraft",
         "uiTheme": "vs-dark",
-        "path": "./src/themes/MonoCraft-color-theme.json"
+        "path": "./themes/MonoCraft-color-theme.json"
       }
     ],
     "keybindings": [

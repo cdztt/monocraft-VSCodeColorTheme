@@ -37,6 +37,7 @@ const node_path_1 = __importDefault(require("node:path"));
 const promises_2 = require("node:stream/promises");
 const fetchTranslated_js_1 = __importDefault(require("./fetchTranslated.js"));
 let EOL = '\n';
+const segmentsNumber = 15;
 function getMultiLines(readable, num) {
     return __asyncGenerator(this, arguments, function* getMultiLines_1() {
         var _a, e_1, _b, _c;
@@ -178,7 +179,7 @@ function translateAll(filePath) {
             });
             const translatedPath = node_path_1.default.resolve(filePath, '../translated_' + node_path_1.default.basename(filePath));
             const writable = (0, node_fs_1.createWriteStream)(translatedPath);
-            yield (0, promises_2.pipeline)(getMultiLines(readable, 10), transform, transform2.bind(null, filePath), writable);
+            yield (0, promises_2.pipeline)(getMultiLines(readable, segmentsNumber), transform, transform2.bind(null, filePath), writable);
         }
         catch (err) {
             return JSON.stringify(err);
