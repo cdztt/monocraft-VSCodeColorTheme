@@ -29,6 +29,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const vscode_1 = __importDefault(require("vscode"));
 const addColor_js_1 = __importStar(require("./actions/addColor.js"));
 const appendPunc_js_1 = __importDefault(require("./actions/appendPunc.js"));
+const fetchTranslated_js_1 = require("./actions/fetchTranslated.js");
 const tranAllHandler_js_1 = __importDefault(require("./handlers/tranAllHandler.js"));
 const tranSeleHandler_js_1 = __importDefault(require("./handlers/tranSeleHandler.js"));
 function activate(context) {
@@ -38,7 +39,8 @@ function activate(context) {
     const appendSemicolon = vscode_1.default.commands.registerCommand('editor.action.appendSemicolon', () => {
         (0, appendPunc_js_1.default)(';');
     });
-    const tranSele = vscode_1.default.commands.registerCommand('tran.sele', tranSeleHandler_js_1.default);
+    const tranSele = vscode_1.default.commands.registerCommand('tran.sele', tranSeleHandler_js_1.default.bind(null, fetchTranslated_js_1.Lang.zh));
+    const tranSeleToEn = vscode_1.default.commands.registerCommand('tran.seleToEn', tranSeleHandler_js_1.default.bind(null, fetchTranslated_js_1.Lang.en));
     const tranAll = vscode_1.default.commands.registerCommand('tran.all', tranAllHandler_js_1.default);
     function setColor(color) {
         return vscode_1.default.commands.registerCommand(`color.${color}`, () => {
@@ -63,7 +65,7 @@ function activate(context) {
     const colorAutoSlate = setAutoColor('slate');
     const colorAutoCoral = setAutoColor('coral');
     context.subscriptions.push(appendComma, appendSemicolon);
-    context.subscriptions.push(tranSele, tranAll);
+    context.subscriptions.push(tranSele, tranSeleToEn, tranAll);
     context.subscriptions.push(colorRed, colorGreen, colorBlue, colorSlate, colorCoral);
     context.subscriptions.push(colorAutoRed, colorAutoGreen, colorAutoBlue, colorAutoSlate, colorAutoCoral);
 }

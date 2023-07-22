@@ -1,4 +1,27 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -35,9 +58,14 @@ const node_fs_1 = require("node:fs");
 const promises_1 = require("node:fs/promises");
 const node_path_1 = __importDefault(require("node:path"));
 const promises_2 = require("node:stream/promises");
-const fetchTranslated_js_1 = __importDefault(require("./fetchTranslated.js"));
+const fetchTranslated_js_1 = __importStar(require("./fetchTranslated.js"));
 let EOL = '\n';
-const segmentsNumber = 15;
+/**
+ *  The maximum number of words used in a single request by the translation interface is about 100，
+ *  The target English document has about 6 words per line，
+ *  So the number of rows here is roughly set to 15
+ */
+const linesNumber = 15;
 function getMultiLines(readable, num) {
     return __asyncGenerator(this, arguments, function* getMultiLines_1() {
         var _a, e_1, _b, _c;
@@ -98,7 +126,7 @@ function transform(source) {
                 _c = source_1_1.value;
                 _d = false;
                 const text = _c;
-                const translated = yield __await((0, fetchTranslated_js_1.default)(text));
+                const translated = yield __await((0, fetchTranslated_js_1.default)(text, fetchTranslated_js_1.Lang.zh));
                 const translatedArr = translated.split(EOL).slice(0, -1);
                 yield yield __await(translatedArr);
             }
@@ -179,7 +207,7 @@ function translateAll(filePath) {
             });
             const translatedPath = node_path_1.default.resolve(filePath, '../translated_' + node_path_1.default.basename(filePath));
             const writable = (0, node_fs_1.createWriteStream)(translatedPath);
-            yield (0, promises_2.pipeline)(getMultiLines(readable, segmentsNumber), transform, transform2.bind(null, filePath), writable);
+            yield (0, promises_2.pipeline)(getMultiLines(readable, linesNumber), transform, transform2.bind(null, filePath), writable);
         }
         catch (err) {
             return JSON.stringify(err);

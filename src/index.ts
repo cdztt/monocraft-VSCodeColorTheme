@@ -1,8 +1,9 @@
 import vscode from 'vscode';
-import addColor, { Color } from './actions/addColor.js';
-import appendPunc from './actions/appendPunc.js';
-import tranAllHandler from './handlers/tranAllHandler.js';
-import tranSeleHandler from './handlers/tranSeleHandler.js';
+import addColor, { Color } from './actions/addColor';
+import appendPunc from './actions/appendPunc';
+import { Lang } from './actions/fetchTranslated';
+import tranAllHandler from './handlers/tranAllHandler';
+import tranSeleHandler from './handlers/tranSeleHandler';
 
 function activate(context: vscode.ExtensionContext) {
   const appendComma = vscode.commands.registerCommand(
@@ -21,7 +22,12 @@ function activate(context: vscode.ExtensionContext) {
 
   const tranSele = vscode.commands.registerCommand(
     'tran.sele',
-    tranSeleHandler
+    tranSeleHandler.bind(null, Lang.zh)
+  );
+
+  const tranSeleToEn = vscode.commands.registerCommand(
+    'tran.seleToEn',
+    tranSeleHandler.bind(null, Lang.en)
   );
 
   const tranAll = vscode.commands.registerCommand('tran.all', tranAllHandler);
@@ -51,7 +57,7 @@ function activate(context: vscode.ExtensionContext) {
   const colorAutoCoral = setAutoColor('coral');
 
   context.subscriptions.push(appendComma, appendSemicolon);
-  context.subscriptions.push(tranSele, tranAll);
+  context.subscriptions.push(tranSele, tranSeleToEn, tranAll);
   context.subscriptions.push(
     colorRed,
     colorGreen,

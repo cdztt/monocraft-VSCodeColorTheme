@@ -1,12 +1,17 @@
 import axios from 'axios';
 
-async function fetchTranslated(text: string) {
+export enum Lang {
+  en = 'en',
+  zh = 'zh-Hans',
+}
+
+async function fetchTranslated(text: string, toLang: Lang) {
   const options = {
     method: 'POST',
     url: 'https://microsoft-translator-text.p.rapidapi.com/translate',
     params: {
       'api-version': '3.0',
-      'to[0]': 'zh-Hans',
+      'to[0]': toLang,
       textType: 'plain',
       profanityAction: 'NoAction',
     },

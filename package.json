@@ -50,12 +50,21 @@
         "key": "ctrl+'",
         "command": "tran.sele",
         "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "ctrl+alt+'",
+        "command": "tran.seleToEn",
+        "when": "editorTextFocus && !editorReadonly"
       }
     ],
     "commands": [
       {
         "command": "tran.sele",
         "title": "tranSele"
+      },
+      {
+        "command": "tran.seleToEn",
+        "title": "tranSeleToEn"
       },
       {
         "command": "tran.all",

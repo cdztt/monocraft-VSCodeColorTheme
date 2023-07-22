@@ -2,10 +2,15 @@ import { ReadStream, createWriteStream } from 'node:fs';
 import { open, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pipeline } from 'node:stream/promises';
-import fetchTranslated from './fetchTranslated.js';
+import fetchTranslated, { Lang } from './fetchTranslated';
 
 let EOL = '\n';
-const segmentsNumber = 15;
+/**
+ * The maximum number of words used in a single request by the translation interface is about 100，
+ * The target English document has about 6 words per line，
+ * So the number of rows here is roughly set to 15
+ */
+const linesNumber = 15;
 
 async function* getMultiLines(readable: ReadStream, num: number) {
   let text = '';
@@ -53,7 +58,7 @@ async function* getMultiLines(readable: ReadStream, num: number) {
 
 async function* transform(source: AsyncIterable<string>) {
   for await (const text of source) {
-    const translated = await fetchTranslated(text);
+    const translated = await fetchTranslated(text, Lang.zh);
     const translatedArr = translated.split(EOL).slice(0, -1);
     yield translatedArr;
   }
@@ -118,7 +123,7 @@ async function translateAll(filePath: string) {
     const writable = createWriteStream(translatedPath);
 
     await pipeline(
-      getMultiLines(readable, segmentsNumber),
+      getMultiLines(readable, linesNumber),
       transform,
       transform2.bind(null, filePath),
       writable
