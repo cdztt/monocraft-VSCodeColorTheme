@@ -27,24 +27,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const vscode_1 = __importDefault(require("vscode"));
-const addColor_js_1 = __importStar(require("./actions/addColor.js"));
-const appendPunc_js_1 = __importDefault(require("./actions/appendPunc.js"));
-const fetchTranslated_js_1 = require("./actions/fetchTranslated.js");
-const tranAllHandler_js_1 = __importDefault(require("./handlers/tranAllHandler.js"));
-const tranSeleHandler_js_1 = __importDefault(require("./handlers/tranSeleHandler.js"));
+const addColor_1 = __importStar(require("./actions/addColor"));
+const appendPunc_1 = __importDefault(require("./actions/appendPunc"));
+const fetchTranslated_1 = require("./actions/fetchTranslated");
+const tranAllHandler_1 = __importDefault(require("./handlers/tranAllHandler"));
+const tranSeleHandler_1 = __importDefault(require("./handlers/tranSeleHandler"));
 function activate(context) {
     const appendComma = vscode_1.default.commands.registerCommand('editor.action.appendComma', () => {
-        (0, appendPunc_js_1.default)(',');
+        (0, appendPunc_1.default)(',');
     });
     const appendSemicolon = vscode_1.default.commands.registerCommand('editor.action.appendSemicolon', () => {
-        (0, appendPunc_js_1.default)(';');
+        (0, appendPunc_1.default)(';');
     });
-    const tranSele = vscode_1.default.commands.registerCommand('tran.sele', tranSeleHandler_js_1.default.bind(null, fetchTranslated_js_1.Lang.zh));
-    const tranSeleToEn = vscode_1.default.commands.registerCommand('tran.seleToEn', tranSeleHandler_js_1.default.bind(null, fetchTranslated_js_1.Lang.en));
-    const tranAll = vscode_1.default.commands.registerCommand('tran.all', tranAllHandler_js_1.default);
+    const tranSele = vscode_1.default.commands.registerCommand('tran.sele', tranSeleHandler_1.default.bind(null, fetchTranslated_1.Lang.zh));
+    const tranSeleToEn = vscode_1.default.commands.registerCommand('tran.seleToEn', tranSeleHandler_1.default.bind(null, fetchTranslated_1.Lang.en));
+    const tranAll = vscode_1.default.commands.registerCommand('tran.all', tranAllHandler_1.default);
     function setColor(color) {
         return vscode_1.default.commands.registerCommand(`color.${color}`, () => {
-            (0, addColor_js_1.default)(addColor_js_1.Color[color]);
+            (0, addColor_1.default)(addColor_1.Color[color]);
         });
     }
     const colorRed = setColor('red');

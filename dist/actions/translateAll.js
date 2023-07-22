@@ -58,12 +58,12 @@ const node_fs_1 = require("node:fs");
 const promises_1 = require("node:fs/promises");
 const node_path_1 = __importDefault(require("node:path"));
 const promises_2 = require("node:stream/promises");
-const fetchTranslated_js_1 = __importStar(require("./fetchTranslated.js"));
+const fetchTranslated_1 = __importStar(require("./fetchTranslated"));
 let EOL = '\n';
 /**
- *  The maximum number of words used in a single request by the translation interface is about 100，
- *  The target English document has about 6 words per line，
- *  So the number of rows here is roughly set to 15
+ * The maximum number of words used in a single request by the translation interface is about 100，
+ * The target English document has about 6 words per line，
+ * So the number of rows here is roughly set to 15
  */
 const linesNumber = 15;
 function getMultiLines(readable, num) {
@@ -126,7 +126,7 @@ function transform(source) {
                 _c = source_1_1.value;
                 _d = false;
                 const text = _c;
-                const translated = yield __await((0, fetchTranslated_js_1.default)(text, fetchTranslated_js_1.Lang.zh));
+                const translated = yield __await((0, fetchTranslated_1.default)(text, fetchTranslated_1.Lang.zh));
                 const translatedArr = translated.split(EOL).slice(0, -1);
                 yield yield __await(translatedArr);
             }
