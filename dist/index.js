@@ -26,18 +26,34 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const vscode_1 = __importDefault(require("vscode"));
+const vscode_1 = __importStar(require("vscode"));
 const addColor_1 = __importStar(require("./actions/addColor"));
 const appendPunc_1 = __importDefault(require("./actions/appendPunc"));
 const fetchTranslated_1 = require("./actions/fetchTranslated");
+const insertSpaceBehind_1 = __importDefault(require("./actions/insertSpaceBehind"));
 const tranAllHandler_1 = __importDefault(require("./handlers/tranAllHandler"));
 const tranSeleHandler_1 = __importDefault(require("./handlers/tranSeleHandler"));
 function activate(context) {
+    vscode_1.default.window.onDidChangeTextEditorSelection(() => {
+        const editor = vscode_1.default.window.activeTextEditor;
+        if (editor !== undefined) {
+            const cursorCount = editor.selections.length;
+            if (cursorCount > 1) {
+                editor.options.cursorStyle = vscode_1.TextEditorCursorStyle.Underline;
+            }
+            else {
+                editor.options.cursorStyle = vscode_1.TextEditorCursorStyle.Line;
+            }
+        }
+    });
     const appendComma = vscode_1.default.commands.registerCommand('editor.action.appendComma', () => {
         (0, appendPunc_1.default)(',');
     });
     const appendSemicolon = vscode_1.default.commands.registerCommand('editor.action.appendSemicolon', () => {
         (0, appendPunc_1.default)(';');
+    });
+    const insertSpace = vscode_1.default.commands.registerCommand('editor.action.insertSpaceBehind', () => {
+        (0, insertSpaceBehind_1.default)();
     });
     const tranSele = vscode_1.default.commands.registerCommand('tran.sele', tranSeleHandler_1.default.bind(null, fetchTranslated_1.Lang.zh));
     const tranSeleToEn = vscode_1.default.commands.registerCommand('tran.seleToEn', tranSeleHandler_1.default.bind(null, fetchTranslated_1.Lang.en));
@@ -50,7 +66,6 @@ function activate(context) {
     const colorRed = setColor('red');
     const colorGreen = setColor('green');
     const colorBlue = setColor('blue');
-    const colorSlate = setColor('slate');
     const colorCoral = setColor('coral');
     function setAutoColor(color) {
         return vscode_1.default.commands.registerCommand(`color.auto.${color}`, () => {
@@ -62,12 +77,11 @@ function activate(context) {
     const colorAutoRed = setAutoColor('red');
     const colorAutoGreen = setAutoColor('green');
     const colorAutoBlue = setAutoColor('blue');
-    const colorAutoSlate = setAutoColor('slate');
     const colorAutoCoral = setAutoColor('coral');
-    context.subscriptions.push(appendComma, appendSemicolon);
+    context.subscriptions.push(appendComma, appendSemicolon, insertSpace);
     context.subscriptions.push(tranSele, tranSeleToEn, tranAll);
-    context.subscriptions.push(colorRed, colorGreen, colorBlue, colorSlate, colorCoral);
-    context.subscriptions.push(colorAutoRed, colorAutoGreen, colorAutoBlue, colorAutoSlate, colorAutoCoral);
+    context.subscriptions.push(colorRed, colorGreen, colorBlue, colorCoral);
+    context.subscriptions.push(colorAutoRed, colorAutoGreen, colorAutoBlue, colorAutoCoral);
 }
 module.exports = {
     activate,

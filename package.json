@@ -3,7 +3,7 @@
   "publisher": "cdztt",
   "displayName": "MonoCraft",
   "description": "Dark color theme and Chinese to English translator",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdztt/monocraft-VSCodeColorTheme.git"
@@ -21,11 +21,11 @@
   },
   "categories": [
     "Themes",
+    "Keymaps",
     "Other"
   ],
   "activationEvents": [
-    "onCommand:editor.action.appendComma",
-    "onCommand:editor.action.appendSemicolon"
+    "onStartupFinished"
   ],
   "contributes": {
     "themes": [
@@ -47,6 +47,11 @@
         "when": "editorTextFocus && !editorReadonly"
       },
       {
+        "key": "shift+space",
+        "command": "editor.action.insertSpaceBehind",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
         "key": "ctrl+'",
         "command": "tran.sele",
         "when": "editorTextFocus && !editorReadonly"
@@ -58,6 +63,14 @@
       }
     ],
     "commands": [
+      {
+        "command": "editor.action.appendComma",
+        "title": "appendComma"
+      },
+      {
+        "command": "editor.action.appendSemicolon",
+        "title": "appendSemicolon"
+      },
       {
         "command": "tran.sele",
         "title": "tranSele"
@@ -83,10 +96,6 @@
         "title": "colorBlue"
       },
       {
-        "command": "color.slate",
-        "title": "colorSlate"
-      },
-      {
         "command": "color.coral",
         "title": "colorCoral"
       },
@@ -101,10 +110,6 @@
       {
         "command": "color.auto.blue",
         "title": "colorAutoBlue"
-      },
-      {
-        "command": "color.auto.slate",
-        "title": "colorAutoSlate"
       },
       {
         "command": "color.auto.coral",
