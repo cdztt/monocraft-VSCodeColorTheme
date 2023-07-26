@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.22% </span>
+                <span class="strong">95.23% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>51/53</span>
+                <span class='fraction'>40/42</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.33% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/15</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/7</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.22% </span>
+                <span class="strong">95.23% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>51/53</span>
+                <span class='fraction'>40/42</span>
             </div>
         
             
@@ -105,27 +105,7 @@
 <a name='L40'></a><a href='#L40'>40</a>
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
-<a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a>
-<a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<a name='L43'></a><a href='#L43'>43</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -137,7 +117,6 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
@@ -166,19 +145,9 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
-var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value<span class="branch-0 cbranch-no" title="branch not covered" > : new P(function (resolve) { resolve(value); });</span> }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } <span class="branch-0 cbranch-no" title="branch not covered" >catch (e) { reject(e); } }</span>
-<span class="fstat-no" title="function not covered" >        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }</span>
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
     return (mod &amp;&amp; mod.__esModule<span class="branch-0 cbranch-no" title="branch not covered" >) ? mod </span>: { "default": mod };
 };
@@ -190,36 +159,34 @@ var Lang;
     Lang["en"] = "en";
     Lang["zh"] = "zh-Hans";
 })(Lang || (exports.Lang = Lang = {}));
-function fetchTranslated(text, toLang) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const options = {
-            method: 'POST',
-            url: 'https://microsoft-translator-text.p.rapidapi.com/translate',
-            params: {
-                'api-version': '3.0',
-                'to[0]': toLang,
-                textType: 'plain',
-                profanityAction: 'NoAction',
+async function fetchTranslated(text, toLang) {
+    const options = {
+        method: 'POST',
+        url: 'https://microsoft-translator-text.p.rapidapi.com/translate',
+        params: {
+            'api-version': '3.0',
+            'to[0]': toLang,
+            textType: 'plain',
+            profanityAction: 'NoAction',
+        },
+        headers: {
+            'content-type': 'application/json',
+            'X-RapidAPI-Key': '528e06a4a6mshbd0ed4c156ab813p1f8a0ejsn419e8182ed3c',
+            'X-RapidAPI-Host': 'microsoft-translator-text.p.rapidapi.com',
+        },
+        data: [
+            {
+                text,
             },
-            headers: {
-                'content-type': 'application/json',
-                'X-RapidAPI-Key': '528e06a4a6mshbd0ed4c156ab813p1f8a0ejsn419e8182ed3c',
-                'X-RapidAPI-Host': 'microsoft-translator-text.p.rapidapi.com',
-            },
-            data: [
-                {
-                    text,
-                },
-            ],
-        };
-        try {
-            const resp = yield axios_1.default.request(options);
-            return resp.data[0].translations[0].text;
-        }
-<span class="branch-0 cbranch-no" title="branch not covered" >        catch (err) {</span>
-<span class="cstat-no" title="statement not covered" >            return '网络错误';</span>
-<span class="cstat-no" title="statement not covered" >        }</span>
-    });
+        ],
+    };
+    try {
+        const resp = await axios_1.default.request(options);
+        return resp.data[0].translations[0].text;
+    }
+<span class="branch-0 cbranch-no" title="branch not covered" >    catch (err) {</span>
+<span class="cstat-no" title="statement not covered" >        return '网络错误';</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
 }
 exports.default = fetchTranslated;
 &nbsp;</pre></td></tr></table></pre>
@@ -229,7 +196,7 @@ exports.default = fetchTranslated;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-25T14:22:54.627Z
+                at 2023-07-26T13:02:16.769Z
             </div>
         <script src="prettify.js"></script>
         <script>

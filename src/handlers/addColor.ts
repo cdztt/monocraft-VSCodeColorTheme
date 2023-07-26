@@ -1,5 +1,5 @@
 import vscode from 'vscode';
-import getCursorRange from '../helpers/getCursorRange';
+import getCursorRange from '../utils/getCursorRange';
 
 export enum Color {
   red = '#a52a2a',

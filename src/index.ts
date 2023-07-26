@@ -1,44 +1,29 @@
-import vscode, { TextEditorCursorStyle } from 'vscode';
-import addColor, { Color } from './actions/addColor';
-import appendPunc from './actions/appendPunc';
-import { Lang } from './actions/fetchTranslated';
-import insertSpaceBehind from './actions/insertSpaceBehind';
+import vscode from 'vscode';
+import addColor, { Color } from './handlers/addColor';
+import appendPunc from './handlers/appendPunc';
+import changeMultiCursorsStyle from './handlers/changeMultiCursorsStyle';
+import insertBlock from './handlers/insertBlock';
+import insertSpaceBehind from './handlers/insertSpaceBehind';
 import tranAllHandler from './handlers/tranAllHandler';
 import tranSeleHandler from './handlers/tranSeleHandler';
+import { Lang } from './utils/fetchTranslated';
 
 function activate(context: vscode.ExtensionContext) {
-  vscode.window.onDidChangeTextEditorSelection(() => {
-    const editor = vscode.window.activeTextEditor;
-    if (editor !== undefined) {
-      const cursorCount = editor.selections.length;
-
-      if (cursorCount > 1) {
-        editor.options.cursorStyle = TextEditorCursorStyle.Underline;
-      } else {
-        editor.options.cursorStyle = TextEditorCursorStyle.Line;
-      }
-    }
-  });
+  vscode.window.onDidChangeTextEditorSelection(changeMultiCursorsStyle);
 
   const appendComma = vscode.commands.registerCommand(
-    'editor.action.appendComma',
-    () => {
-      appendPunc(',');
-    }
+    'edit.appendComma',
+    appendPunc.bind(null, ',')
   );
 
   const appendSemicolon = vscode.commands.registerCommand(
-    'editor.action.appendSemicolon',
-    () => {
-      appendPunc(';');
-    }
+    'edit.insertBlock',
+    insertBlock
   );
 
   const insertSpace = vscode.commands.registerCommand(
-    'editor.action.insertSpaceBehind',
-    () => {
-      insertSpaceBehind();
-    }
+    'edit.insertSpaceBehind',
+    insertSpaceBehind
   );
 
   const tranSele = vscode.commands.registerCommand(

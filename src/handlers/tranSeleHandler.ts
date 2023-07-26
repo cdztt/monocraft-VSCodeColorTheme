@@ -1,10 +1,13 @@
 import vscode from 'vscode';
-import fetchTranslated, { Lang } from '../actions/fetchTranslated';
-import getCursorRange from '../helpers/getCursorRange';
+import fetchTranslated, { Lang } from '../utils/fetchTranslated';
+import getCursorRange from '../utils/getCursorRange';
 
 async function tranSeleHandler(toLang: Lang) {
   const editor = vscode.window.activeTextEditor;
   if (editor !== undefined) {
+    if (editor.selection.isEmpty) {
+      await vscode.commands.executeCommand('editor.action.smartSelect.expand');
+    }
     const range = getCursorRange(editor);
     let text = editor.document.getText(range);
 
@@ -17,8 +20,14 @@ async function tranSeleHandler(toLang: Lang) {
       text = text.replace(regExpUseless, '');
     }
 
-    const translated = await fetchTranslated(text, toLang);
-    vscode.window.showInformationMessage(translated);
+    vscode.window.withProgress(
+      { location: vscode.ProgressLocation.Notification },
+      async (progress) => {
+        progress.report({ increment: 20, message: '正在翻译...' });
+        const translated = await fetchTranslated(text, toLang);
+        vscode.window.showInformationMessage(translated);
+      }
+    );
   }
 }
 

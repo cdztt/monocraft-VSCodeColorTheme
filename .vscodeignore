@@ -5,4 +5,11 @@ vsc-extension-quickstart.md
 *.txt
 CHANGELOG.md
 coverage
+build
+src
 test
+webpack.config.js
+tsconfig.json
+.eslintrc.json
+.gitattributes
+jest.config.js

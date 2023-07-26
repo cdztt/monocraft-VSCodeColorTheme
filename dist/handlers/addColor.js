@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Color = void 0;
 const vscode_1 = __importDefault(require("vscode"));
-const getCursorRange_1 = __importDefault(require("../helpers/getCursorRange"));
+const getCursorRange_1 = __importDefault(require("../utils/getCursorRange"));
 var Color;
 (function (Color) {
     Color["red"] = "#a52a2a";

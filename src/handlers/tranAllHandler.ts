@@ -1,5 +1,5 @@
 import vscode from 'vscode';
-import translateAll from '../actions/translateAll';
+import translateAll from '../utils/translateAll';
 
 function wait(time = 1000) {
   return new Promise((resolve) => {
