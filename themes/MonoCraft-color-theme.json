@@ -12,20 +12,19 @@
     "list.highlightForeground": "#f8f8f2",
     "button.background": "#75715E",
     "editor.background": "#272822",
-    "editor.foreground": "#f8f8f2",
+    "editor.foreground": "#cfcfcf",
     "selection.background": "#878b9180",
     "minimap.selectionHighlight": "#878b9180",
     "editor.selectionHighlightBackground": "#575b6180",
     "editor.selectionBackground": "#878b9180",
-    "editor.findMatchHighlightBackground": "#575b6180", // 统一find和selection
-    "editor.findMatchBackground": "#878b9180", // 统一find和selection
-    "editor.findMatchBorder": "#878b91", // 给find选中加边框
-    // wordHighlightStrongBackground是作用域里第一个定义的变量，原始值#6a6a9680
+    "editor.findMatchHighlightBackground": "#575b6180",
+    "editor.findMatchBackground": "#878b9180",
+    "editor.findMatchBorder": "#878b91",
     "editor.wordHighlightBackground": "#4a4a7680",
     "editor.wordHighlightStrongBackground": "#4a4a7680",
     "editor.lineHighlightBackground": "#171719",
     "editorLineNumber.activeForeground": "#c2c2bf",
-    "editorCursor.foreground": "#ff4967", // original: #f8f8f0
+    "editorCursor.foreground": "#ff4967",
     "editorWhitespace.foreground": "#464741",
     "editorIndentGuide.background": "#464741",
     "editorIndentGuide.activeBackground": "#767771",
