@@ -3,13 +3,14 @@
   "type": "dark",
   "colors": {
     "dropdown.background": "#414339",
-    "list.activeSelectionBackground": "#3e3d32",
     "quickInputList.focusBackground": "#414339",
     "dropdown.listBackground": "#1e1f1c",
+    "list.activeSelectionBackground": "#3e3d32",
     "list.inactiveSelectionBackground": "#414339",
     "list.hoverBackground": "#3e3d32",
     "list.dropBackground": "#414339",
     "list.highlightForeground": "#f8f8f2",
+    "list.activeSelectionForeground": "#f8f8f2",
     "button.background": "#75715E",
     "editor.background": "#272822",
     "editor.foreground": "#cfcfcf",
@@ -265,7 +266,8 @@
         "entity.name.type",
         "entity.name.class",
         "entity.name.namespace",
-        "entity.name.scope-resolution"
+        "entity.name.scope-resolution",
+        "variable.language.this"
       ],
       "settings": {
         "foreground": "#9292ff"
