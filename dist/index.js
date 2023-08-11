@@ -30,6 +30,7 @@ const vscode_1 = __importDefault(require("vscode"));
 const addColor_1 = __importStar(require("./handlers/addColor"));
 const appendPunc_1 = __importDefault(require("./handlers/appendPunc"));
 const changeMultiCursorsStyle_1 = __importDefault(require("./handlers/changeMultiCursorsStyle"));
+const insertArrow_1 = __importDefault(require("./handlers/insertArrow"));
 const insertBlock_1 = __importDefault(require("./handlers/insertBlock"));
 const insertSpaceBehind_1 = __importDefault(require("./handlers/insertSpaceBehind"));
 const tranAllHandler_1 = __importDefault(require("./handlers/tranAllHandler"));
@@ -37,9 +38,10 @@ const tranSeleHandler_1 = __importDefault(require("./handlers/tranSeleHandler"))
 const fetchTranslated_1 = require("./utils/fetchTranslated");
 function activate(context) {
     vscode_1.default.window.onDidChangeTextEditorSelection(changeMultiCursorsStyle_1.default);
-    const appendComma = vscode_1.default.commands.registerCommand('edit.appendComma', appendPunc_1.default.bind(null, ','));
-    const appendSemicolon = vscode_1.default.commands.registerCommand('edit.insertBlock', insertBlock_1.default);
-    const insertSpace = vscode_1.default.commands.registerCommand('edit.insertSpaceBehind', insertSpaceBehind_1.default);
+    const editAppendComma = vscode_1.default.commands.registerCommand('edit.appendComma', appendPunc_1.default.bind(null, ','));
+    const editInsertBlock = vscode_1.default.commands.registerCommand('edit.insertBlock', insertBlock_1.default);
+    const editInsertArrow = vscode_1.default.commands.registerCommand('edit.insertArrow', insertArrow_1.default);
+    const editInsertSpaceBehind = vscode_1.default.commands.registerCommand('edit.insertSpaceBehind', insertSpaceBehind_1.default);
     const tranSele = vscode_1.default.commands.registerCommand('tran.sele', tranSeleHandler_1.default.bind(null, fetchTranslated_1.Lang.zh));
     const tranSeleToEn = vscode_1.default.commands.registerCommand('tran.seleToEn', tranSeleHandler_1.default.bind(null, fetchTranslated_1.Lang.en));
     const tranAll = vscode_1.default.commands.registerCommand('tran.all', tranAllHandler_1.default);
@@ -63,7 +65,7 @@ function activate(context) {
     const colorAutoGreen = setAutoColor('green');
     const colorAutoBlue = setAutoColor('blue');
     const colorAutoCoral = setAutoColor('coral');
-    context.subscriptions.push(appendComma, appendSemicolon, insertSpace);
+    context.subscriptions.push(editAppendComma, editInsertBlock, editInsertArrow, editInsertSpaceBehind);
     context.subscriptions.push(tranSele, tranSeleToEn, tranAll);
     context.subscriptions.push(colorRed, colorGreen, colorBlue, colorCoral);
     context.subscriptions.push(colorAutoRed, colorAutoGreen, colorAutoBlue, colorAutoCoral);

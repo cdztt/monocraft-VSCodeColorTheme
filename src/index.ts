@@ -2,6 +2,7 @@ import vscode from 'vscode';
 import addColor, { Color } from './handlers/addColor';
 import appendPunc from './handlers/appendPunc';
 import changeMultiCursorsStyle from './handlers/changeMultiCursorsStyle';
+import insertArrow from './handlers/insertArrow';
 import insertBlock from './handlers/insertBlock';
 import insertSpaceBehind from './handlers/insertSpaceBehind';
 import tranAllHandler from './handlers/tranAllHandler';
@@ -11,17 +12,22 @@ import { Lang } from './utils/fetchTranslated';
 function activate(context: vscode.ExtensionContext) {
   vscode.window.onDidChangeTextEditorSelection(changeMultiCursorsStyle);
 
-  const appendComma = vscode.commands.registerCommand(
+  const editAppendComma = vscode.commands.registerCommand(
     'edit.appendComma',
     appendPunc.bind(null, ',')
   );
 
-  const appendSemicolon = vscode.commands.registerCommand(
+  const editInsertBlock = vscode.commands.registerCommand(
     'edit.insertBlock',
     insertBlock
   );
 
-  const insertSpace = vscode.commands.registerCommand(
+  const editInsertArrow = vscode.commands.registerCommand(
+    'edit.insertArrow',
+    insertArrow
+  );
+
+  const editInsertSpaceBehind = vscode.commands.registerCommand(
     'edit.insertSpaceBehind',
     insertSpaceBehind
   );
@@ -60,7 +66,12 @@ function activate(context: vscode.ExtensionContext) {
   const colorAutoBlue = setAutoColor('blue');
   const colorAutoCoral = setAutoColor('coral');
 
-  context.subscriptions.push(appendComma, appendSemicolon, insertSpace);
+  context.subscriptions.push(
+    editAppendComma,
+    editInsertBlock,
+    editInsertArrow,
+    editInsertSpaceBehind
+  );
   context.subscriptions.push(tranSele, tranSeleToEn, tranAll);
   context.subscriptions.push(colorRed, colorGreen, colorBlue, colorCoral);
   context.subscriptions.push(

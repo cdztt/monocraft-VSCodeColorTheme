@@ -3,7 +3,7 @@
   "publisher": "cdztt",
   "displayName": "MonoCraft",
   "description": "Dark color theme and Chinese to English translator",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdztt/monocraft-VSCodeColorTheme.git"
@@ -48,6 +48,11 @@
         "when": "editorTextFocus && !editorReadonly"
       },
       {
+        "key": "ctrl+.",
+        "command": "edit.insertArrow",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
         "key": "shift+space",
         "command": "edit.insertSpaceBehind",
         "when": "editorTextFocus && !editorReadonly"
@@ -58,7 +63,7 @@
         "when": "editorTextFocus && !editorReadonly"
       },
       {
-        "key": "ctrl+alt+'",
+        "key": "ctrl+shift+'",
         "command": "tran.seleToEn",
         "when": "editorTextFocus && !editorReadonly"
       }
