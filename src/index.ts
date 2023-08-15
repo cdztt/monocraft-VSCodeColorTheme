@@ -1,7 +1,7 @@
 import vscode from 'vscode';
 import addColor, { Color } from './handlers/addColor';
 import appendPunc from './handlers/appendPunc';
-import changeMultiCursorsStyle from './handlers/changeMultiCursorsStyle';
+import changeCursorStyle from './handlers/changeCursorStyle';
 import insertArrow from './handlers/insertArrow';
 import insertBlock from './handlers/insertBlock';
 import insertSpaceBehind from './handlers/insertSpaceBehind';
@@ -10,7 +10,7 @@ import tranSeleHandler from './handlers/tranSeleHandler';
 import { Lang } from './utils/fetchTranslated';
 
 function activate(context: vscode.ExtensionContext) {
-  vscode.window.onDidChangeTextEditorSelection(changeMultiCursorsStyle);
+  vscode.window.onDidChangeTextEditorSelection(changeCursorStyle);
 
   const editAppendComma = vscode.commands.registerCommand(
     'edit.appendComma',

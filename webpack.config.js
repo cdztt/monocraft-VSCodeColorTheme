@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   target: 'webworker',
-  entry: './dist/index.js',
+  entry: './js/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',

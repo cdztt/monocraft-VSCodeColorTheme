@@ -9,3 +9,5 @@ dist
 build
 gulpfile.js
 jest.config.js
+js
+private

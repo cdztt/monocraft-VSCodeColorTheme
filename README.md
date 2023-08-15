@@ -1,16 +1,23 @@
-# install
+# Dark color theme and Chinese / English translator
+
+## Welcome to use
+
+### install
+
+- Search for _monocraft_ in VSCode extensions, download and install it.
+
+OR
+
 1. Download the 'monocraft-x.x.x.vsix' file to local
-1. Open the VSCode and open the extensions view (Ctrl+Shift+X)
+1. Open the VSCode and open the extensions view (Ctrl + Shift + X)
 1. Use the 'Install from VSIX' command in the extensions view (under the ...) to install your extension
 
-***
-***
+### keyboard shortcuts
 
-### Besides a color theme, the extension includes some keyboard shortcuts.
-* ctrl + ,
+- ctrl + '
 
-Append a comma( , ) to the end of the current line.
+  English translated into Chinese
 
-* ctrl + ;
+- ctrl + shift + '
 
-Append a semicolon( ; ) to the end of the current line.
+  Chinese translated into English

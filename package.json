@@ -2,8 +2,8 @@
   "name": "monocraft",
   "publisher": "cdztt",
   "displayName": "MonoCraft",
-  "description": "Dark color theme and Chinese to English translator",
-  "version": "1.5.8",
+  "description": "Dark color theme and Chinese / English translator",
+  "version": "1.6.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdztt/monocraft-VSCodeColorTheme.git"

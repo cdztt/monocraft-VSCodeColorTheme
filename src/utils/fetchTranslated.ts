@@ -1,4 +1,5 @@
 import axios from 'axios';
+import key from '../../private';
 
 export enum Lang {
   en = 'en',
@@ -17,7 +18,7 @@ async function fetchTranslated(text: string, toLang: Lang) {
     },
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': '528e06a4a6mshbd0ed4c156ab813p1f8a0ejsn419e8182ed3c',
+      'X-RapidAPI-Key': key.XRapidAPIKey,
       'X-RapidAPI-Host': 'microsoft-translator-text.p.rapidapi.com',
     },
     data: [

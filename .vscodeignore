@@ -15,3 +15,5 @@ tsconfig.json
 jest.config.js
 gulpfile.js
 *.vsix
+js
+private

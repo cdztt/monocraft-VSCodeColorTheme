@@ -1,6 +1,6 @@
 import vscode, { TextEditorCursorStyle } from 'vscode';
 
-function changeMultiCursorsStyle() {
+function changeCursorStyle() {
   const editor = vscode.window.activeTextEditor;
   if (editor !== undefined) {
     const cursorCount = editor.selections.length;
@@ -17,4 +17,4 @@ function changeMultiCursorsStyle() {
   }
 }
 
-export default changeMultiCursorsStyle;
+export default changeCursorStyle;

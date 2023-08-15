@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2021",
     "declaration": true,
-    "outDir": "dist",
+    "outDir": "js",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
