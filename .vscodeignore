@@ -1,11 +1,11 @@
-.vscode/**
-.vscode-test/**
+.vscode
+node_modules
 .gitignore
 vsc-extension-quickstart.md
 *.txt
 CHANGELOG.md
 coverage
-build
+dist
 src
 test
 webpack.config.js
@@ -13,3 +13,5 @@ tsconfig.json
 .eslintrc.json
 .gitattributes
 jest.config.js
+gulpfile.js
+*.vsix

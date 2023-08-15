@@ -6,9 +6,13 @@ function changeMultiCursorsStyle() {
     const cursorCount = editor.selections.length;
 
     if (cursorCount > 1) {
-      editor.options.cursorStyle = TextEditorCursorStyle.Underline;
+      editor.options.cursorStyle = TextEditorCursorStyle.BlockOutline;
     } else {
-      editor.options.cursorStyle = TextEditorCursorStyle.Line;
+      if (editor.selection.isEmpty) {
+        editor.options.cursorStyle = TextEditorCursorStyle.Line;
+      } else {
+        editor.options.cursorStyle = TextEditorCursorStyle.Underline;
+      }
     }
   }
 }

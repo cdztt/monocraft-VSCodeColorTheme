@@ -29,10 +29,15 @@ function changeMultiCursorsStyle() {
     if (editor !== undefined) {
         const cursorCount = editor.selections.length;
         if (cursorCount > 1) {
-            editor.options.cursorStyle = vscode_1.TextEditorCursorStyle.Underline;
+            editor.options.cursorStyle = vscode_1.TextEditorCursorStyle.BlockOutline;
         }
         else {
-            editor.options.cursorStyle = vscode_1.TextEditorCursorStyle.Line;
+            if (editor.selection.isEmpty) {
+                editor.options.cursorStyle = vscode_1.TextEditorCursorStyle.Line;
+            }
+            else {
+                editor.options.cursorStyle = vscode_1.TextEditorCursorStyle.Underline;
+            }
         }
     }
 }

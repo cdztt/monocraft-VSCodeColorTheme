@@ -5,3 +5,6 @@ vsc-extension-quickstart.md
 *.txt
 CHANGELOG.md
 coverage
+dist
+build
+gulpfile.js
