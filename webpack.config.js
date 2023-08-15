@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   target: 'webworker',
-  entry: './js/index.js',
+  entry: './dist/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
@@ -12,8 +12,12 @@ module.exports = {
     },
   },
   externals: [nodeExternals(), { vscode: 'commonjs vscode' }],
+  // externals: { vscode: 'commonjs vscode' },
   externalsPresets: {
     node: true,
+  },
+  resolve: {
+    mainFields: ['browser', 'module', 'main'],
   },
   module: {
     rules: [
