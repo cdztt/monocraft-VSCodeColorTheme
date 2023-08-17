@@ -1,7 +1,11 @@
 .vscode
-node_modules
+.gitattributes
 .gitignore
-vsc-extension-quickstart.md
-*.txt
-CHANGELOG.md
-coverage
+node_modules
+src
+test
+js
+private
+tsconfig.json
+webpack.config.js
+.eslintrc.json

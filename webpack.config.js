@@ -1,9 +1,8 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  target: 'webworker',
-  entry: './dist/index.js',
+  target: 'node',
+  entry: './js/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
@@ -11,13 +10,9 @@ module.exports = {
       type: 'commonjs2',
     },
   },
-  externals: [nodeExternals(), { vscode: 'commonjs vscode' }],
-  // externals: { vscode: 'commonjs vscode' },
+  externals: { vscode: 'commonjs vscode' },
   externalsPresets: {
     node: true,
-  },
-  resolve: {
-    mainFields: ['browser', 'module', 'main'],
   },
   module: {
     rules: [

@@ -1,13 +1,5 @@
+.vscode
 node_modules
-.vscode/**
-.vscode-test/**
-vsc-extension-quickstart.md
-*.txt
-CHANGELOG.md
-coverage
-dist
-build
-gulpfile.js
-jest.config.js
 js
+build
 private

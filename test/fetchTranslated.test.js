@@ -1,6 +1,4 @@
-const {
-  default: fetchTranslated,
-} = require('../dist/utils/fetchTranslated.js');
+const { default: fetchTranslated } = require('../js/utils/fetchTranslated.js');
 
 test('third party API of translation, to Chinese', () => {
   return expect(

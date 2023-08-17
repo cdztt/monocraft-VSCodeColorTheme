@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { key } from '../../private';
 
 export enum Lang {
   en = 'en',
@@ -17,8 +18,7 @@ async function fetchTranslated(text: string, toLang: Lang) {
     },
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': '528e06a4a6mshbd0ed4c156ab813p1f8a0ejsn419e8182ed3c',
-      // 'X-RapidAPI-Key': key.XRapidAPIKey,
+      'X-RapidAPI-Key': key.XRapidAPIKey,
       'X-RapidAPI-Host': 'microsoft-translator-text.p.rapidapi.com',
     },
     data: [
@@ -29,10 +29,12 @@ async function fetchTranslated(text: string, toLang: Lang) {
   };
 
   try {
-    const resp = await axios.request(options);
-    return resp.data[0].translations[0].text as string;
+    const result = await axios
+      .request(options)
+      .then((resp) => resp.data[0].translations[0].text);
+    return result;
   } catch (err) {
-    return '网络错误';
+    return `错误：${(err as Error).message}`;
   }
 }
 
