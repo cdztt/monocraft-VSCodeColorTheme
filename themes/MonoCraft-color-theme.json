@@ -109,7 +109,7 @@
    * mage: 			    #8be6ff		 10.5		    function
    * mage:		      #82d5ec		 9.0
    *****************************************************************************
-   * rogue:			    #e4d12e		 9.5		    control keyword
+   * rogue:			    #e4d12e		 9.5		    storage
    * rogue:         #b5a72c    6.0
    * rogue:         #a3982f    5.0
    * rogue:         #847d41    3.5
@@ -130,7 +130,7 @@
    *****************************************************************************
    * warlock:		    #8888ff		 5.0        type and class
    *****************************************************************************
-   * druid:			    #ff8317		 6.0        operator and interpolation
+   * druid:			    #ff8317		 6.0        keyword
    * druid:	        #e9842b		 5.5
    * druid:	        #e27a20		 5.0
    * druid:	        #a26025		 3.0
@@ -261,7 +261,7 @@
     },
     {
       "name": "Variable",
-      "scope": ["variable.other", "string.unquoted"],
+      "scope": ["variable.other", "variable.language", "string.unquoted"],
       "settings": {
         "foreground": "#cfcfcf"
       }
@@ -284,8 +284,7 @@
         "entity.name.type",
         "entity.name.class",
         "entity.name.namespace",
-        "entity.name.scope-resolution",
-        "variable.language.this"
+        "entity.name.scope-resolution"
       ],
       "settings": {
         "foreground": "#8888ff"
@@ -299,10 +298,10 @@
       }
     },
     {
-      "name": "language variable",
-      "scope": ["variable.language"],
+      "name": "Library function",
+      "scope": "support.function",
       "settings": {
-        "foreground": "#cfcfcf"
+        "foreground": "#82d5ec"
       }
     },
     {
@@ -327,15 +326,8 @@
       }
     },
     {
-      "name": "Library function",
-      "scope": "support.function",
-      "settings": {
-        "foreground": "#82d5ec"
-      }
-    },
-    {
       "name": "support.type",
-      "scope": ["support.type"],
+      "scope": ["support.type", "variable.language.this"],
       "settings": {
         "foreground": "#519ae3"
       }
