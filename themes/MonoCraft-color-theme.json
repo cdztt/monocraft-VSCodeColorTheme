@@ -168,17 +168,6 @@
       }
     },
     {
-      "name": "String",
-      "scope": [
-        "string",
-        "punctuation.definition.string",
-        "string.regexp.js punctuation.definition.string"
-      ],
-      "settings": {
-        "foreground": "#d5a169"
-      }
-    },
-    {
       "name": "punctuation",
       "scope": [
         "meta.property-value.css",
@@ -197,8 +186,16 @@
         "text.html.derivative",
         "JSXNested",
         "text.html.vue-html",
-        "meta.delimiter"
+        "meta.delimiter",
+        "support.constant.property-value.css"
       ],
+      "settings": {
+        "foreground": "#cfcfcf"
+      }
+    },
+    {
+      "name": "Variable",
+      "scope": ["variable.other", "variable.language", "string.unquoted"],
       "settings": {
         "foreground": "#cfcfcf"
       }
@@ -208,6 +205,17 @@
       "scope": ["punctuation.terminator.statement"],
       "settings": {
         "foreground": "#848484"
+      }
+    },
+    {
+      "name": "String",
+      "scope": [
+        "string",
+        "punctuation.definition.string",
+        "string.regexp.js punctuation.definition.string"
+      ],
+      "settings": {
+        "foreground": "#d5a169"
       }
     },
     {
@@ -257,13 +265,6 @@
       "scope": "constant.character, constant.other",
       "settings": {
         "foreground": "#b983c0"
-      }
-    },
-    {
-      "name": "Variable",
-      "scope": ["variable.other", "variable.language", "string.unquoted"],
-      "settings": {
-        "foreground": "#cfcfcf"
       }
     },
     {
