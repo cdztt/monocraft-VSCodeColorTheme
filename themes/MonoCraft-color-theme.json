@@ -5,7 +5,7 @@
     "quickInputList.focusBackground": "#414339",
     "dropdown.background": "#414339",
     "dropdown.listBackground": "#1e1f1c",
-    "list.activeSelectionForeground": "#cfcfcf",
+    "list.activeSelectionForeground": "#e1dcdc",
     "list.activeSelectionBackground": "#3e3d32",
     "list.inactiveSelectionBackground": "#3e3d32",
     "list.hoverBackground": "#3e3d3270",
@@ -16,7 +16,7 @@
     "minimap.selectionHighlight": "#878b9180",
     "minimap.background": "#1e1f1c",
     "editor.background": "#272822",
-    "editor.foreground": "#cfcfcf",
+    "editor.foreground": "#e1dcdc",
     "editor.selectionBackground": "#4fae9450",
     "editor.selectionHighlightBackground": "#9a2d3f40",
     "editor.findMatchBackground": "#4fae9430",
@@ -103,8 +103,8 @@
 
   /*****************************************************************************
    * priest: 		    #e4e2e2		 11.5		    variable
+   * priest: 		    #e1dcdc		 11.0
    * priest:	      #cfcfcf		 9.5
-   * priest:        #848484    4.0        semicolon
    *****************************************************************************
    * mage: 			    #8be6ff		 10.5		    function
    * mage:		      #82d5ec		 9.0
@@ -148,11 +148,11 @@
     {
       "scope": ["source", "meta.embedded", "source.groovy.embedded"],
       "settings": {
-        "foreground": "#cfcfcf"
+        "foreground": "#e1dcdc"
       }
     },
     {
-      "name": "Comment",
+      "name": "Comment and semicolon",
       "scope": [
         "comment",
         "punctuation.definition.block.tag",
@@ -161,7 +161,8 @@
         "punctuation.definition.comment",
         "storage.type.class.jsdoc",
         "entity.name.type.instance.jsdoc",
-        "variable.other.jsdoc"
+        "variable.other.jsdoc",
+        "punctuation.terminator.statement"
       ],
       "settings": {
         "foreground": "#88846f"
@@ -190,21 +191,14 @@
         "support.constant.property-value.css"
       ],
       "settings": {
-        "foreground": "#cfcfcf"
+        "foreground": "#e1dcdc"
       }
     },
     {
       "name": "Variable",
       "scope": ["variable.other", "variable.language", "string.unquoted"],
       "settings": {
-        "foreground": "#cfcfcf"
-      }
-    },
-    {
-      "name": "semicolon",
-      "scope": ["punctuation.terminator.statement"],
-      "settings": {
-        "foreground": "#848484"
+        "foreground": "#e1dcdc"
       }
     },
     {
@@ -323,7 +317,7 @@
       "name": "Tag attribute",
       "scope": "entity.other.attribute-name",
       "settings": {
-        "foreground": "#cfcfcf"
+        "foreground": "#e1dcdc"
       }
     },
     {
@@ -351,7 +345,7 @@
       "name": "JSON String",
       "scope": ["meta.structure.dictionary.json", "string.quoted.double.json"],
       "settings": {
-        "foreground": "#cfcfcf"
+        "foreground": "#e1dcdc"
       }
     },
     {
@@ -486,7 +480,7 @@
       "name": "Markdown Punctuation Definition Link",
       "scope": "markup.list.unnumbered.markdown, markup.list.numbered.markdown",
       "settings": {
-        "foreground": "#cfcfcf"
+        "foreground": "#e1dcdc"
       }
     },
     {
