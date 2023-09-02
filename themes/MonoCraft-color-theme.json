@@ -5,7 +5,7 @@
     "quickInputList.focusBackground": "#414339",
     "dropdown.background": "#414339",
     "dropdown.listBackground": "#1e1f1c",
-    "list.activeSelectionForeground": "#e1dcdc",
+    "list.activeSelectionForeground": "#ccc8c8",
     "list.activeSelectionBackground": "#3e3d32",
     "list.inactiveSelectionBackground": "#3e3d32",
     "list.hoverBackground": "#3e3d3270",
@@ -16,7 +16,7 @@
     "minimap.selectionHighlight": "#878b9180",
     "minimap.background": "#1e1f1c",
     "editor.background": "#272822",
-    "editor.foreground": "#e1dcdc",
+    "editor.foreground": "#ccc8c8",
     "editor.selectionBackground": "#4fae9450",
     "editor.selectionHighlightBackground": "#9a2d3f40",
     "editor.findMatchBackground": "#4fae9430",
@@ -103,11 +103,12 @@
 
   /*****************************************************************************
    * priest: 		    #e4e2e2		 11.5		    variable
-   * priest: 		    #e1dcdc		 11.0
    * priest:	      #cfcfcf		 9.5
+   * priest: 		    #ccc8c8		 9.0
    *****************************************************************************
    * mage: 			    #8be6ff		 10.5		    function
    * mage:		      #82d5ec		 9.0
+   * mage:		      #7bc9df		 8.0
    *****************************************************************************
    * rogue:			    #e4d12e		 9.5		    storage
    * rogue:         #b5a72c    6.0
@@ -148,7 +149,7 @@
     {
       "scope": ["source", "meta.embedded", "source.groovy.embedded"],
       "settings": {
-        "foreground": "#e1dcdc"
+        "foreground": "#ccc8c8"
       }
     },
     {
@@ -191,14 +192,14 @@
         "support.constant.property-value.css"
       ],
       "settings": {
-        "foreground": "#e1dcdc"
+        "foreground": "#ccc8c8"
       }
     },
     {
       "name": "Variable",
       "scope": ["variable.other", "variable.language", "string.unquoted"],
       "settings": {
-        "foreground": "#e1dcdc"
+        "foreground": "#ccc8c8"
       }
     },
     {
@@ -289,14 +290,14 @@
       "name": "Function name",
       "scope": ["entity.name.function", "meta.function-call.generic"],
       "settings": {
-        "foreground": "#82d5ec"
+        "foreground": "#7bc9df"
       }
     },
     {
       "name": "Library function",
       "scope": "support.function",
       "settings": {
-        "foreground": "#82d5ec"
+        "foreground": "#7bc9df"
       }
     },
     {
@@ -317,7 +318,7 @@
       "name": "Tag attribute",
       "scope": "entity.other.attribute-name",
       "settings": {
-        "foreground": "#e1dcdc"
+        "foreground": "#ccc8c8"
       }
     },
     {
@@ -345,7 +346,7 @@
       "name": "JSON String",
       "scope": ["meta.structure.dictionary.json", "string.quoted.double.json"],
       "settings": {
-        "foreground": "#e1dcdc"
+        "foreground": "#ccc8c8"
       }
     },
     {
@@ -480,7 +481,7 @@
       "name": "Markdown Punctuation Definition Link",
       "scope": "markup.list.unnumbered.markdown, markup.list.numbered.markdown",
       "settings": {
-        "foreground": "#e1dcdc"
+        "foreground": "#ccc8c8"
       }
     },
     {
