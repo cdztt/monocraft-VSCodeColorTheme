@@ -3,7 +3,7 @@
   "publisher": "cdztt",
   "displayName": "MonoCraft",
   "description": "Dark color theme and Chinese / English translator",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdztt/monocraft-VSCodeColorTheme.git"

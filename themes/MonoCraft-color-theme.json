@@ -180,7 +180,6 @@
         "punctuation.separator",
         "punctuation.terminator",
         "punctuation.definition",
-        "punctuation.definition.quasi",
         "punctuation.quasi.element",
         "punctuation.destructuring",
         "meta.brace",
@@ -207,6 +206,7 @@
       "scope": [
         "string",
         "punctuation.definition.string",
+        "punctuation.definition.quasi",
         "string.regexp.js punctuation.definition.string"
       ],
       "settings": {
