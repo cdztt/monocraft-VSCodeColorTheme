@@ -110,16 +110,16 @@
    * mage:		      #82d5ec		 9.0
    * mage:		      #7bc9df		 8.0
    *****************************************************************************
-   * rogue:			    #e4d12e		 9.5		    storage
+   * rogue:			    #e4d12e		 9.5
    * rogue:         #b5a72c    6.0
    * rogue:         #a3982f    5.0
-   * rogue:         #847d41    3.5
+   * rogue:         #847d41    3.5        storage
    *****************************************************************************
-   * paladin:		    #eb9abe		 7.0        number literal
-   * paladin:       #d490ae		 6.0
+   * paladin:		    #eb9abe		 7.0
+   * paladin:       #d490ae		 6.0        keyword
    *****************************************************************************
-   * warrior:		    #d5a169		 6.5			  string literal
-   * warrior:       #C0966A		 5.5
+   * warrior:		    #d5a169		 6.5
+   * warrior:       #C0966A		 5.5        string literal
    *****************************************************************************
    * shaman:			  #53a9ff		 6.0			  support type
    * shaman:	      #519ae3		 5.0
@@ -131,12 +131,13 @@
    *****************************************************************************
    * warlock:		    #8888ff		 5.0        type and class
    *****************************************************************************
-   * druid:			    #ff8317		 6.0        keyword
-   * druid:	        #e9842b		 5.5
+   * druid:			    #ff8317		 6.0
+   * druid:	        #e9842b		 5.5        number literal
    * druid:	        #e27a20		 5.0
+   * druid:	        #c56d21		 4.0        constant
    * druid:	        #a26025		 3.0
    *****************************************************************************
-   * demonhunter:   #b983c0		 5.0        constant
+   * demonhunter:   #b983c0		 5.0        some punctuation
    *****************************************************************************
    * deathknight:   #ff5c77		 5.0        cursor
    * deathknight:   #ff4967		 4.5
@@ -210,7 +211,7 @@
         "string.regexp.js punctuation.definition.string"
       ],
       "settings": {
-        "foreground": "#d5a169"
+        "foreground": "#C0966A"
       }
     },
     {
@@ -222,7 +223,7 @@
         "meta.brace.square"
       ],
       "settings": {
-        "foreground": "#a26025"
+        "foreground": "#b983c0"
       }
     },
     {
@@ -238,28 +239,28 @@
         "keyword.operator.logical"
       ],
       "settings": {
-        "foreground": "#a26025"
+        "foreground": "#d490ae"
       }
     },
     {
       "name": "Number",
       "scope": ["constant.numeric"],
       "settings": {
-        "foreground": "#eb9abe"
+        "foreground": "#e9842b"
       }
     },
     {
       "name": "Built-in constant",
       "scope": ["constant.language", "support.constant"],
       "settings": {
-        "foreground": "#b983c0"
+        "foreground": "#c56d21"
       }
     },
     {
       "name": "User-defined constant",
       "scope": "constant.character, constant.other",
       "settings": {
-        "foreground": "#b983c0"
+        "foreground": "#c56d21"
       }
     },
     {
@@ -374,7 +375,7 @@
       "name": "diff.changed",
       "scope": "markup.changed",
       "settings": {
-        "foreground": "#e27a20"
+        "foreground": "#e9842b"
       }
     },
     {
@@ -386,7 +387,7 @@
     {
       "scope": "entity.name.filename.find-in-files",
       "settings": {
-        "foreground": "#e27a20"
+        "foreground": "#e9842b"
       }
     },
     {
@@ -400,7 +401,7 @@
       "name": "Markup Lists",
       "scope": "markup.list",
       "settings": {
-        "foreground": "#e27a20"
+        "foreground": "#e9842b"
       }
     },
     {
@@ -414,7 +415,7 @@
       "name": "Markup Inline",
       "scope": "markup.inline.raw",
       "settings": {
-        "foreground": "#e27a20"
+        "foreground": "#e9842b"
       }
     },
     {
@@ -467,7 +468,7 @@
       "name": "Markdown Underline Link/Image",
       "scope": "markup.underline.link.markdown, markup.underline.link.image.markdown",
       "settings": {
-        "foreground": "#e27a20"
+        "foreground": "#e9842b"
       }
     },
     {
