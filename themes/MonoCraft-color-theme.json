@@ -102,32 +102,34 @@
   },
 
   /*****************************************************************************
-   * priest: 		    #e4e2e2		 11.5		    variable
+   * priest: 		    #e4e2e2		 11.5
    * priest:	      #cfcfcf		 9.5
-   * priest: 		    #ccc8c8		 9.0
+   * priest: 		    #ccc8c8		 9.0        variable
    *****************************************************************************
-   * mage: 			    #8be6ff		 10.5		    function
+   * mage: 			    #8be6ff		 10.5
    * mage:		      #82d5ec		 9.0
-   * mage:		      #7bc9df		 8.0
+   * mage:		      #7bc9df		 8.0        function
    *****************************************************************************
    * rogue:			    #e4d12e		 9.5
+   * rogue:			    #caba24		 7.5        keyword
    * rogue:         #b5a72c    6.0
    * rogue:         #a3982f    5.0
    * rogue:         #847d41    3.5        storage
    *****************************************************************************
    * paladin:		    #eb9abe		 7.0
-   * paladin:       #d490ae		 6.0        keyword
+   * paladin:		    #e692b6		 6.5        operator
+   * paladin:       #d490ae		 6.0
    *****************************************************************************
    * warrior:		    #d5a169		 6.5
    * warrior:       #C0966A		 5.5        string literal
    *****************************************************************************
-   * shaman:			  #53a9ff		 6.0			  support type
-   * shaman:	      #519ae3		 5.0
+   * shaman:			  #53a9ff		 6.0
+   * shaman:	      #519ae3		 5.0        support type
    *****************************************************************************
    * hunter:			  #7fbd34		 6.5			  html tag
    *****************************************************************************
-   * monk:			    #00cb77		 7.0			  component
-   * monk:		      #20bc7b		 6.0
+   * monk:			    #00cb77		 7.0
+   * monk:		      #20bc7b		 6.0        component
    *****************************************************************************
    * warlock:		    #8888ff		 5.0        type and class
    *****************************************************************************
@@ -137,7 +139,8 @@
    * druid:	        #c56d21		 4.0        constant
    * druid:	        #a26025		 3.0
    *****************************************************************************
-   * demonhunter:   #b983c0		 5.0        some punctuation
+   * demonhunter:   #b983c0		 5.0
+   * demonhunter:   #9f66a6		 3.5        accessor
    *****************************************************************************
    * deathknight:   #ff5c77		 5.0        cursor
    * deathknight:   #ff4967		 4.5
@@ -203,6 +206,13 @@
       }
     },
     {
+      "name": "Tag attribute",
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "#ccc8c8"
+      }
+    },
+    {
       "name": "String",
       "scope": [
         "string",
@@ -215,21 +225,27 @@
       }
     },
     {
-      "name": "some punctuation",
+      "name": "storage",
       "scope": [
-        "punctuation.definition.template-expression",
-        "punctuation.section.embedded",
-        "punctuation.accessor",
-        "meta.brace.square"
+        "storage.type",
+        "storage.type.function",
+        "storage.type.class",
+        "storage.modifier"
       ],
       "settings": {
-        "foreground": "#b983c0"
+        "foreground": "#847d41"
       }
     },
     {
       "name": "keyword",
+      "scope": ["keyword"],
+      "settings": {
+        "foreground": "#caba24"
+      }
+    },
+    {
+      "name": "operator",
       "scope": [
-        "keyword",
         "keyword.operator",
         "keyword.operator.assignment",
         "keyword.operator.comparison",
@@ -239,7 +255,19 @@
         "keyword.operator.logical"
       ],
       "settings": {
-        "foreground": "#d490ae"
+        "foreground": "#e692b6"
+      }
+    },
+    {
+      "name": "accessor",
+      "scope": [
+        "punctuation.definition.template-expression",
+        "punctuation.section.embedded",
+        "punctuation.accessor",
+        "meta.brace.square"
+      ],
+      "settings": {
+        "foreground": "#9f66a6"
       }
     },
     {
@@ -261,18 +289,6 @@
       "scope": "constant.character, constant.other",
       "settings": {
         "foreground": "#c56d21"
-      }
-    },
-    {
-      "name": "storage",
-      "scope": [
-        "storage.type",
-        "storage.type.function",
-        "storage.type.class",
-        "storage.modifier"
-      ],
-      "settings": {
-        "foreground": "#847d41"
       }
     },
     {
@@ -302,6 +318,13 @@
       }
     },
     {
+      "name": "support.type",
+      "scope": ["support.type", "variable.language.this"],
+      "settings": {
+        "foreground": "#519ae3"
+      }
+    },
+    {
       "name": "Tag name",
       "scope": "entity.name.tag",
       "settings": {
@@ -313,20 +336,6 @@
       "scope": "support.class.component",
       "settings": {
         "foreground": "#20bc7b"
-      }
-    },
-    {
-      "name": "Tag attribute",
-      "scope": "entity.other.attribute-name",
-      "settings": {
-        "foreground": "#ccc8c8"
-      }
-    },
-    {
-      "name": "support.type",
-      "scope": ["support.type", "variable.language.this"],
-      "settings": {
-        "foreground": "#519ae3"
       }
     },
     {
