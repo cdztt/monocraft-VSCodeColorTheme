@@ -26,7 +26,7 @@
     "editor.lineHighlightBackground": "#171719",
     "editorLineNumber.foreground": "#90908a",
     "editorLineNumber.activeForeground": "#c2c2bf",
-    "editorCursor.foreground": "#ff2b4e",
+    "editorCursor.foreground": "#ff1c7e",
     "editorWhitespace.foreground": "#464741",
     "editorIndentGuide.background1": "#464741",
     "editorIndentGuide.activeBackground1": "#767771",
@@ -103,14 +103,14 @@
 
   /*****************************************************************************
    * priest: 		    #ccc8c8		 9.0        variable
-   * priest: 		    #868383		 4.0        accessor
+   * priest: 		    #868383		 4.0        operator and accessor
    *****************************************************************************
    * mage:		      #7bc9df		 8.0        function
    *****************************************************************************
    * rogue:         #b5a72c    6.0        keyword
-   * rogue:         #847d41    3.5        storage
+   * rogue:         #847d41    3.5        storage type
    *****************************************************************************
-   * paladin:       #ca8aa6		 5.5        operator
+   * paladin:       #ff1c7e		 4.0        cursor
    *****************************************************************************
    * warrior:       #b68f65		 5.0        string literal
    *****************************************************************************
@@ -120,14 +120,13 @@
    *****************************************************************************
    * monk:		      #20bc7b		 6.0        component
    *****************************************************************************
-   * warlock:		    #7e7ec0		 4.0        type and class
+   * warlock:		    #7373b9		 3.5        type and class
    *****************************************************************************
    * druid:	        #e9842b		 5.5        number literal
    * druid:	        #a26025		 3.0        constant
    *****************************************************************************
    * demonhunter:   #7d7a7f		 3.5        comment
    *****************************************************************************
-   * deathknight:   #ff2b4e		 4.0        cursor
    * deathknight:   #9a2d3f		 2.0        selection color
    *****************************************************************************
    * evoker:        #4fae94    5.5        selection color
@@ -210,12 +209,7 @@
     },
     {
       "name": "storage",
-      "scope": [
-        "storage.type",
-        "storage.type.function",
-        "storage.type.class",
-        "storage.modifier"
-      ],
+      "scope": ["storage.type", "keyword.operator.new"],
       "settings": {
         "foreground": "#847d41"
       }
@@ -229,22 +223,15 @@
     },
     {
       "name": "operator",
-      "scope": [
-        "keyword.operator",
-        "keyword.operator.assignment",
-        "keyword.operator.comparison",
-        "keyword.operator.relational",
-        "keyword.operator.arithmetic",
-        "keyword.operator.ternary",
-        "keyword.operator.logical"
-      ],
+      "scope": ["keyword.operator"],
       "settings": {
-        "foreground": "#ca8aa6"
+        "foreground": "#868383"
       }
     },
     {
       "name": "accessor",
       "scope": [
+        "punctuation.definition.binding-pattern.array",
         "punctuation.definition.template-expression",
         "punctuation.section.embedded",
         "punctuation.accessor",
@@ -281,10 +268,11 @@
         "entity.name.type",
         "entity.name.class",
         "entity.name.namespace",
-        "entity.name.scope-resolution"
+        "entity.name.scope-resolution",
+        "variable.language.this"
       ],
       "settings": {
-        "foreground": "#7e7ec0"
+        "foreground": "#7373b9"
       }
     },
     {
@@ -303,7 +291,7 @@
     },
     {
       "name": "support.type",
-      "scope": ["support.type", "variable.language.this"],
+      "scope": ["support.type"],
       "settings": {
         "foreground": "#4a91d8"
       }
@@ -374,7 +362,7 @@
     {
       "scope": "constant.numeric.line-number.find-in-files - match",
       "settings": {
-        "foreground": "#7e7ec0A0"
+        "foreground": "#7373b9A0"
       }
     },
     {
