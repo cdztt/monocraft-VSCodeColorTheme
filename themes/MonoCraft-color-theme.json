@@ -209,7 +209,11 @@
     },
     {
       "name": "storage",
-      "scope": ["storage.type", "keyword.operator.new"],
+      "scope": [
+        "storage.type",
+        "keyword.operator.new",
+        "keyword.operator.accessor"
+      ],
       "settings": {
         "foreground": "#847d41"
       }
