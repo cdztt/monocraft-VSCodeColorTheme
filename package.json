@@ -3,7 +3,7 @@
   "publisher": "cdztt",
   "displayName": "MonoCraft",
   "description": "Dark color theme and Chinese / English translator",
-  "version": "1.9.0",
+  "version": "1.9.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdztt/monocraft-VSCodeColorTheme.git"
@@ -45,6 +45,11 @@
       },
       {
         "key": "ctrl+;",
+        "command": "edit.appendSemicolon",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "ctrl+k ctrl+;",
         "command": "edit.insertBlock",
         "when": "editorTextFocus && !editorReadonly"
       },

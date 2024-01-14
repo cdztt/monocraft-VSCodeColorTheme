@@ -17,6 +17,11 @@ function activate(context: vscode.ExtensionContext) {
     appendPunc.bind(null, ',')
   );
 
+  const editAppendSemicolon = vscode.commands.registerCommand(
+    'edit.appendSemicolon',
+    appendPunc.bind(null, ';')
+  );
+
   const editInsertBlock = vscode.commands.registerCommand(
     'edit.insertBlock',
     insertBlock
@@ -68,6 +73,7 @@ function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     editAppendComma,
+    editAppendSemicolon,
     editInsertBlock,
     editInsertArrow,
     editInsertSpaceBehind
