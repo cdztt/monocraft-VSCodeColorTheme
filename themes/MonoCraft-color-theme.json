@@ -108,7 +108,7 @@
    * mage:		      #7bc9df		 8.0        function
    *****************************************************************************
    * rogue:         #b5a72c    6.0        keyword
-   * rogue:         #847d41    3.5        storage
+   * rogue:         #847d41    3.5        storage and rust
    *****************************************************************************
    * paladin:       #ff1c7e		 4.0        cursor
    *****************************************************************************
@@ -209,7 +209,14 @@
     },
     {
       "name": "storage",
-      "scope": ["storage.type", "storage.modifier"],
+      "scope": [
+        "storage.type",
+        "keyword.other",
+        "keyword.control.rust",
+        "keyword.operator.borrow.and.rust",
+        "storage.type.rust",
+        "storage.modifier"
+      ],
       "settings": {
         "foreground": "#847d41"
       }
@@ -223,7 +230,13 @@
     },
     {
       "name": "operator",
-      "scope": ["keyword.operator"],
+      "scope": [
+        "keyword.operator",
+        "punctuation.brackets.curly.rust",
+        "punctuation.brackets.square.rust",
+        "punctuation.brackets.round.rust",
+        "punctuation.brackets.angle.rust"
+      ],
       "settings": {
         "foreground": "#868383"
       }
