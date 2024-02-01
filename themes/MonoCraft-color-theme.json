@@ -160,9 +160,6 @@
       "scope": [
         "meta.property-value.css",
         "source.css",
-        "punctuation.section.property-list",
-        "punctuation.section.function",
-        "punctuation.section.class",
         "punctuation.separator",
         "punctuation.terminator",
         "punctuation.definition",
@@ -233,7 +230,9 @@
         "keyword.operator",
         "punctuation.brackets.curly.rust",
         "punctuation.brackets.round.rust",
-        "punctuation.brackets.angle.rust"
+        "punctuation.brackets.angle.rust",
+        "punctuation.bracket",
+        "punctuation.section"
       ],
       "settings": {
         "foreground": "#868383"
@@ -244,7 +243,6 @@
       "scope": [
         "punctuation.definition.binding-pattern.array",
         "punctuation.definition.template-expression",
-        "punctuation.section.embedded",
         "punctuation.accessor",
         "meta.brace.curly",
         "meta.brace.square",
