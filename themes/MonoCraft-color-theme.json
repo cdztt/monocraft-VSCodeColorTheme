@@ -107,8 +107,7 @@
    *****************************************************************************
    * mage:		      #7bc9df		 8.0        function
    *****************************************************************************
-   * rogue:         #b5a72c    6.0        keyword
-   * rogue:         #989040    4.5        storage and rust
+   * rogue:         #989040    4.5        keyword and storage
    *****************************************************************************
    * paladin:       #ff1c7e		 4.0        cursor
    *****************************************************************************
@@ -225,7 +224,7 @@
       "name": "keyword",
       "scope": ["keyword"],
       "settings": {
-        "foreground": "#b5a72c"
+        "foreground": "#989040"
       }
     },
     {
@@ -247,7 +246,10 @@
         "punctuation.definition.template-expression",
         "punctuation.section.embedded",
         "punctuation.accessor",
-        "meta.brace.square"
+        "meta.brace.curly",
+        "meta.brace.square",
+        "meta.brace.round",
+        "meta.function.js"
       ],
       "settings": {
         "foreground": "#868383"
