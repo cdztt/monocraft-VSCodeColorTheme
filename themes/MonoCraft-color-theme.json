@@ -103,7 +103,7 @@
 
   /*****************************************************************************
    * priest: 		    #ccc8c8		 9.0        variable
-   * priest: 		    #868383		 4.0        operator and accessor
+   * priest: 		    #868383		 4.0        operator and bracket
    *****************************************************************************
    * mage:		      #7bc9df		 8.0        function
    *****************************************************************************
@@ -231,16 +231,9 @@
         "punctuation.brackets.curly.rust",
         "punctuation.brackets.round.rust",
         "punctuation.brackets.angle.rust",
+        "punctuation.section",
         "punctuation.bracket",
-        "punctuation.section"
-      ],
-      "settings": {
-        "foreground": "#868383"
-      }
-    },
-    {
-      "name": "accessor",
-      "scope": [
+        "punctuation.definition.parameters",
         "punctuation.definition.binding-pattern.array",
         "punctuation.definition.template-expression",
         "punctuation.accessor",
