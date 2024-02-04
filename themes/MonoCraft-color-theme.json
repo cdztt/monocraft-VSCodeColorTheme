@@ -240,7 +240,12 @@
         "meta.brace.curly",
         "meta.brace.square",
         "meta.brace.round",
-        "meta.function.js"
+        "meta.function.js",
+        "entity.quasi.element.js",
+        "punctuation.definition.arguments",
+        "punctuation.parenthesis",
+        "punctuation.definition.begin.bracket",
+        "punctuation.definition.end.bracket"
       ],
       "settings": {
         "foreground": "#868383"
