@@ -133,7 +133,12 @@
 
   "tokenColors": [
     {
-      "scope": ["source", "meta.embedded", "source.groovy.embedded"],
+      "scope": [
+        "source",
+        "meta.embedded",
+        "source.groovy.embedded",
+        "punctuation.section.embedded"
+      ],
       "settings": {
         "foreground": "#ccc8c8"
       }
@@ -245,7 +250,14 @@
         "punctuation.definition.arguments",
         "punctuation.parenthesis",
         "punctuation.definition.begin.bracket",
-        "punctuation.definition.end.bracket"
+        "punctuation.definition.end.bracket",
+        "meta.function.arrow.js",
+        "meta.method-call.with-arguments.js",
+        "punctuation.separator.key-value",
+        "meta.delimiter.comma.js",
+        "punctuation.terminator.rule.css",
+        "punctuation.definition.tag",
+        "punctuation.definition.entity.css"
       ],
       "settings": {
         "foreground": "#868383"
