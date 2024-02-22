@@ -257,7 +257,8 @@
         "meta.delimiter.comma.js",
         "punctuation.terminator.rule.css",
         "punctuation.definition.tag",
-        "punctuation.definition.entity.css"
+        "punctuation.definition.entity.css",
+        "punctuation.definition.block"
       ],
       "settings": {
         "foreground": "#868383"
