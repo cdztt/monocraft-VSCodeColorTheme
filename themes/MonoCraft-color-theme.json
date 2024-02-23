@@ -113,7 +113,7 @@
    *****************************************************************************
    * warrior:       #b68f65		 5.0        string literal
    *****************************************************************************
-   * shaman:	      #4a91d8		 4.5        support type
+   * shaman:	      #3e7ebd		 3.5        Tag attribute
    *****************************************************************************
    * hunter:			  #7fbd34		 6.5			  html tag
    *****************************************************************************
@@ -176,7 +176,8 @@
         "JSXNested",
         "text.html.vue-html",
         "meta.delimiter",
-        "support.constant.property-value.css"
+        "support.constant.property-value.css",
+        "support.type.property-name"
       ],
       "settings": {
         "foreground": "#ccc8c8"
@@ -191,9 +192,9 @@
     },
     {
       "name": "Tag attribute",
-      "scope": "entity.other.attribute-name",
+      "scope": ["entity.other.attribute-name"],
       "settings": {
-        "foreground": "#ccc8c8"
+        "foreground": "#3e7ebd"
       }
     },
     {
@@ -202,7 +203,8 @@
         "string",
         "punctuation.definition.string",
         "punctuation.definition.quasi",
-        "string.regexp.js punctuation.definition.string"
+        "string.regexp.js punctuation.definition.string",
+        "string.quoted.double.json"
       ],
       "settings": {
         "foreground": "#b68f65"
@@ -288,6 +290,7 @@
     {
       "name": "Class name",
       "scope": [
+        "support.type",
         "entity.name.type",
         "entity.name.class",
         "entity.name.namespace",
@@ -311,13 +314,6 @@
       "scope": "support.function",
       "settings": {
         "foreground": "#7bc9df"
-      }
-    },
-    {
-      "name": "support.type",
-      "scope": ["support.type"],
-      "settings": {
-        "foreground": "#4a91d8"
       }
     },
     {
@@ -346,13 +342,6 @@
       "scope": "invalid.deprecated",
       "settings": {
         "foreground": "#F44747"
-      }
-    },
-    {
-      "name": "JSON String",
-      "scope": ["meta.structure.dictionary.json", "string.quoted.double.json"],
-      "settings": {
-        "foreground": "#ccc8c8"
       }
     },
     {
