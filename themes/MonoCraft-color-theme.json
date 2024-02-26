@@ -176,7 +176,6 @@
         "JSXNested",
         "text.html.vue-html",
         "meta.delimiter",
-        "support.constant.property-value.css",
         "support.type.property-name"
       ],
       "settings": {
