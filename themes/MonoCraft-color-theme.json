@@ -113,13 +113,13 @@
    *****************************************************************************
    * warrior:       #b68f65		 5.0        string literal
    *****************************************************************************
-   * shaman:	      #3e7ebd		 3.5        Tag attribute
+   * shaman:	      #3e7ebd		 3.5        type and class
    *****************************************************************************
    * hunter:			  #7fbd34		 6.5			  html tag
    *****************************************************************************
    * monk:		      #20bc7b		 6.0        component
    *****************************************************************************
-   * warlock:		    #7373b9		 3.5        type and class
+   * warlock:		    #7373b9		 3.5        Tag attribute
    *****************************************************************************
    * druid:	        #e9842b		 5.5        number literal
    * druid:	        #a26025		 3.0        constant
@@ -132,12 +132,6 @@
    ****************************************************************************/
 
   "tokenColors": [
-    {
-      "scope": ["source", "meta.embedded", "source.groovy.embedded"],
-      "settings": {
-        "foreground": "#ccc8c8"
-      }
-    },
     {
       "name": "Comment and semicolon",
       "scope": [
@@ -156,30 +150,26 @@
       }
     },
     {
-      "name": "punctuation",
+      "name": "Variable",
       "scope": [
-        "meta.property-value.css",
+        "source",
         "source.css",
+        "variable.other",
+        "variable.language",
+        "string.unquoted",
+        "meta.embedded",
+        "meta.brace",
+        "meta.delimiter",
+        "meta.property-value.css",
         "punctuation.separator",
         "punctuation.terminator",
-        "punctuation.definition",
-        "punctuation.quasi.element",
         "punctuation.destructuring",
-        "meta.brace",
         "text.html.markdown",
         "text.html.derivative",
         "JSXNested",
         "text.html.vue-html",
-        "meta.delimiter",
         "support.type.property-name"
       ],
-      "settings": {
-        "foreground": "#ccc8c8"
-      }
-    },
-    {
-      "name": "Variable",
-      "scope": ["variable.other", "variable.language", "string.unquoted"],
       "settings": {
         "foreground": "#ccc8c8"
       }
@@ -190,10 +180,11 @@
         "entity.other.attribute-name",
         "punctuation.attribute-shorthand",
         "punctuation.section.embedded",
-        "punctuation.definition.interpolation"
+        "punctuation.definition.interpolation.begin.html",
+        "punctuation.definition.interpolation.end.html"
       ],
       "settings": {
-        "foreground": "#3e7ebd"
+        "foreground": "#7373b9"
       }
     },
     {
@@ -213,19 +204,17 @@
       "name": "storage",
       "scope": [
         "storage.type",
+        "keyword",
         "keyword.other",
         "keyword.control.rust",
         "keyword.operator.borrow.and.rust",
+        "keyword.operator.new",
         "storage.type.rust",
-        "storage.modifier"
+        "storage.modifier",
+        "meta.brace.square",
+        "punctuation.brackets.square.rust",
+        "punctuation.definition.binding-pattern.array"
       ],
-      "settings": {
-        "foreground": "#989040"
-      }
-    },
-    {
-      "name": "keyword",
-      "scope": ["keyword"],
       "settings": {
         "foreground": "#989040"
       }
@@ -240,11 +229,9 @@
         "punctuation.section",
         "punctuation.bracket",
         "punctuation.definition.parameters",
-        "punctuation.definition.binding-pattern.array",
         "punctuation.definition.template-expression",
         "punctuation.accessor",
         "meta.brace.curly",
-        "meta.brace.square",
         "meta.brace.round",
         "meta.function.js",
         "entity.quasi.element.js",
@@ -260,7 +247,10 @@
         "punctuation.definition.tag",
         "punctuation.definition.entity.css",
         "punctuation.definition.block",
-        "meta.method-call.without-arguments"
+        "meta.method-call.without-arguments",
+        "punctuation.definition.interpolation",
+        "punctuation.quasi.element",
+        "punctuation.definition.typeparameters"
       ],
       "settings": {
         "foreground": "#868383"
@@ -295,11 +285,10 @@
         "entity.name.class",
         "entity.name.namespace",
         "entity.name.scope-resolution",
-        "variable.language.this",
-        "punctuation.brackets.square.rust"
+        "variable.language.this"
       ],
       "settings": {
-        "foreground": "#7373b9"
+        "foreground": "#3e7ebd"
       }
     },
     {
