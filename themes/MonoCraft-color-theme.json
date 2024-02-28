@@ -133,12 +133,7 @@
 
   "tokenColors": [
     {
-      "scope": [
-        "source",
-        "meta.embedded",
-        "source.groovy.embedded",
-        "punctuation.section.embedded"
-      ],
+      "scope": ["source", "meta.embedded", "source.groovy.embedded"],
       "settings": {
         "foreground": "#ccc8c8"
       }
@@ -191,7 +186,12 @@
     },
     {
       "name": "Tag attribute",
-      "scope": ["entity.other.attribute-name"],
+      "scope": [
+        "entity.other.attribute-name",
+        "punctuation.attribute-shorthand",
+        "punctuation.section.embedded",
+        "punctuation.definition.interpolation"
+      ],
       "settings": {
         "foreground": "#3e7ebd"
       }
@@ -259,7 +259,8 @@
         "punctuation.terminator.rule.css",
         "punctuation.definition.tag",
         "punctuation.definition.entity.css",
-        "punctuation.definition.block"
+        "punctuation.definition.block",
+        "meta.method-call.without-arguments"
       ],
       "settings": {
         "foreground": "#868383"
