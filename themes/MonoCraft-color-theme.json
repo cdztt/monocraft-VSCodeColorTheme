@@ -235,6 +235,7 @@
         "meta.brace.round",
         "meta.function.js",
         "meta.function.method",
+        "meta.method-call.with-arguments",
         "entity.quasi.element.js",
         "punctuation.definition.arguments",
         "punctuation.parenthesis",
