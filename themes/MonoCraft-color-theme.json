@@ -121,7 +121,7 @@
    *****************************************************************************
    * warlock:		    #7373b9		 3.5        Tag attribute
    *****************************************************************************
-   * druid:	        #e9842b		 5.5        number literal
+   * druid:	        #e9842b		 5.5        number and comparison
    * druid:	        #a26025		 3.0        constant
    *****************************************************************************
    * demonhunter:   #7d7a7f		 3.5        comment
@@ -259,7 +259,11 @@
     },
     {
       "name": "Number",
-      "scope": ["constant.numeric"],
+      "scope": [
+        "constant.numeric",
+        "keyword.operator.comparison",
+        "keyword.operator.logical"
+      ],
       "settings": {
         "foreground": "#e9842b"
       }
