@@ -107,6 +107,7 @@
    *****************************************************************************
    * mage:		      #7bc9df		 8.0        function
    *****************************************************************************
+   * rogue:         #dccc1a    9.0        ternary
    * rogue:         #989040    4.5        keyword and storage
    *****************************************************************************
    * paladin:       #ff1c7e		 4.0        cursor
@@ -220,6 +221,17 @@
       }
     },
     {
+      "name": "ternary",
+      "scope": [
+        "keyword.operator.ternary",
+        "keyword.operator.logical",
+        "keyword.operator.nullcoalesce"
+      ],
+      "settings": {
+        "foreground": "#dccc1a"
+      }
+    },
+    {
       "name": "operator",
       "scope": [
         "keyword.operator",
@@ -259,11 +271,7 @@
     },
     {
       "name": "Number",
-      "scope": [
-        "constant.numeric",
-        "keyword.operator.comparison",
-        "keyword.operator.logical"
-      ],
+      "scope": ["constant.numeric", "keyword.operator.comparison"],
       "settings": {
         "foreground": "#e9842b"
       }
