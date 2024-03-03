@@ -66,8 +66,10 @@
     "pickerGroup.foreground": "#75715E",
     "focusBorder": "#75715E",
     "debugToolBar.background": "#1e1f1c",
-    "diffEditor.insertedTextBackground": "#4b661680",
-    "diffEditor.removedTextBackground": "#90274A70",
+    "diffEditor.insertedTextBackground": "#4b661690",
+    "diffEditor.insertedLineBackground": "#4b661640",
+    "diffEditor.removedTextBackground": "#90274a90",
+    "diffEditor.removedLineBackground": "#90274a40",
     "input.background": "#414339",
     "inputOption.activeBorder": "#75715E",
     "inputValidation.errorBackground": "#90274A",
@@ -108,7 +110,7 @@
    * mage:		      #7bc9df		 8.0        function
    *****************************************************************************
    * rogue:         #dccc1a    9.0        ternary
-   * rogue:         #989040    4.5        keyword and storage
+   * rogue:         #9f9833    5.0        keyword and storage
    *****************************************************************************
    * paladin:       #ff1c7e		 4.0        cursor
    *****************************************************************************
@@ -217,7 +219,7 @@
         "punctuation.definition.binding-pattern.array"
       ],
       "settings": {
-        "foreground": "#989040"
+        "foreground": "#9f9833"
       }
     },
     {
