@@ -120,13 +120,13 @@
    * druid:	        #e9842b		 5.5        number
    * druid:	        #a26025		 3.0        constant
    *****************************************************************************
-   * shaman:	      #3e7ebd		 3.5        type and class
+   * warlock:		    #6969b3		 3.0        type
    *****************************************************************************
-   * hunter:			  #7fbd34		 6.5			  html tag
+   * monk:		      #148b5a		 3.5        class
    *****************************************************************************
-   * monk:		      #20bc7b		 6.0        component
+   * hunter:			  #6fa42d		 5.0			  tag
    *****************************************************************************
-   * warlock:		    #7373b9		 3.5        tag attribute
+   * shaman:	      #4b89c6		 4.0        tag attribute
    *****************************************************************************
    * paladin:       #ff1c7e		 4.0        cursor
    *****************************************************************************
@@ -192,7 +192,9 @@
         "keyword.operator.new",
         "keyword.control.module",
         "keyword.control.unit.css",
-        "keyword.control.anchor.regexp"
+        "keyword.control.anchor.regexp",
+        "keyword.control.import",
+        "keyword.control.from"
       ],
       "settings": {
         "foreground": "#969036"
@@ -250,7 +252,8 @@
         "meta.method-call.without-arguments",
         "punctuation.definition.interpolation",
         "punctuation.quasi.element",
-        "punctuation.definition.typeparameters"
+        "punctuation.definition.typeparameters",
+        "variable.language.this"
       ],
       "settings": {
         "foreground": "#868383"
@@ -300,31 +303,29 @@
       }
     },
     {
-      "name": "Class",
+      "name": "type",
       "scope": [
         "support.type",
         "entity.name.type",
-        "entity.name.class",
         "entity.name.namespace",
-        "entity.name.scope-resolution",
-        "variable.language.this"
+        "entity.name.scope-resolution"
       ],
       "settings": {
-        "foreground": "#3e7ebd"
+        "foreground": "#6969b3"
       }
     },
     {
-      "name": "Tag name",
+      "name": "tag name",
       "scope": ["entity.name.tag"],
       "settings": {
-        "foreground": "#7fbd34"
+        "foreground": "#6fa42d"
       }
     },
     {
-      "name": "component",
-      "scope": ["support.class.component"],
+      "name": "class",
+      "scope": ["support.class", "entity.name.class"],
       "settings": {
-        "foreground": "#20bc7b"
+        "foreground": "#148b5a"
       }
     },
     {
@@ -337,7 +338,7 @@
         "punctuation.definition.interpolation.end.html"
       ],
       "settings": {
-        "foreground": "#7373b9"
+        "foreground": "#4b89c6"
       }
     },
     {
@@ -385,7 +386,7 @@
     {
       "scope": "constant.numeric.line-number.find-in-files - match",
       "settings": {
-        "foreground": "#7373b9A0"
+        "foreground": "#6969b3A0"
       }
     },
     {
@@ -524,9 +525,8 @@
       "name": "markdown code",
       "scope": ["markup.fenced_code.block.markdown"],
       "settings": {
-        "foreground": "#7fbd34"
+        "foreground": "#6fa42d"
       }
     }
-  ],
-  "semanticHighlighting": true
+  ]
 }
