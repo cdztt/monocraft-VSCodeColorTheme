@@ -106,16 +106,16 @@
   /*****************************************************************************
    * priest: 		    #ccc8c8		 9.0        variable
    * priest: 		    #868383		 4.0        operator and bracket
+   * priest: 		    #656262		 2.5        comment
    *****************************************************************************
    * mage:		      #7bc9df		 8.0        function
    *****************************************************************************
-   * rogue:         #dccc1a    9.0        ternary operator
+   * rogue:         #d1c11a    8.0        ternary operator
    * rogue:         #969036    4.5        keyword and storage
    *****************************************************************************
-   * demonhunter:   #7d7a7f		 3.5        comment
    * demonhunter:   #a87bc8		 4.5        control keyword
    *****************************************************************************
-   * warrior:       #b68f65		 5.0        string literal
+   * warrior:       #b68f65		 5.0        string
    *****************************************************************************
    * druid:	        #e9842b		 5.5        number
    * druid:	        #a26025		 3.0        constant
@@ -137,24 +137,14 @@
 
   "tokenColors": [
     {
-      "name": "Comment, semicolon",
-      "scope": [
-        "comment",
-        "punctuation.definition.block.tag",
-        "punctuation.definition.bracket.curly",
-        "punctuation.definition.bracket",
-        "punctuation.definition.comment",
-        "storage.type.class.jsdoc",
-        "entity.name.type.instance.jsdoc",
-        "variable.other.jsdoc",
-        "punctuation.terminator.statement"
-      ],
+      "name": "comment",
+      "scope": ["comment"],
       "settings": {
-        "foreground": "#7d7a7f"
+        "foreground": "#656262"
       }
     },
     {
-      "name": "Variable",
+      "name": "variable",
       "scope": [
         "source",
         "source.css",
@@ -210,12 +200,16 @@
         "keyword.operator.borrow.and.rust"
       ],
       "settings": {
-        "foreground": "#dccc1a"
+        "foreground": "#d1c11a"
       }
     },
     {
       "name": "control",
-      "scope": ["keyword.control"],
+      "scope": [
+        "keyword.control",
+        "keyword.operator.of",
+        "keyword.operator.in"
+      ],
       "settings": {
         "foreground": "#a87bc8"
       }
@@ -245,15 +239,21 @@
         "meta.function.arrow.js",
         "punctuation.separator.key-value",
         "meta.delimiter.comma.js",
-        "punctuation.terminator.rule.css",
+        "punctuation.terminator.rule",
         "punctuation.definition.tag",
-        "punctuation.definition.entity.css",
+        "punctuation.definition.entity",
         "punctuation.definition.block",
         "meta.method-call.without-arguments",
         "punctuation.definition.interpolation",
         "punctuation.quasi.element",
         "punctuation.definition.typeparameters",
-        "variable.language.this"
+        "variable.language.this",
+        "punctuation.terminator.statement",
+        "storage.type.class.jsdoc",
+        "entity.name.type.instance.jsdoc",
+        "variable.other.jsdoc",
+        "source.css-ignored-vscode",
+        "source.js-ignored-vscode"
       ],
       "settings": {
         "foreground": "#868383"
@@ -282,8 +282,8 @@
     {
       "name": "constant",
       "scope": [
-        "constant.language",
         "support.constant",
+        "constant.language",
         "constant.character",
         "constant.other"
       ],
