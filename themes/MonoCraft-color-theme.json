@@ -184,7 +184,8 @@
         "keyword.control.unit.css",
         "keyword.control.anchor.regexp",
         "keyword.control.import",
-        "keyword.control.from"
+        "keyword.control.from",
+        "keyword.operator.existential"
       ],
       "settings": {
         "foreground": "#969036"
@@ -265,7 +266,6 @@
         "string",
         "punctuation.definition.string",
         "punctuation.definition.quasi",
-        "string.regexp.js punctuation.definition.string",
         "string.quoted.double.json"
       ],
       "settings": {
