@@ -209,7 +209,8 @@
       "scope": [
         "keyword.control",
         "keyword.operator.of",
-        "keyword.operator.in"
+        "keyword.operator.in",
+        "keyword.operator.expression.of"
       ],
       "settings": {
         "foreground": "#a87bc8"
