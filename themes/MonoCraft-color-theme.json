@@ -185,7 +185,10 @@
         "keyword.control.anchor.regexp",
         "keyword.control.import",
         "keyword.control.from",
-        "keyword.operator.existential"
+        "keyword.operator.existential",
+        "keyword.operator.typeof",
+        "keyword.control.export",
+        "keyword.control.as"
       ],
       "settings": {
         "foreground": "#969036"
@@ -255,7 +258,9 @@
         "entity.name.type.instance.jsdoc",
         "variable.other.jsdoc",
         "source.css-ignored-vscode",
-        "source.js-ignored-vscode"
+        "source.js-ignored-vscode",
+        "punctuation.definition.binding-pattern.object",
+        "punctuation.separator.namespace"
       ],
       "settings": {
         "foreground": "#868383"
