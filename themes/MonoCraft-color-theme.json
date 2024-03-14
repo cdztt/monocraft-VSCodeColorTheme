@@ -188,7 +188,11 @@
         "keyword.operator.existential",
         "keyword.operator.typeof",
         "keyword.control.export",
-        "keyword.control.as"
+        "keyword.control.as",
+        "keyword.operator.logical",
+        "keyword.operator.comparison",
+        "keyword.operator.relational",
+        "keyword.operator.nullcoalesce",
       ],
       "settings": {
         "foreground": "#969036"
@@ -198,9 +202,6 @@
       "name": "ternary",
       "scope": [
         "keyword.operator.ternary",
-        "keyword.operator.logical",
-        "keyword.operator.comparison",
-        "keyword.operator.nullcoalesce",
         "keyword.operator.borrow.and.rust"
       ],
       "settings": {
@@ -213,7 +214,7 @@
         "keyword.control",
         "keyword.operator.of",
         "keyword.operator.in",
-        "keyword.operator.expression.of"
+        "keyword.operator.expression.of",
       ],
       "settings": {
         "foreground": "#a87bc8"
