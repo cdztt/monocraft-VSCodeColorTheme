@@ -192,7 +192,7 @@
         "keyword.operator.logical",
         "keyword.operator.comparison",
         "keyword.operator.relational",
-        "keyword.operator.nullcoalesce",
+        "keyword.operator.nullcoalesce"
       ],
       "settings": {
         "foreground": "#969036"
@@ -200,10 +200,7 @@
     },
     {
       "name": "ternary",
-      "scope": [
-        "keyword.operator.ternary",
-        "keyword.operator.borrow.and.rust"
-      ],
+      "scope": ["keyword.operator.ternary", "keyword.operator.borrow.and.rust"],
       "settings": {
         "foreground": "#d1c11a"
       }
@@ -214,7 +211,7 @@
         "keyword.control",
         "keyword.operator.of",
         "keyword.operator.in",
-        "keyword.operator.expression.of",
+        "keyword.operator.expression.of"
       ],
       "settings": {
         "foreground": "#a87bc8"
@@ -253,7 +250,6 @@
         "punctuation.definition.interpolation",
         "punctuation.quasi.element",
         "punctuation.definition.typeparameters",
-        "variable.language.this",
         "punctuation.terminator.statement",
         "storage.type.class.jsdoc",
         "entity.name.type.instance.jsdoc",
@@ -315,7 +311,8 @@
         "support.type",
         "entity.name.type",
         "entity.name.namespace",
-        "entity.name.scope-resolution"
+        "entity.name.scope-resolution",
+        "variable.language.this"
       ],
       "settings": {
         "foreground": "#6969b3"
@@ -330,7 +327,7 @@
     },
     {
       "name": "class",
-      "scope": ["support.class", "entity.name.class"],
+      "scope": ["support.class", "entity.name.class", "variable.other.class"],
       "settings": {
         "foreground": "#148b5a"
       }
