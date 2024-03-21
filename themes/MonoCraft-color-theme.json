@@ -200,7 +200,11 @@
     },
     {
       "name": "ternary",
-      "scope": ["keyword.operator.ternary", "keyword.operator.borrow.and.rust"],
+      "scope": [
+        "keyword.operator.ternary",
+        "keyword.operator.borrow.and.rust",
+        "keyword.generator.asterisk"
+      ],
       "settings": {
         "foreground": "#d1c11a"
       }
