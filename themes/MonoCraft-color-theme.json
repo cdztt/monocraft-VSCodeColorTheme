@@ -261,7 +261,8 @@
         "source.css-ignored-vscode",
         "source.js-ignored-vscode",
         "punctuation.definition.binding-pattern.object",
-        "punctuation.separator.namespace"
+        "punctuation.separator.namespace",
+        "punctuation.separator.pointer-access.c"
       ],
       "settings": {
         "foreground": "#868383"
