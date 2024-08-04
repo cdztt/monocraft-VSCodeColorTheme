@@ -4,3 +4,4 @@ js
 build
 private
 *.vsix
+dev_azure_com.md
