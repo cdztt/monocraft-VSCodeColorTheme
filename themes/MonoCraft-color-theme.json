@@ -39,6 +39,7 @@
     "editorGroup.border": "#34352f",
     "editorWidget.background": "#1e1f1c",
     "tab.border": "#1e1f1c",
+    "tab.activeBorder": "#4b89c6",
     "tab.inactiveBackground": "#272822",
     "tab.inactiveForeground": "#ccccc7",
     "tab.lastPinnedBorder": "#414339",
