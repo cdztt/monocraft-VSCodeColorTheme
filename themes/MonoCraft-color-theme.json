@@ -192,7 +192,9 @@
         "keyword.operator.logical",
         "keyword.operator.comparison",
         "keyword.operator.relational",
-        "keyword.operator.nullcoalesce"
+        "keyword.operator.nullcoalesce",
+        "keyword.operator.c",
+        "keyword.operator.sizeof"
       ],
       "settings": {
         "foreground": "#969036"
