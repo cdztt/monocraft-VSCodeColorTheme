@@ -107,10 +107,11 @@
 
   /*****************************************************************************
    * priest: 		    #ccc8c8		 9.0        variable
-   * priest: 		    #868383		 4.0        operator and bracket
+   * priest: 		    #8e8c8c		 4.5        operator and bracket
    * priest: 		    #656262		 2.5        comment
    *****************************************************************************
    * mage:		      #7bc9df		 8.0        function
+   * mage:		      #92a8ae		 6.0        macro
    *****************************************************************************
    * rogue:         #d1c11a    8.0        ternary operator
    * rogue:         #969036    4.5        keyword and storage
@@ -266,10 +267,11 @@
         "source.js-ignored-vscode",
         "punctuation.definition.binding-pattern.object",
         "punctuation.separator.namespace",
-        "punctuation.separator.pointer-access.c"
+        "punctuation.separator.pointer-access.c",
+        "variable.other.enummember.c"
       ],
       "settings": {
-        "foreground": "#868383"
+        "foreground": "#8e8c8c"
       }
     },
     {
@@ -312,6 +314,15 @@
       ],
       "settings": {
         "foreground": "#7bc9df"
+      }
+    },
+    {
+      "name": "macro",
+      "scope": [
+        "entity.name.function.preprocessor.c",
+      ],
+      "settings": {
+        "foreground": "#92a8ae",
       }
     },
     {
