@@ -107,7 +107,7 @@
 
   /*****************************************************************************
    * priest: 		    #ccc8c8		 9.0        variable
-   * priest: 		    #8e8c8c		 4.5        operator and bracket
+   * priest: 		    #979494		 5.0        operator and bracket
    * priest: 		    #656262		 2.5        comment
    *****************************************************************************
    * mage:		      #7bc9df		 8.0        function
@@ -271,7 +271,7 @@
         "variable.other.enummember.c"
       ],
       "settings": {
-        "foreground": "#8e8c8c"
+        "foreground": "#979494"
       }
     },
     {
