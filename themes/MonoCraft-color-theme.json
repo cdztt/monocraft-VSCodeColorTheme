@@ -111,7 +111,7 @@
    * priest: 		    #656262		 2.5        comment
    *****************************************************************************
    * mage:		      #7bc9df		 8.0        function
-   * mage:		      #92a8ae		 6.0        macro
+   * mage:		      #8ca9b1		 6.0        macro
    *****************************************************************************
    * rogue:         #d1c11a    8.0        ternary operator
    * rogue:         #969036    4.5        keyword and storage
@@ -322,7 +322,7 @@
         "entity.name.function.preprocessor.c",
       ],
       "settings": {
-        "foreground": "#92a8ae",
+        "foreground": "#8ca9b1",
       }
     },
     {
