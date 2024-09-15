@@ -268,7 +268,9 @@
         "punctuation.definition.binding-pattern.object",
         "punctuation.separator.namespace",
         "punctuation.separator.pointer-access.c",
-        "variable.other.enummember.c"
+        "variable.other.enummember.c",
+        "punctuation.separator.delimiter.c",
+        "punctuation.separator.dot-access.c"
       ],
       "settings": {
         "foreground": "#979494"
