@@ -1,15 +1,15 @@
 hello and welcome back to the gcp
 您好，欢迎回到 GCP
 mindset Channel today we'll talk about
-心态频道今天我们就来聊聊
+mindset 频道 今天我们来聊聊
 data management and clinical research
 数据管理和临床研究
 more after the intro
-介绍后的更多信息
+介绍后的更多内容
 welcome to the gcp mindset Channel and
-欢迎来到GCP思维渠道和
+欢迎来到 GCP Mindset 频道和
 all topics on clinical research
-关于临床研究的所有主题
+临床研究的所有专题
 Welcome to our new video where today we
 欢迎来到我们的新视频，今天我们
 will delve into the fascinating world
@@ -44,15 +44,15 @@ but what is the role of a clinical
 research associate
 as a clinical research associate you are
 essentially the backbone of any clinical
-将深入迷人的世界 临床研究中的数据管理 这个快节奏的技术时代 先进的数据管理起着重要作用 在各种 临床研究领域没有 例外 本视频的目的是提供 临床研究初学者 特别是崭露头角的临床研究 对以下方面有基本了解的同事 数据管理需要什么以及为什么需要它 在临床研究中至关重要 让我们从了解临床开始 研究 临床研究是医学的一个分支 决定安全性和安全性的科学 药物装置的有效性 诊断产品和治疗 供人类使用的治疗方案 在预防方面发挥重要作用 诊断和治疗疾病 临床涉及许多角色 然而，我们今天的重点是 关于临床研究的作用 关联关键人物确保 任何临床的成功执行 科研项目 但是临床的作用是什么 研究助理 作为临床研究助理，您是 本质上是任何临床的支柱
+将深入探索迷人的世界 临床研究中的数据管理 这个快节奏的技术时代 Advancements Data Management 在 在各种 没有临床研究的领域 例外 本视频的目的是提供 临床研究初学者 特别是新兴的临床研究 对 数据管理需要什么以及为什么 在临床研究中非常重要 让我们从了解临床开始 研究 临床研究是医学的一个分支 决定安全性和 药物设备的有效性 诊断产品和治疗 它玩的供人类使用的方案 在预防方面发挥重要作用 诊断和治疗疾病 临床涉及许多角色 然而，我们今天的重点将是 关于临床研究的作用 在确保 任何临床的成功执行 研究项目 但是临床的作用是什么 助理研究员 作为临床研究助理，您是 基本上是任何临床的支柱
 research project your responsibilities
 研究项目 您的职责
 Encompass everything from planning and
 涵盖从规划和
 setting up the study to monitoring its
-建立研究以监测其
+设置研究以监控其
 progress and ensuring that all
-进步并确保所有人
+进步并确保所有
 procedures are followed correctly
 正确遵循程序
 however one of the most critical aspects
@@ -60,11 +60,11 @@ however one of the most critical aspects
 of your role as a clinical research
 您作为临床研究的角色
 associate is data management the
-关联是数据管理
+Associate 是数据管理
 accuracy and reliability of the study's
-研究的准确性和可靠性
+研究
 findings rest heavily on how well you
-调查结果在很大程度上取决于你的表现如何
+发现在很大程度上取决于您的表现
 manage the collected data
 管理收集的数据
 what is data management and clinical
@@ -74,12 +74,12 @@ research
 data management in clinical research
 临床研究中的数据管理
 refers to the process of collecting
-指收集的过程
+指采集的过程
 storing retrieving and preserving data
-存储检索和保留数据
+存储、检索和保留数据
 generated from clinical trials it is
-从临床试验中产生它是
+从临床试验中产生
 pivotal to ensuring that the data is
 对于确保数据
 accurate consistent and reliable
-准确一致且可靠
+准确、一致、可靠
