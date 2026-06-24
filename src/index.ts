@@ -1,53 +1,53 @@
 import vscode from 'vscode';
 import addColor, { Color } from './handlers/addColor';
-import appendPunc from './handlers/appendPunc';
+// import appendPunc from './handlers/appendPunc';
 import changeCursorStyle from './handlers/changeCursorStyle';
-import insertArrow from './handlers/insertArrow';
-import insertBlock from './handlers/insertBlock';
-import insertSpaceBehind from './handlers/insertSpaceBehind';
-import tranAllHandler from './handlers/tranAllHandler';
-import tranSeleHandler from './handlers/tranSeleHandler';
-import { Lang } from './utils/fetchTranslated';
+// import insertArrow from './handlers/insertArrow';
+// import insertBlock from './handlers/insertBlock';
+// import insertSpaceBehind from './handlers/insertSpaceBehind';
+// import tranAllHandler from './handlers/tranAllHandler';
+// import tranSeleHandler from './handlers/tranSeleHandler';
+// import { Lang } from './utils/fetchTranslated';
 
 function activate(context: vscode.ExtensionContext) {
   vscode.window.onDidChangeTextEditorSelection(changeCursorStyle);
 
-  const editAppendComma = vscode.commands.registerCommand(
-    'edit.appendComma',
-    appendPunc.bind(null, ',')
-  );
+  // const editAppendComma = vscode.commands.registerCommand(
+  //   'edit.appendComma',
+  //   appendPunc.bind(null, ',')
+  // );
 
-  const editAppendSemicolon = vscode.commands.registerCommand(
-    'edit.appendSemicolon',
-    appendPunc.bind(null, ';')
-  );
+  // const editAppendSemicolon = vscode.commands.registerCommand(
+  //   'edit.appendSemicolon',
+  //   appendPunc.bind(null, ';')
+  // );
 
-  const editInsertBlock = vscode.commands.registerCommand(
-    'edit.insertBlock',
-    insertBlock
-  );
+  // const editInsertBlock = vscode.commands.registerCommand(
+  //   'edit.insertBlock',
+  //   insertBlock
+  // );
 
-  const editInsertArrow = vscode.commands.registerCommand(
-    'edit.insertArrow',
-    insertArrow
-  );
+  // const editInsertArrow = vscode.commands.registerCommand(
+  //   'edit.insertArrow',
+  //   insertArrow
+  // );
 
-  const editInsertSpaceBehind = vscode.commands.registerCommand(
-    'edit.insertSpaceBehind',
-    insertSpaceBehind
-  );
+  // const editInsertSpaceBehind = vscode.commands.registerCommand(
+  //   'edit.insertSpaceBehind',
+  //   insertSpaceBehind
+  // );
 
-  const tranSele = vscode.commands.registerCommand(
-    'tran.sele',
-    tranSeleHandler.bind(null, Lang.zh)
-  );
+  // const tranSele = vscode.commands.registerCommand(
+  //   'tran.sele',
+  //   tranSeleHandler.bind(null, Lang.zh)
+  // );
 
-  const tranSeleToEn = vscode.commands.registerCommand(
-    'tran.seleToEn',
-    tranSeleHandler.bind(null, Lang.en)
-  );
+  // const tranSeleToEn = vscode.commands.registerCommand(
+  //   'tran.seleToEn',
+  //   tranSeleHandler.bind(null, Lang.en)
+  // );
 
-  const tranAll = vscode.commands.registerCommand('tran.all', tranAllHandler);
+  // const tranAll = vscode.commands.registerCommand('tran.all', tranAllHandler);
 
   function setColor(color: keyof typeof Color) {
     return vscode.commands.registerCommand(`color.${color}`, () => {
@@ -59,11 +59,24 @@ function activate(context: vscode.ExtensionContext) {
   const colorBlue = setColor('blue');
   const colorCoral = setColor('coral');
 
+  // 记录每种颜色当前活跃的自动上色监听器，避免重复注册导致监听器累积
+  const autoColorListeners = new Map<string, vscode.Disposable>();
+
   function setAutoColor(color: keyof typeof Color) {
     return vscode.commands.registerCommand(`color.auto.${color}`, () => {
-      vscode.workspace.onDidChangeTextDocument(() => {
+      // 再次执行同一命令时，关闭已有的自动上色（toggle 开关）
+      const existing = autoColorListeners.get(color);
+      if (existing !== undefined) {
+        existing.dispose();
+        autoColorListeners.delete(color);
+        return;
+      }
+
+      const listener = vscode.workspace.onDidChangeTextDocument(() => {
         vscode.commands.executeCommand(`color.${color}`);
       });
+      autoColorListeners.set(color, listener);
+      context.subscriptions.push(listener);
     });
   }
   const colorAutoRed = setAutoColor('red');
@@ -71,14 +84,14 @@ function activate(context: vscode.ExtensionContext) {
   const colorAutoBlue = setAutoColor('blue');
   const colorAutoCoral = setAutoColor('coral');
 
-  context.subscriptions.push(
-    editAppendComma,
-    editAppendSemicolon,
-    editInsertBlock,
-    editInsertArrow,
-    editInsertSpaceBehind
-  );
-  context.subscriptions.push(tranSele, tranSeleToEn, tranAll);
+  // context.subscriptions.push(
+  //   editAppendComma,
+  //   editAppendSemicolon,
+  //   editInsertBlock,
+  //   editInsertArrow,
+  //   editInsertSpaceBehind
+  // );
+  // context.subscriptions.push(tranSele, tranSeleToEn, tranAll);
   context.subscriptions.push(colorRed, colorGreen, colorBlue, colorCoral);
   context.subscriptions.push(
     colorAutoRed,

@@ -8,5 +8,11 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": [
+    "src/utils/fetchTranslated.ts",
+    "src/utils/translateAll.ts",
+    "src/handlers/tranSeleHandler.ts",
+    "src/handlers/tranAllHandler.ts"
+  ]
 }

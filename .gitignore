@@ -5,3 +5,4 @@ build
 private
 *.vsix
 dev_azure_com.md
+AGENTS.md

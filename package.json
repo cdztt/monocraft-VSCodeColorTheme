@@ -3,7 +3,7 @@
   "publisher": "cdztt",
   "displayName": "MonoCraft",
   "description": "Dark color theme and Chinese / English translator",
-  "version": "2.1.0",
+  "version": "2.2.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdztt/monocraft-VSCodeColorTheme.git"
@@ -16,7 +16,10 @@
     "test": "jest",
     "wp:build": "webpack --mode production",
     "vsce:pack": "vsce package",
-    "vsce:pub": "vsce publish"
+    "vsce:pub": "vsce publish",
+    "build": "tsc && webpack --mode production",
+    "pack": "npm run build && vsce package",
+    "release": "npm run build && vsce publish"
   },
   "engines": {
     "vscode": "^1.80.0"
@@ -37,56 +40,8 @@
         "path": "./themes/MonoCraft-color-theme.json"
       }
     ],
-    "keybindings": [
-      {
-        "key": "ctrl+,",
-        "command": "edit.appendComma",
-        "when": "editorTextFocus && !editorReadonly"
-      },
-      {
-        "key": "ctrl+;",
-        "command": "edit.appendSemicolon",
-        "when": "editorTextFocus && !editorReadonly"
-      },
-      {
-        "key": "ctrl+k ctrl+;",
-        "command": "edit.insertBlock",
-        "when": "editorTextFocus && !editorReadonly"
-      },
-      {
-        "key": "ctrl+.",
-        "command": "edit.insertArrow",
-        "when": "editorTextFocus && !editorReadonly"
-      },
-      {
-        "key": "shift+space",
-        "command": "edit.insertSpaceBehind",
-        "when": "editorTextFocus && !editorReadonly"
-      },
-      {
-        "key": "ctrl+'",
-        "command": "tran.sele",
-        "when": "editorTextFocus && !editorReadonly"
-      },
-      {
-        "key": "ctrl+shift+'",
-        "command": "tran.seleToEn",
-        "when": "editorTextFocus && !editorReadonly"
-      }
-    ],
+    "keybindings": [],
     "commands": [
-      {
-        "command": "tran.sele",
-        "title": "tranSele"
-      },
-      {
-        "command": "tran.seleToEn",
-        "title": "tranSeleToEn"
-      },
-      {
-        "command": "tran.all",
-        "title": "tranAll"
-      },
       {
         "command": "color.red",
         "title": "colorRed"
@@ -133,6 +88,7 @@
     "@types/node": "^20.4.2",
     "@types/vscode": "^1.80.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/vsce": "^3.9.2",
     "babel-loader": "^9.1.3",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
